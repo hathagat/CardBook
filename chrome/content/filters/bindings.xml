@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<bindings id="cardbookBindings"
+			xmlns="http://www.mozilla.org/xbl"
+			xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+			xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<binding id='abPickerSearch'>
+		<resources>
+			<stylesheet src="chrome://cardbook/content/filters/filters.css"/>
+		</resources>
+		<content>
+			<xul:menulist flex="1" class="search-value-menulist" xbl:inherits="disabled"
+                    oncommand="this.parentNode.setAttribute('value', this.value);this.parentNode.value=this.getAttribute('label');">
+				<xul:menupopup class="search-value-popup"/>
+			</xul:menulist>
+		</content>
+		<implementation>
+			<method name="addDirectories">
+				<parameter name="aMenuPopup"/>
+				<parameter name="aMenuValue"/>
+				<parameter name="aMenuLabel"/>
+				<body>
+					<![CDATA[
+						let newMenuItem = document.createElement('menuitem');
+						newMenuItem.setAttribute('label', aMenuLabel);
+						newMenuItem.setAttribute('value', aMenuValue);
+						aMenuPopup.appendChild(newMenuItem);
+					]]>
+				</body>
+			</method>
+			<constructor>
+				<![CDATA[
+					let value = this.getAttribute("value");
+					let menulist = document.getAnonymousNodes(this)[0];
+					let menupopup = menulist.menupopup;
+					
+					var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"].getService(Components.interfaces.mozIJSSubScriptLoader);
+					loader.loadSubScript("chrome://cardbook/content/preferences/cardbookPreferences.js");
+					var cardbookPrefService = new cardbookPreferenceService();
+					var result = [];
+					result = cardbookPrefService.getAllPrefIds();
+					for (let i = 0; i < result.length; i++) {
+						var myPrefId = result[i];
+						var cardbookPrefService1 = new cardbookPreferenceService(myPrefId);
+						if (cardbookPrefService1.getEnabled() && (cardbookPrefService1.getType() !== "SEARCH")) {
+							this.addDirectories(menupopup, myPrefId, cardbookPrefService1.getName());
+						}
+					}
+
+					// scan all menupopup items to find the uri for the selection
+					let valueElements = menupopup.getElementsByAttribute('value', value);
+					if (valueElements && valueElements.length) {
+						menulist.selectedItem = valueElements[0];
+					} else {
+						menulist.selectedIndex = 0;
+					}
+					this.value = menulist.selectedItem.getAttribute("value");
+				]]>
+			</constructor>
+		</implementation>
+	</binding>
+
+	<binding id='abPickerAction' extends="chrome://messenger/content/searchWidgets.xml#ruleactiontarget-base">
+		<resources>
+			<stylesheet src="chrome://cardbook/content/filters/filters.css"/>
+		</resources>
+		<content>
+			<xul:menulist flex="1" class="ruleactionitem" xbl:inherits="disabled"
+                    oncommand="this.parentNode.setAttribute('value', this.value);this.parentNode.value=this.getAttribute('label');">
+				<xul:menupopup/>
+			</xul:menulist>
+		</content>
+		<implementation>
+			<method name="addDirectories">
+				<parameter name="aMenuPopup"/>
+				<parameter name="aMenuValue"/>
+				<parameter name="aMenuLabel"/>
+				<body>
+					<![CDATA[
+						let newMenuItem = document.createElement('menuitem');
+						newMenuItem.setAttribute('label', aMenuLabel);
+						newMenuItem.setAttribute('value', aMenuValue);
+						aMenuPopup.appendChild(newMenuItem);
+					]]>
+				</body>
+			</method>
+			<constructor>
+				<![CDATA[
+					let menulist = document.getAnonymousNodes(this)[0];
+					let value = menulist.value;
+					let menupopup = menulist.menupopup;
+					
+					var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"].getService(Components.interfaces.mozIJSSubScriptLoader);
+					loader.loadSubScript("chrome://cardbook/content/preferences/cardbookPreferences.js");
+					var cardbookPrefService = new cardbookPreferenceService();
+					var result = [];
+					result = cardbookPrefService.getAllPrefIds();
+					for (let i = 0; i < result.length; i++) {
+						var myPrefId = result[i];
+						var cardbookPrefService1 = new cardbookPreferenceService(myPrefId);
+						if (cardbookPrefService1.getEnabled() && (cardbookPrefService1.getType() !== "SEARCH") && !cardbookPrefService1.getReadOnly()) {
+							this.addDirectories(menupopup, myPrefId, cardbookPrefService1.getName());
+						}
+					}
+
+					// scan all menupopup items to find the uri for the selection
+					let valueElements = menupopup.getElementsByAttribute('value', value);
+					if (valueElements && valueElements.length) {
+						menulist.selectedItem = valueElements[0];
+					} else {
+						menulist.selectedIndex = 0;
+					}
+					this.value = menulist.selectedItem.getAttribute("value");
+				]]>
+			</constructor>
+		</implementation>
+	</binding>
+</bindings>

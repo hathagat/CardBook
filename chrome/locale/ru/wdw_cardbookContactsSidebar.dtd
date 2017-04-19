@@ -1,0 +1,11 @@
+<!ENTITY categoriesPicker.label "Фильтр категорий:">
+<!ENTITY categoriesPicker.accesskey "Ф">
+<!ENTITY editAddrBookCard.label "Правка">
+<!ENTITY editAddrBookCard.accesskey "П">
+<!ENTITY searchContacts.label "Искать:">
+<!ENTITY searchContacts.accesskey "И">
+<!ENTITY name.label "Имя">
+<!ENTITY addtoReplytoFieldMenu.label "Добавить в поле «Адрес для ответа»">
+<!ENTITY addtoReplytoFieldMenu.accesskey "Д">
+<!ENTITY replytoButton.label "Добавить в «Адрес для ответа»:">
+<!ENTITY replytoButton.accesskey "А">

@@ -1,0 +1,5 @@
+<!ENTITY addImageCardFromFileLabel "Добавить изображение из файла">
+<!ENTITY addImageCardFromClipboardLabel "Добавить изображение из буфера обмена">
+<!ENTITY addImageCardFromUrlLabel "Добавить изображение из URL из буфера обмена">
+<!ENTITY saveImageCardLabel "Сохранить изображение">
+<!ENTITY deleteImageCardLabel "Удалить изображение">

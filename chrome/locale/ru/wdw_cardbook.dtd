@@ -1,0 +1,166 @@
+<!ENTITY wdw_cardbookWindowLabel "CardBook">
+
+<!ENTITY accountsOrCatsTreeLabel "Адресные книги">
+<!ENTITY enableAccountsTooltip "Включение и отключение поиска и синхронизации адресных книг.">
+<!ENTITY colorAccountsTooltip "Выделять цветом адресные книги в результатах поиска (используется при сквозном поиске в нескольких адресных книгах).">
+<!ENTITY readonlyAccountsTooltip "Установить адресную книгу в режим «только чтение» или «чтение—запись».">
+
+<!ENTITY cardbookAccountMenuLabel "Адресная книга">
+
+<!ENTITY cardbookAccountMenuAddServerLabel "Добавить адресную книгу">
+<!ENTITY cardbookAccountMenuEditServerLabel "Править адресную книгу">
+<!ENTITY cardbookAccountMenuCloseServerLabel "Удалить адресную книгу">
+<!ENTITY cardbookAccountMenuSyncLabel "Синхронизировать адресную книгу">
+<!ENTITY cardbookAccountMenuSyncsLabel "Синхронизировать все адресные книги">
+
+<!ENTITY cardbookContactsMenuLabel "Контакты">
+
+<!ENTITY cardbookToolsMenuLabel "Инструменты">
+<!ENTITY cardbookToolsMenuBirthdayListLabel "Открыть список дней рождения">
+<!ENTITY cardbookToolsMenuSyncLightningLabel "Добавить дни рождения в календарь">
+<!ENTITY cardbookToolsMenuFindAllDuplicatesLabel "Искать повторяющиеся контакты во всех адресных книгах">
+<!ENTITY cardbookToolsMenuFindSingleDuplicatesLabel "Искать повторяющиеся контакты во текущей адресной книге">
+
+<!ENTITY cardbookToolbarLabel "Панель инструментов CardBook">
+<!ENTITY cardbookToolbarAccesskey "П">
+<!ENTITY CustomizeCardBookToolbarLabel "Настроить…">
+<!ENTITY CustomizeCardBookToolbarAccesskey "Н">
+<!ENTITY cardbookToolbarAddServerButtonLabel "Добавить адресную книгу">
+<!ENTITY cardbookToolbarAddServerButtonTooltip "Добавить удалённую или локальную адресную книгу">
+<!ENTITY cardbookToolbarSyncButtonLabel "Синхронизация">
+<!ENTITY cardbookToolbarSyncButtonTooltip "Синхронизирует все удалённые адресные книги">
+<!ENTITY cardbookToolbarConfigurationButtonLabel "Настройки">
+<!ENTITY cardbookToolbarConfigurationButtonTooltip "Открывает панель настроек CardBook">
+<!ENTITY cardbookToolbarAddButtonLabel "Новый контакт">
+<!ENTITY cardbookToolbarAddButtonTooltip "Позволяет создать новый контакт">
+<!ENTITY cardbookToolbarEditButtonLabel "Править контакт">
+<!ENTITY cardbookToolbarEditButtonTooltip "Позволяет измененить контакт">
+<!ENTITY cardbookToolbarRemoveButtonLabel "Удалить контакт">
+<!ENTITY cardbookToolbarRemoveButtonTooltip "Позволяет удалить контакт">
+<!ENTITY cardbookToolbarPrintButtonLabel "Предварительный просмор печати">
+<!ENTITY cardbookToolbarPrintButtonTooltip "Разрешить печатать выделение">
+<!ENTITY cardbookToolbarAppMenuButtonLabel "Меню CardBook">
+<!ENTITY cardbookToolbarAppMenuButtonTooltip "Меню CardBook">
+<!ENTITY cardbookToolbarSearchBoxLabel "Поиск контактов">
+<!ENTITY cardbookToolbarSearchBoxTooltip "Поиск контактов">
+<!ENTITY cardbookToolbarComplexSearchLabel "Расширеный поиск">
+<!ENTITY cardbookToolbarComplexSearchTooltip "Поиск с учётом нескольких условий">
+<!ENTITY cardbookToolbarThMenuButtonLabel "Меню приложения">
+<!ENTITY cardbookToolbarThMenuButtonTooltip "Показать меню &brandShortName;">
+
+<!ENTITY generalTabLabel "Основные">
+<!ENTITY mailPopularityTabLabel "Почта">
+<!ENTITY technicalTabLabel "Технические данные">
+<!ENTITY vcardTabLabel "vCard">
+
+<!ENTITY lastnameColumnLabel "Фамилия">
+<!ENTITY firstnameColumnLabel "Имя">
+<!ENTITY othernameColumnLabel "Отчество">
+<!ENTITY prefixnameColumnLabel "Префикс">
+<!ENTITY suffixnameColumnLabel "Суффикс">
+<!ENTITY fnColumnLabel "Отображаемое имя">
+<!ENTITY nicknameColumnLabel "Прозвище">
+<!ENTITY genderColumnLabel "Пол">
+<!ENTITY bdayColumnLabel "День рождения">
+<!ENTITY dispadrColumnLabel "Адреса">
+<!ENTITY disphomeadrColumnLabel "Домашние адреса">
+<!ENTITY dispworkadrColumnLabel "Рабочие адреса">
+<!ENTITY disptelColumnLabel "Телефоны">
+<!ENTITY disphometelColumnLabel "Домашние телефоны">
+<!ENTITY dispworktelColumnLabel "Рабочие телефоны">
+<!ENTITY dispcelltelColumnLabel "Мобильные телефоны">
+<!ENTITY dispemailColumnLabel "Адреса email">
+<!ENTITY disphomeemailColumnLabel "Домашние email">
+<!ENTITY dispworkemailColumnLabel "Рабочие email">
+<!ENTITY mailerColumnLabel "Почтовая программа">
+<!ENTITY tzColumnLabel "Часовой пояс">
+<!ENTITY geoColumnLabel "Широта и долгота">
+<!ENTITY titleColumnLabel "Должность">
+<!ENTITY roleColumnLabel "Роль">
+<!ENTITY orgColumnLabel "Организация">
+<!ENTITY categoriesColumnLabel "Категории">
+<!ENTITY noteColumnLabel "Заметка">
+<!ENTITY prodidColumnLabel "Product ID">
+<!ENTITY sortstringColumnLabel "Строка для сортировки">
+<!ENTITY uidColumnLabel "Uid">
+<!ENTITY dispurlColumnLabel "URL">
+<!ENTITY versionColumnLabel "Версия">
+<!ENTITY class1ColumnLabel "Классификатор доступа">
+<!ENTITY dispimppColumnLabel "Мгновенные сообщения">
+<!ENTITY cardurlColumnLabel "URL карточки">
+<!ENTITY dirPrefIdColumnLabel "DirPrefId">
+<!ENTITY kindColumnLabel "Вид">
+<!ENTITY revColumnLabel "Рев.">
+<!ENTITY etagColumnLabel "Etag">
+
+<!ENTITY categoriesGroupboxLabel "Категории">
+<!ENTITY noteTabLabel "Заметка">
+
+<!ENTITY miscGroupboxLabel "Разное">
+<!ENTITY othersGroupboxLabel "Другое">
+<!ENTITY techGroupboxLabel "Тех.данные">
+<!ENTITY labelGroupboxLabel "Метки">
+<!ENTITY class1Label "Класс">
+<!ENTITY geoLabel "Geo">
+<!ENTITY mailerLabel "Почтовая программа">
+<!ENTITY agentLabel "Агент">
+<!ENTITY keyLabel "Ключ">
+<!ENTITY photolocalURILabel "Локальное фото">
+<!ENTITY logolocalURILabel "Локальный логотип">
+<!ENTITY soundlocalURILabel "Локальный звук">
+<!ENTITY photoURILabel "Фотография">
+<!ENTITY logoURILabel "Логотип">
+<!ENTITY soundURILabel "Звук">
+<!ENTITY prodidLabel "Product ID">
+<!ENTITY sortstringLabel "Строка для сортировки">
+<!ENTITY uidLabel "UID">
+<!ENTITY versionLabel "Версия">
+<!ENTITY tzLabel "Часовой пояс">
+
+<!ENTITY dirPrefIdLabel "dirPrefId">
+<!ENTITY cardurlLabel "URL карточки">
+<!ENTITY cacheuriLabel "URI в кеше">
+<!ENTITY revLabel "Ревизия">
+<!ENTITY etagLabel "Etag">
+
+<!ENTITY localizeadrTreeLabel "Показать на карте">
+<!ENTITY toEmailEmailTreeLabel "Отправить email">
+<!ENTITY ccEmailEmailTreeLabel "Отправить email (копию)">
+<!ENTITY bccemailemailTreeLabel "Отправить email (скрытую копию)">
+<!ENTITY findemailemailTreeLabel "Искать сообщения, связанные с этим адресом">
+<!ENTITY findeventemailTreeLabel "Искать события календаря, связанные с этим адресом">
+<!ENTITY openURLTreeLabel "Открыть URL">
+
+<!ENTITY copyCardTreeLabel "Копировать запись">
+
+<!ENTITY toEmailCardFromAccountsOrCatsLabel "Отправить сообщение email контатам">
+<!ENTITY toEmailCardFromCardsLabel "Отправить email контактам">
+<!ENTITY ccEmailCardFromAccountsOrCatsLabel "Отправить email контактам (копию)">
+<!ENTITY ccEmailCardFromCardsLabel "Отправить email контактам (копию)">
+<!ENTITY bccEmailCardFromAccountsOrCatsLabel "Отправить email контактам (скрытую копию)">
+<!ENTITY bccEmailCardFromCardsLabel "Отправить email контактам (скрытую копию)">
+<!ENTITY categoryLabel "Категория">
+<!ENTITY findEmailsFromCardsLabel "Искать сообщения, связанные с этим контактом">
+<!ENTITY findEventsFromCardsLabel "Искать события календаря, связанные с этим контактом">
+<!ENTITY localizeCardFromCardsLabel "Показать на карте">
+<!ENTITY openURLCardFromCardsLabel "Открыть URL из контакта">
+<!ENTITY cutCardFromAccountsOrCatsLabel "Вырезать контакт">
+<!ENTITY cutCardFromCardsLabel "Вырезать контакт">
+<!ENTITY copyCardFromAccountsOrCatsLabel "Копировать контакт">
+<!ENTITY copyCardFromCardsLabel "Копировать контакт">
+<!ENTITY pasteCardFromAccountsOrCatsLabel "Вставить контакт">
+<!ENTITY pasteCardFromCardsLabel "Вставить контакт">
+<!ENTITY exportCardToFileLabel "Экспортировать контакт в файл">
+<!ENTITY exportCardToDirLabel "Экспортировать контакт в каталог">
+<!ENTITY importCardFromFileLabel "Импортировать контакт из файла">
+<!ENTITY importCardFromDirLabel "Импортировать контакт из каталога">
+<!ENTITY renameCatFromAccountsOrCatsLabel "Переименовать категорию">
+<!ENTITY removeCatFromAccountsOrCatsLabel "Удалить категорию">
+<!ENTITY mergeCardsFromCardsLabel "Объеденить контакты">
+<!ENTITY duplicateCardFromCardsLabel "Клонировать контакт">
+<!ENTITY convertListToCategoryFromCardsLabel "Преобразовать список в категорию">
+<!ENTITY editAccountFromAccountsOrCatsLabel "Править адресную книгу">
+<!ENTITY syncAccountFromAccountsOrCatsLabel "Синхронизировать адресную книку">
+<!ENTITY removeAccountFromAccountsOrCatsLabel "Удалить адресную книгу">
+
+<!ENTITY IMPPMenuLabel "Соедениться с">

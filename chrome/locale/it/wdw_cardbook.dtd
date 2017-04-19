@@ -1,0 +1,166 @@
+<!ENTITY wdw_cardbookWindowLabel "CardBook">
+
+<!ENTITY accountsOrCatsTreeLabel "Rubriche">
+<!ENTITY enableAccountsTooltip "Abilita o disabilita la ricerca e la sincronizzazione delle rubriche.">
+<!ENTITY colorAccountsTooltip "Evidenzia i risultati di ricerca nelle rubriche (Da utilizzare quando si effettuano ricerche in più rubriche).">
+<!ENTITY readonlyAccountsTooltip "Imposta le rubriche in modalità sola lettura oppure in modalità lettura-scrittura.">
+
+<!ENTITY cardbookAccountMenuLabel "Rubrica">
+
+<!ENTITY cardbookAccountMenuAddServerLabel "Aggiungi rubrica">
+<!ENTITY cardbookAccountMenuEditServerLabel "Modifica rubrica">
+<!ENTITY cardbookAccountMenuCloseServerLabel "Elimina rubrica">
+<!ENTITY cardbookAccountMenuSyncLabel "Sincronizza rubrica">
+<!ENTITY cardbookAccountMenuSyncsLabel "Sincronizza tutte le rubriche">
+
+<!ENTITY cardbookContactsMenuLabel "Contatti">
+
+<!ENTITY cardbookToolsMenuLabel "Strumenti">
+<!ENTITY cardbookToolsMenuBirthdayListLabel "Visualizza la lista dei compleanni">
+<!ENTITY cardbookToolsMenuSyncLightningLabel "Aggiungi compleanno al calendario">
+<!ENTITY cardbookToolsMenuFindAllDuplicatesLabel "Trova i contatti duplicati in tutte le rubriche">
+<!ENTITY cardbookToolsMenuFindSingleDuplicatesLabel "Trova i contatti duplicati nella rubrica corrente">
+
+<!ENTITY cardbookToolbarLabel "Barra degli strumenti di CardBook">
+<!ENTITY cardbookToolbarAccesskey "a">
+<!ENTITY CustomizeCardBookToolbarLabel "Personalizza">
+<!ENTITY CustomizeCardBookToolbarAccesskey "C">
+<!ENTITY cardbookToolbarAddServerButtonLabel "Aggiungi rubrica">
+<!ENTITY cardbookToolbarAddServerButtonTooltip "Aggiungi una rubrica locale o remota">
+<!ENTITY cardbookToolbarSyncButtonLabel "Sincronizza">
+<!ENTITY cardbookToolbarSyncButtonTooltip "Sincronizza tutte le rubriche remote">
+<!ENTITY cardbookToolbarConfigurationButtonLabel "Opzioni">
+<!ENTITY cardbookToolbarConfigurationButtonTooltip "Opzioni di CardBook">
+<!ENTITY cardbookToolbarAddButtonLabel "Aggiungi contatto">
+<!ENTITY cardbookToolbarAddButtonTooltip "Permetti la creazione di contatti">
+<!ENTITY cardbookToolbarEditButtonLabel "Modifica contatto">
+<!ENTITY cardbookToolbarEditButtonTooltip "Permetti la modifica dei contatti">
+<!ENTITY cardbookToolbarRemoveButtonLabel "Elimina contatto">
+<!ENTITY cardbookToolbarRemoveButtonTooltip "Permetti l'eliminazione dei contatti">
+<!ENTITY cardbookToolbarPrintButtonLabel "Anteprima di stampa">
+<!ENTITY cardbookToolbarPrintButtonTooltip "Stampare la selezione">
+<!ENTITY cardbookToolbarAppMenuButtonLabel "Menu CardBook">
+<!ENTITY cardbookToolbarAppMenuButtonTooltip "Menu CardBook">
+<!ENTITY cardbookToolbarSearchBoxLabel "Ricerca contatti">
+<!ENTITY cardbookToolbarSearchBoxTooltip "Ricerca contatti">
+<!ENTITY cardbookToolbarComplexSearchLabel "Ricerca avanzata">
+<!ENTITY cardbookToolbarComplexSearchTooltip "Ricerca con filtri multipli">
+<!ENTITY cardbookToolbarThMenuButtonLabel "Menu dell'applicazione">
+<!ENTITY cardbookToolbarThMenuButtonTooltip "Mostra il Menu &brandShortName;">
+
+<!ENTITY generalTabLabel "Generale">
+<!ENTITY mailPopularityTabLabel "Popolarità Mail">
+<!ENTITY technicalTabLabel "Tecnico">
+<!ENTITY vcardTabLabel "vCard">
+
+<!ENTITY lastnameColumnLabel "Cognome">
+<!ENTITY firstnameColumnLabel "Nome">
+<!ENTITY othernameColumnLabel "Altro nome">
+<!ENTITY prefixnameColumnLabel "Prefisso">
+<!ENTITY suffixnameColumnLabel "Suffisso">
+<!ENTITY fnColumnLabel "Mostra Nome">
+<!ENTITY nicknameColumnLabel "Soprannome">
+<!ENTITY genderColumnLabel "Genere">
+<!ENTITY bdayColumnLabel "Compleanno">
+<!ENTITY dispadrColumnLabel "Indirizzi">
+<!ENTITY disphomeadrColumnLabel "Indirizzo (Casa)">
+<!ENTITY dispworkadrColumnLabel "Indirizzo (Lavoro)">
+<!ENTITY disptelColumnLabel "Telefoni">
+<!ENTITY disphometelColumnLabel "Telefono (Casa)">
+<!ENTITY dispworktelColumnLabel "Telefono (Lavoro)">
+<!ENTITY dispcelltelColumnLabel "Cellulare">
+<!ENTITY dispemailColumnLabel "Indirizzi email">
+<!ENTITY disphomeemailColumnLabel "Email (Casa)">
+<!ENTITY dispworkemailColumnLabel "Email (Lavoro)">
+<!ENTITY mailerColumnLabel "Mailer">
+<!ENTITY tzColumnLabel "TZ">
+<!ENTITY geoColumnLabel "Geo">
+<!ENTITY titleColumnLabel "Titolo">
+<!ENTITY roleColumnLabel "Ruolo">
+<!ENTITY orgColumnLabel "Azienda/Organizzazione">
+<!ENTITY categoriesColumnLabel "Categorie">
+<!ENTITY noteColumnLabel "Note">
+<!ENTITY prodidColumnLabel "Prodid">
+<!ENTITY sortstringColumnLabel "Ordina stringa">
+<!ENTITY uidColumnLabel "Uid">
+<!ENTITY dispurlColumnLabel "URL">
+<!ENTITY versionColumnLabel "Versione">
+<!ENTITY class1ColumnLabel "Class">
+<!ENTITY dispimppColumnLabel "Messaggeria instantanea">
+<!ENTITY cardurlColumnLabel "URL della Card">
+<!ENTITY dirPrefIdColumnLabel "DirPrefId">
+<!ENTITY kindColumnLabel "Tipologia">
+<!ENTITY revColumnLabel "Rev">
+<!ENTITY etagColumnLabel "Etag">
+
+<!ENTITY categoriesGroupboxLabel "Categorie">
+<!ENTITY noteTabLabel "Note">
+
+<!ENTITY miscGroupboxLabel "Varie">
+<!ENTITY othersGroupboxLabel "Altro">
+<!ENTITY techGroupboxLabel "Tecnico">
+<!ENTITY labelGroupboxLabel "Etichette">
+<!ENTITY class1Label "Class">
+<!ENTITY geoLabel "Geo">
+<!ENTITY mailerLabel "Mailer">
+<!ENTITY agentLabel "Agent">
+<!ENTITY keyLabel "Chiave">
+<!ENTITY photolocalURILabel "Foto locale">
+<!ENTITY logolocalURILabel "Logo locale">
+<!ENTITY soundlocalURILabel "Suono locale">
+<!ENTITY photoURILabel "Foto">
+<!ENTITY logoURILabel "Logo">
+<!ENTITY soundURILabel "Suono">
+<!ENTITY prodidLabel "Prodid">
+<!ENTITY sortstringLabel "Ordina stringa">
+<!ENTITY uidLabel "UID">
+<!ENTITY versionLabel "Versione">
+<!ENTITY tzLabel "Fuso orario">
+
+<!ENTITY dirPrefIdLabel "dirPrefId">
+<!ENTITY cardurlLabel "URL della Card">
+<!ENTITY cacheuriLabel "Cache URI">
+<!ENTITY revLabel "Rev">
+<!ENTITY etagLabel "Etag">
+
+<!ENTITY localizeadrTreeLabel "Localizza">
+<!ENTITY toEmailEmailTreeLabel "Usa email">
+<!ENTITY ccEmailEmailTreeLabel "Usa email (in copia/CC)">
+<!ENTITY bccemailemailTreeLabel "Usa email (in copia nascosta/BCC)">
+<!ENTITY findemailemailTreeLabel "Trova email collegate a questo indirizzo email">
+<!ENTITY findeventemailTreeLabel "Trova eventi del calendario collegati a questo indirizzo email">
+<!ENTITY openURLTreeLabel "Apri URL">
+
+<!ENTITY copyCardTreeLabel "Usa in copia">
+
+<!ENTITY toEmailCardFromAccountsOrCatsLabel "Contatti email">
+<!ENTITY toEmailCardFromCardsLabel "Contatti email">
+<!ENTITY ccEmailCardFromAccountsOrCatsLabel "Contatti email (in copia/CC)">
+<!ENTITY ccEmailCardFromCardsLabel "Contatti email (in copia/CC)">
+<!ENTITY bccEmailCardFromAccountsOrCatsLabel "Contatti email (in copia nascosta/BCC)">
+<!ENTITY bccEmailCardFromCardsLabel "Contatti email (in copia nascosta/BCC)">
+<!ENTITY categoryLabel "Categoria">
+<!ENTITY findEmailsFromCardsLabel "Trova email collegate a questo contatto">
+<!ENTITY findEventsFromCardsLabel "Trova eventi del calendario collegati a questo contatto">
+<!ENTITY localizeCardFromCardsLabel "Localizza">
+<!ENTITY openURLCardFromCardsLabel "Apri URL da contatto">
+<!ENTITY cutCardFromAccountsOrCatsLabel "Taglia contatto">
+<!ENTITY cutCardFromCardsLabel "Taglia contatto">
+<!ENTITY copyCardFromAccountsOrCatsLabel "Copia contatto">
+<!ENTITY copyCardFromCardsLabel "Copia contatto">
+<!ENTITY pasteCardFromAccountsOrCatsLabel "Incolla contatto">
+<!ENTITY pasteCardFromCardsLabel "Incolla contatto">
+<!ENTITY exportCardToFileLabel "Esporta contatto su file">
+<!ENTITY exportCardToDirLabel "Esporta contatto in cartella">
+<!ENTITY importCardFromFileLabel "Importa contatti da file">
+<!ENTITY importCardFromDirLabel "Importa contatti da cartella">
+<!ENTITY renameCatFromAccountsOrCatsLabel "Rinomina categoria">
+<!ENTITY removeCatFromAccountsOrCatsLabel "Elimina categoria">
+<!ENTITY mergeCardsFromCardsLabel "Unisci contatti">
+<!ENTITY duplicateCardFromCardsLabel "Duplica contatto">
+<!ENTITY convertListToCategoryFromCardsLabel "Trasforma lista in categoria">
+<!ENTITY editAccountFromAccountsOrCatsLabel "Modifica rubrica">
+<!ENTITY syncAccountFromAccountsOrCatsLabel "Sincronizza rubrica">
+<!ENTITY removeAccountFromAccountsOrCatsLabel "Elimina rubrica">
+
+<!ENTITY IMPPMenuLabel "Collega">

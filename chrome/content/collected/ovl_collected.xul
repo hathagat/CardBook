@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE overlay>
+
+<overlay id="ovl_collected"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="chrome://cardbook/content/wdw_log.js"/>
+	<script src="chrome://cardbook/content/cardbookUtils.js"/>
+	<script src="chrome://cardbook/content/cardbookMailPopularity.js"/>
+	<script src="chrome://cardbook/content/collected/ovl_collected.js"/>
+
+</overlay>

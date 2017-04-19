@@ -1,0 +1,8 @@
+<!ENTITY listTabLabel "Lijst">
+<!ENTITY kindLabel "Soort">
+<!ENTITY kindAccesskey "S">
+<!ENTITY availableCardsGroupboxLabel "Beschikbare contactpersonen">
+<!ENTITY addedCardsGroupboxLabel "Lijst contactpersonen">
+<!ENTITY appendlistTreeLabel "Toevoegen aan lijst">
+<!ENTITY deletelistTreeLabel "Verwijderen van lijst">
+<!ENTITY editCardFromListLabel "Contactpersoon wijzigen">

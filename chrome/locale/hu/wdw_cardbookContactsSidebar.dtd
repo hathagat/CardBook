@@ -1,0 +1,11 @@
+<!ENTITY categoriesPicker.label "Kategória szűrő:">
+<!ENTITY categoriesPicker.accesskey "K">
+<!ENTITY editAddrBookCard.label "Névjegy szerkesztése">
+<!ENTITY editAddrBookCard.accesskey "E">
+<!ENTITY searchContacts.label "Névjegy keresése:">
+<!ENTITY searchContacts.accesskey "N">
+<!ENTITY name.label "Név">
+<!ENTITY addtoReplytoFieldMenu.label "Hozzáadás a Válaszcím mezőhöz">
+<!ENTITY addtoReplytoFieldMenu.accesskey "V">
+<!ENTITY replytoButton.label "Válaszcím:">
+<!ENTITY replytoButton.accesskey "V">

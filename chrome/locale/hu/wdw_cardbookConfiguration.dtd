@@ -1,0 +1,207 @@
+<!ENTITY wdw_cardbookConfigurationWindowLabel "A névjegyzék beállításai">
+
+<!ENTITY generalTabLabel "Általános">
+<!ENTITY editionTabLabel "Szerkesztés">
+<!ENTITY typesTabLabel "Típusok">
+<!ENTITY IMPPsTabLabel "Internetes kommunikáció">
+<!ENTITY customFieldsTabLabel "Egyéni mezők">
+<!ENTITY listsTabLabel "Listák">
+<!ENTITY syncTabLabel "Összehangolás">
+<!ENTITY emailTabLabel "Email">
+<!ENTITY birthdaylistTabLabel "Születésnapok">
+<!ENTITY synclistTabLabel "Szülinapi emlékeztetők">
+
+<!ENTITY integrationGroupboxLabel "Thunderbird integráció">
+<!ENTITY autocompletionLabel "E-mail címek automata kiegészítése">
+<!ENTITY autocompletionAccesskey "A">
+<!ENTITY autocompletionTooltip "Kiterjeszti az alapértelmezett automatikus kiegészítéséhez névjegyzéket a Thunderbird egy automatikus kiegészítéséhez kapcsolatok címjegyzékei CardBook.">
+<!ENTITY exclusiveLabel "Névjegyzék egyedi forrása">
+<!ENTITY exclusiveAccesskey "f">
+<!ENTITY exclusiveTooltip "Ha le van tiltva, ez az opció lehetővé teszi, hogy letölteni kapcsolatok Thunderbird szabvány címjegyzékek a sárga csillag, az e-mail megjelenítési nevét és az e-mail automatikus kiegészítésre.">
+<!ENTITY accountsRestrictionsLabel "Postafiók korlátozások">
+<!ENTITY accountsRestrictionsEnabledLabel "Engedélyezve">
+<!ENTITY accountsRestrictionsMailNameLabel "Postafiók">
+<!ENTITY accountsRestrictionsABNameLabel "Névjegyzék">
+<!ENTITY accountsRestrictionsCatNameLabel "Kategória">
+<!ENTITY accountsRestrictionsIncludeNameLabel "Típus">
+<!ENTITY addRestrictionLabel "Új...">
+<!ENTITY addRestrictionAccesskey "j">
+<!ENTITY renameRestrictionLabel "Szerkesztés...">
+<!ENTITY renameRestrictionAccesskey "z">
+<!ENTITY deleteRestrictionLabel "Törlés...">
+<!ENTITY deleteRestrictionAccesskey "T">
+<!ENTITY emailsCollectionLabel "Gyűjt kimenő e-mail">
+<!ENTITY emailsCollectionAccesskey "G">
+<!ENTITY emailsCollectionCatLabel "A kategória hozzáadása a begyűjtött névjegyekhez">
+<!ENTITY emailsCollectionCatAccesskey "k">
+<!ENTITY emailsCollectionTooltip "Kiterjeszti a Thunderbird szabványos kimenő email cím gyűjteménye. Ha engedélyezve van, e-mail címek nincs jelen semmilyen CardBook címjegyzéket bekerül a kiválasztott névjegytár(ok).">
+<!ENTITY logGroupboxLabel "Naplófájl">
+<!ENTITY debugModeLabel "Hibakeresés mód">
+<!ENTITY debugModeAccesskey "H">
+<!ENTITY debugModeTooltip "Engedélyezze hibakeresés módban hosszabb jelentés.">
+<!ENTITY statusInformationLineNumberLabel "Sorok száma tartják a naplófájl">
+<!ENTITY statusInformationLineNumberAccesskey "S">
+
+<!ENTITY tabsEdittingGroupboxLabel "Kijelző lapok">
+<!ENTITY noteTabLabel "Jegyzetek">
+<!ENTITY noteTabAccesskey "J">
+<!ENTITY listTabLabel "Lista">
+<!ENTITY listTabAccesskey "L">
+<!ENTITY mailPopularityTabLabel "Üzenet népszerűség">
+<!ENTITY mailPopularityTabAccesskey "Ü">
+<!ENTITY technicalTabLabel "Műszaki">
+<!ENTITY technicalTabAccesskey "M">
+<!ENTITY vcardTabLabel "vCard">
+<!ENTITY vcardTabAccesskey "v">
+<!ENTITY localizeEdittingGroupboxLabel "Térkép:">
+<!ENTITY localizeEngineOpenStreetMapLabel "OpenStreetMap">
+<!ENTITY localizeEngineOpenStreetMapAccesskey "O">
+<!ENTITY localizeEngineGoogleMapsLabel "Google Térkép">
+<!ENTITY localizeEngineGoogleMapsAccesskey "G">
+<!ENTITY localizeEngineBingMapsLabel "Bing Térképek">
+<!ENTITY localizeEngineBingMapsAccesskey "B">
+<!ENTITY localizeTargetLabel "Nyitott külső linkek:">
+<!ENTITY localizeTargetInLabel "Thunderbird belül">
+<!ENTITY localizeTargetInAccesskey "b">
+<!ENTITY localizeTargetOutLabel "Thunderbird kívül">
+<!ENTITY localizeTargetOutAccesskey "k">
+<!ENTITY fnLabelExplanation "Lehetőség van a megszokott módon névjegyzék állítja elő az megjelenített neve. Ez a képlet áll blokkok által közrezárt „()”. Két része van ezekben a blokkokban által határolt „|”. Az első rész alkalmazandó, ha a kifejezés részt, például a {{1}}, nem nulla, a második része alkalmazandó, ha a kifejezés részt null.">
+<!ENTITY fnFormulaLabel "Képlet">
+<!ENTITY fnFormulaAccesskey "P">
+<!ENTITY resetfnFormulaLabel "Alapértelmezés">
+<!ENTITY resetFnFormulaAccesskey "p">
+<!ENTITY miscEdittingGroupboxLabel "Különféle">
+<!ENTITY cardCreationVersionLabel "Alapértelmezett vCard verzió:">
+<!ENTITY preferEmailEditionLabel "Dupla kattintás a névjegyre a névjegy szerkesztés helyett üzenet írás">
+<!ENTITY preferEmailEditionAccesskey "D">
+
+<!ENTITY typesGroupboxLabel "Típusok">
+<!ENTITY typesCategoryAdrLabel "Cím">
+<!ENTITY typesCategoryAdrAccesskey "C">
+<!ENTITY typesCategoryEmailLabel "Email">
+<!ENTITY typesCategoryEmailAccesskey "m">
+<!ENTITY typesCategoryImppLabel "IMPP">
+<!ENTITY typesCategoryImppAccesskey "I">
+<!ENTITY typesCategoryTelLabel "Telefon">
+<!ENTITY typesCategoryTelAccesskey "f">
+<!ENTITY typesCategoryUrlLabel "Webcím">
+<!ENTITY typesCategoryUrlAccesskey "W">
+<!ENTITY typesCodeLabel "Kód">
+<!ENTITY typesLabelLabel "Címke">
+<!ENTITY addTypeLabel "Új...">
+<!ENTITY addTypeAccesskey "j">
+<!ENTITY renameTypeLabel "Szerkesztés...">
+<!ENTITY renameTypeAccesskey "z">
+<!ENTITY deleteTypeLabel "Törlés...">
+<!ENTITY deleteTypeAccesskey "T">
+<!ENTITY preferenceGroupboxLabel "PREF mező">
+<!ENTITY preferenceLabel "PREF mező címke">
+<!ENTITY preferenceAccesskey "P">
+<!ENTITY preferenceValueLabel "PREF mező érték címke (csak vCard 4.0)">
+<!ENTITY preferenceValueAccesskey "é">
+
+<!ENTITY IMPPGroupboxWarn "Internet kommunikációs Jegyzőkönyv beállítási.">
+<!ENTITY IMPPGroupboxLabel "Internetes kommunikáció">
+<!ENTITY IMPPCodeLabel "Kód">
+<!ENTITY IMPPLabelLabel "Címke">
+<!ENTITY IMPPProtocolLabel "Jegyzőkönyv">
+<!ENTITY addIMPPLabel "Új...">
+<!ENTITY addIMPPAccesskey "j">
+<!ENTITY renameIMPPLabel "Szerkesztés...">
+<!ENTITY renameIMPPAccesskey "z">
+<!ENTITY deleteIMPPLabel "Törlés">
+<!ENTITY deleteIMPPAccesskey "T">
+
+<!ENTITY customFieldsPanelLabel "Határozza meg a saját egyéni mezőket.">
+<!ENTITY customFieldName "Mező neve">
+<!ENTITY customFieldLabel "Mezőcímkét">
+
+<!ENTITY orgWarn "A mező ORG tartalmazhat strukturált szöveges érték komponensekből álló amelyeket pontosvessző karaktert (például: cég;szolgáltatás;osztály). Az alábbi mezőket a részegység megnevezésére címkék ezt a struktúrát.">
+
+<!ENTITY listPanelLabel "Ha a kiszolgáló nem támogatja a kategóriákat (például: Google, Apple, Zimbra, stb), listák egy jó módja annak, hogy küldjön e-mailt a csoportoknak. vCard 3.0 nem támogatja natívan listákat, de ez lehet elérni egyéni mezőket, így ha a használni kívánt listákat vCard 3.0, meg kell határozni ezeket a mezőket.">
+<!ENTITY listGroupboxLabel "Listák egyéni mezők">
+<!ENTITY kindCustomLabel "Fajta">
+<!ENTITY kindCustomAccesskey "F">
+<!ENTITY memberCustomLabel "Tag">
+<!ENTITY memberCustomAccesskey "T">
+
+<!ENTITY syncGroupboxLabel "Összehangolás">
+<!ENTITY syncWarn "Összehangolás terjed a módosítások egy távoli szerver és a kiszolgáló módosításokat az Ön számára.">
+<!ENTITY initialSyncLabel "Thunderbird indításkor összehangolási futtatása">
+<!ENTITY initialSyncAccesskey "f">
+<!ENTITY solveConflictsLabel "Ha ugyanaz névjegy volt helyi és szerver frissített:">
+<!ENTITY solveConflictsLocalLabel "Inkább a helyi módosítás">
+<!ENTITY solveConflictsLocalAccesskey "h">
+<!ENTITY solveConflictsRemoteLabel "Inkább a szerver módosítás">
+<!ENTITY solveConflictsRemoteAccesskey "s">
+<!ENTITY solveConflictsUserLabel "Kérdezze felhasználó">
+<!ENTITY solveConflictsUserAccesskey "K">
+<!ENTITY autoSyncGroupboxLabel "Időszakos összehangolása">
+<!ENTITY autoSyncLabel "Engedélyezze időszakos összehangolás">
+<!ENTITY autoSyncAccesskey "E">
+<!ENTITY autoSyncIntervalLabel "Rendszeres összehangolás időköze (perc)">
+<!ENTITY autoSyncIntervalAccesskey "i">
+<!ENTITY requestsGroupboxLabel "Kérések">
+<!ENTITY requestsTimeoutLabel "Időkorlát (másodperc)">
+<!ENTITY requestsTimeoutAccesskey "I">
+<!ENTITY multigetLabel "GET kéréseket, csoport névjegyek">
+<!ENTITY multigetAccesskey "G">
+<!ENTITY advancedSyncGroupboxLabel "Fejlett tulajdonságok">
+<!ENTITY decodeReportLabel "Megfejt webcímek REPORT kérdésekért">
+<!ENTITY decodeReportAccesskey "M">
+
+<!ENTITY miscEmailGroupboxLabel "Üzenet küldés">
+<!ENTITY preferEmailPrefLabel "Inkább e-mail címek jelölt részesített">
+<!ENTITY preferEmailPrefAccesskey "r">
+<!ENTITY preferEmailPrefWarn "Ha e-mail cím nincs jelölve 'PREFerált', az üzenetet küldi, hogy minden névjegy email címét.">
+<!ENTITY attachvCardWarn "Ahhoz, hogy automatikusan hozzáadni egy vCard e-mailjeit, válasszon ki egy vCard az egyes e-mail fiókhoz. Ha be van kapcsolva, névjegyzéek csatolja ezt vCard minden kimenő e-mail fiókból.">
+<!ENTITY attachvCardGroupboxLabel "vCard-csatlakozásra">
+<!ENTITY mailAccountsEnabledLabel "Engedélyezve">
+<!ENTITY mailAccountsNameLabel "Postafiók">
+<!ENTITY mailAccountsFileNameLabel "Csatolt fájl">
+<!ENTITY mailAccountsFnLabel "Névjegy">
+<!ENTITY choosevCardLabel "vCard kiválasztás">
+<!ENTITY choosevCardAccesskey "v">
+<!ENTITY displayvCardLabel "vCard nézes">
+<!ENTITY displayvCardAccesskey "n">
+
+<!ENTITY birthdayListWarn "Születésnapok csak rákeresett névjegyzéket.">
+<!ENTITY addressBooksGroupboxLabel "Minden mappa">
+<!ENTITY calendarsGroupboxLabel "Naptár">
+<!ENTITY searchGroupboxLabel "Keresés">
+<!ENTITY searchInNoteLabel "Születésnapok a jegyzetek mezőben keresés">
+<!ENTITY searchInNoteTooltip "A jegyzétek mezőben a szöveget (elválasztó legyen, és a dátum formátum legyen az egyik alább): Születésnap:tárgy:éééé.hh.nn.">
+<!ENTITY searchInNoteAccesskey "S">
+<!ENTITY dateFormatLabel "Várható dátum formátum">
+<!ENTITY dateFormatAccesskey "V">
+
+<!ENTITY remindersTabLabel "Emlékeztetők">
+<!ENTITY remindViaPopupWindowGroupboxLabel "Emlékeztesd keresztül felugró ablakban">
+<!ENTITY numberOfDaysForSearchingLabel "Napok száma, hogy ellenőrizze születésnap">
+<!ENTITY numberOfDaysForSearchingAccesskey "s">
+<!ENTITY showPopupOnStartupLabel "Indításkor felugró ablakban megjelenítése">
+<!ENTITY showPopupOnStartupAccesskey "f">
+<!ENTITY showPeriodicPopupLabel "Napi felugró ablak megjelenítése">
+<!ENTITY showPeriodicPopupAccesskey "a">
+<!ENTITY periodicPopupTimeLabel "Idő megjelenítése (óó:pp)">
+<!ENTITY periodicPopupTimeAccesskey "I">
+<!ENTITY showPopupEvenIfNoBirthdayLabel "Amikor születésnapi lista üres, felugró ablak megjelenítése">
+<!ENTITY showPopupEvenIfNoBirthdayAccesskey "ü">
+<!ENTITY remindViaLightningGroupboxLabel "Thunderbird Lightning naptár kiegésztő keresztül emlékeztetés">
+<!ENTITY numberOfDaysForWritingLabel "Napok száma előre születésnapok megjelenítése">
+<!ENTITY numberOfDaysForWritingAccesskey "e">
+<!ENTITY syncWithLightningOnStartupLabel "Összehangolni Lightning indításkor">
+<!ENTITY syncWithLightningOnStartupAccesskey "L">
+<!ENTITY calendarEntryTitleLabel "Naptári esemény címe">
+<!ENTITY calendarEntryTitleTooltip "Naptári esemény sablon címét. A bejelentésnek tartalmaznia kell a két helyőrzők &#37;S, illetve helyébe nevét és életkorát.  Ha a mező üres egy szabványos üzenet jelentés.">
+<!ENTITY calendarEntryTitleAccesskey "C">
+<!ENTITY calendarEntryTimeLabel "Naptár esemény idő (óó:pp)">
+<!ENTITY calendarEntryTimeAccesskey "i">
+<!ENTITY calendarEntryWholeDayLabel "Naptár esemény egész nap">
+<!ENTITY calendarEntryWholeDayAccesskey "e">
+<!ENTITY calendarEntryAlarmLabel "Napok száma előtt naptár esemény értesítése">
+<!ENTITY calendarEntryAlarmTooltip "Írja hany nap előlegként szeretnél értesítés. Ha dátum mező üres, akkor nem lenne riasztást.">
+<!ENTITY calendarEntryAlarmAccesskey "n">
+<!ENTITY calendarEntryCategoriesLabel "Naptári események kategória">
+<!ENTITY calendarEntryCategoriesTooltip "Egy vagy több kategóriát, vesszővel elválasztva. Ha a mező üres, akkor nincs kategória.">
+<!ENTITY calendarEntryCategoriesAccesskey "g">

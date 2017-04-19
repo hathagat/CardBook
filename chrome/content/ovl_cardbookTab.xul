@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookMain.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookButtons.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookCheckboxes.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookTreeChildrens.css" type="text/css"?>
+
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookBar.xul"?>
+
+<!DOCTYPE window [
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+	<!ENTITY % categoriesDTD SYSTEM "chrome://cardbook/locale/wdw_categoriesEdition.dtd"> %categoriesDTD;
+	<!ENTITY % cardbookDTD SYSTEM "chrome://cardbook/locale/wdw_cardbook.dtd"> %cardbookDTD;
+	<!ENTITY % namesDTD SYSTEM "chrome://cardbook/locale/wdw_nameEdition.dtd"> %namesDTD;
+	<!ENTITY % bdayDTD SYSTEM "chrome://cardbook/locale/wdw_bdayEdition.dtd"> %bdayDTD;
+	<!ENTITY % orgDTD SYSTEM "chrome://cardbook/locale/wdw_orgEdition.dtd"> %orgDTD;
+	<!ENTITY % adrDTD SYSTEM "chrome://cardbook/locale/wdw_adrEdition.dtd"> %adrDTD;
+	<!ENTITY % listsDTD SYSTEM "chrome://cardbook/locale/wdw_lists.dtd"> %listsDTD;
+	<!ENTITY % logDTD SYSTEM "chrome://cardbook/locale/wdw_logEdition.dtd"> %logDTD;
+	<!ENTITY % configurationDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookConfiguration.dtd"> %configurationDTD;
+]>
+
+<overlay id="ovl_cardbookTab" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="ovl_cardbook.js"/>
+	<script src="wdw_cardbook.js"/>
+	<script src="chrome://cardbook/content/preferences/cardbookPreferences.js"/>
+	<script src="cardbookSynchronization.js"/>
+	<script src="cardbookUtils.js"/>
+	<script src="cardbookObserver.js"/>
+	<script src="wdw_log.js"/>
+	<script src="cardbookCardParser.js"/>
+	<script src="cardbookDirTree.js"/>
+	<script src="cardbookMailPopularity.js"/>
+	<script src="chrome://cardbook/content/migrate/wdw_migrate.js"/>
+	<script src="chrome://cardbook/content/birthdays/cardbookBirthdaysUtils.js"/>
+	<script src="chrome://cardbook/content/cardbookElementTools.js"/>
+	<script src="chrome://cardbook/content/cardbookTypes.js"/>
+	<script src="chrome://cardbook/content/cardEdition/wdw_imageEdition.js"/>
+	<script src="chrome://cardbook/content/cardEdition/wdw_cardEdition.js"/>
+	<script src="chrome://cardbook/content/complexSearch/cardbookComplexSearch.js"/>
+	<script src="chrome://cardbook/content/mailContact/ovl_cardbookMailContacts.js"/>
+
+	<tabpanels id="tabpanelcontainer">
+		<vbox id="cardbookTabPanel" flex="1" onkeypress="wdw_cardbook.chooseActionForKey(event);">
+		
+			<popupset id="cardbook-popupset"/>
+			<toolbox id="cardbook-toolbox" context="cardbook-toolbar-context"/>
+			
+			<menupopup id="adrTreeContextMenu"/>
+			<menupopup id="telTreeContextMenu"/>
+			<menupopup id="emailTreeContextMenu"/>
+			<menupopup id="imppTreeContextMenu"/>
+			<menupopup id="urlTreeContextMenu"/>
+			<menupopup id="accountsOrCatsTreeContextMenu"/>
+			<menupopup id="cardsTreeContextMenu"/>
+			<menupopup id="listsContextMenu"/>
+			
+			<hbox id="mainHbox" flex="1">
+				<vbox id="leftPaneVbox" persist="width collapsed">
+					<tree id="accountsOrCatsTree"
+						class="cardbookTreeClass cardbookAccountTreeClass"
+						seltype="single"
+						flex="1" editable="true" context="accountsOrCatsTreeContextMenu" enableColumnDrag="false"
+						hidecolumnpicker="true" onkeyup="wdw_cardbook.selectAccountOrCatInNoSearch();" onkeydown="wdw_cardbook.selectAccountOrCatInNoSearch();">
+						<treecols>
+							<treecol id="accountEnabled" type="checkbox" editable="true" width="17" hideheader="true" persist="width ordinal hidden" tooltiptext="&enableAccountsTooltip;"/>
+							<treecol id="accountTypeCheckbox" type="checkbox" editable="false" width="20" hideheader="true" persist="width ordinal hidden"/>
+							<treecol id="accountColor" editable="false" width="17" hideheader="true" persist="width ordinal hidden" tooltiptext="&colorAccountsTooltip;"/>
+							<treecol id="accountName"
+								flex="1" persist="width ordinal hidden" primary="true"
+								label="&accountsOrCatsTreeLabel;"
+								crop="center"/>
+							<treecol id="accountId" persist="width ordinal hidden" hidden="true" hideheader="true"/>
+							<treecol id="accountType" persist="width ordinal hidden" hidden="true" hideheader="true"/>
+							<treecol id="accountReadOnly" type="checkbox" persist="width ordinal hidden" width="17" hideheader="true" tooltiptext="&readonlyAccountsTooltip;"/>
+							<treecol id="dummyForScroll" type="checkbox" persist="width ordinal hidden" width="17" hideheader="true"/>
+						</treecols>
+						<treechildren id="accountsOrCatsTreeChildren" flex="1" ondragstart="wdw_cardbook.startDrag(event, this);" ondrop="wdw_cardbook.dragCards(event);"
+									 onclick="wdw_cardbook.selectAccountOrCatInNoSearch();" ondblclick="wdw_cardbook.doubleClickAccountOrCat(event);"/>
+					</tree>
+				</vbox>
+
+				<splitter id="dirTreeSplitter" collapse="before" persist="state orient" class="cardbookVerticalSplitterClass" oncommand="ovl_cardbookLayout.changeResizePanes('viewABPane', true);"/>
+
+				<box id="cardsBox" flex="1">
+					<hbox id="rightPaneUpHbox" flex="1" persist="width height collapsed">
+						<tree id="cardsTree" class="cardbookTreeClass cardbookCardsTreeClass" context="cardsTreeContextMenu" flex="1" enableColumnDrag="true" persist="height sortDirection sortResource" sortDirection="ascending" sortResource="lastname"
+							onkeyup="wdw_cardbook.selectCard(event);" onkeydown="wdw_cardbook.selectCard(event);" onclick="wdw_cardbook.sortTrees(event);">
+							<treecols>
+								<treecol id="lastname" label="&lastnameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="firstname" label="&firstnameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="othername" label="&othernameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="prefixname" label="&prefixnameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="suffixname" label="&suffixnameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="fn" label="&fnColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="nickname" label="&nicknameColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="gender" label="&genderColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="bday" label="&bdayColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispadr" label="&dispadrColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="disphomeadr" label="&disphomeadrColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispworkadr" label="&dispworkadrColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="disptel" label="&disptelColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="disphometel" label="&disphometelColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispworktel" label="&dispworktelColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispcelltel" label="&dispcelltelColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispemail" label="&dispemailColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="disphomeemail" label="&disphomeemailColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispworkemail" label="&dispworkemailColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="mailer" label="&mailerColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="tz" label="&tzColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="geo" label="&geoColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="title" label="&titleColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="role" label="&roleColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="org" label="&orgColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispcategories" label="&categoriesColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="note" label="&noteColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="prodid" label="&prodidColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="sortstring" label="&sortstringColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="uid" label="&uidColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispurl" label="&dispurlColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="version" label="&versionColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="class1" label="&class1ColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dispimpp" label="&dispimppColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="dirPrefId" label="&dirPrefIdColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="kind" label="&kindColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="rev" label="&revColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="cardurl" label="&cardurlColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+								<splitter class="tree-splitter"/>
+								<treecol id="etag" label="&etagColumnLabel;" flex="1" persist="width ordinal hidden" style="text-align:left" hidden="true" class="sortDirectionIndicator" sortDirection="ascending"/>
+							</treecols>
+							<treechildren id="cardsTreeChildren" ondragstart="wdw_cardbook.startDrag(event, this);" ondblclick="wdw_cardbook.doubleClickCardsTree(event);"/>
+						</tree>
+					</hbox>
+					
+					<splitter id="resultsSplitterClassical" collapse="after" orient="horizontal" persist="state orient" class="cardbookVerticalSplitterClass" oncommand="ovl_cardbookLayout.changeResizePanes('viewABContact', true);"/>
+
+					<splitter id="resultsSplitterModern" collapse="after" orient="vertical" persist="state orient" class="cardbookHorizontalSplitterClass" oncommand="ovl_cardbookLayout.changeResizePanes('viewABContact', true);"/>
+
+					<hbox id="rightPaneDownHbox" flex="1" context="" persist="width height collapsed" class="cardbookBackgroundColorClass">
+						<vbox flex="1">
+							<tabbox id="cardbookTabbox" flex="1">
+								
+								<tabs>
+									<tab id="generalTab" label="&generalTabLabel;"/>
+									<tab id="listTab" label="&listTabLabel;"/>
+									<tab id="mailPopularityTab" label="&mailPopularityTabLabel;"/>
+									<tab id="technicalTab" label="&technicalTabLabel;"/>
+									<tab id="vcardTab" label="&vcardTabLabel;"/>
+								</tabs>
+								
+								<tabpanels flex="1">
+									<tabpanel orient="vertical" style="overflow:auto">
+										<hbox flex="1">
+											<vbox flex="1">
+												<hbox align="center" flex="1">
+													<vbox flex="1">
+														<groupbox id="fnGroupbox">
+															<caption id="fnLabel" label="&fnLabel;" class="header"/>
+															<hbox flex="1">
+																<image id="dummyFnPrefBox" class="cardbookNotPrefClass"/>
+																<textbox id="fnTextBox" flex="1"/>
+															</hbox>
+														</groupbox>
+													</vbox>
+												</hbox>
+												<hbox id="persBox" flex="1">
+													<groupbox id="persGroupbox" flex="1">
+														<caption label="&persTitleLabel;" class="header"/>
+														<hbox flex="1">
+															<image id="dummyPersPrefBox" class="cardbookNotPrefClass"/>
+															<grid align="center" flex="1">
+																<columns>
+																	<column/>
+																	<column flex="1"/>
+																</columns>
+													
+																<rows>
+																	<row id="lastnameRow" align="center">
+																		<label id="lastnameLabel" value="&lastnameLabel;" control="lastnameTextBox" class="header"/>
+																		<textbox id="lastnameTextBox"/>
+																	</row>
+																	<row id="firstnameRow" align="center">
+																		<label id="firstnameLabel" value="&firstnameLabel;" control="firstnameTextBox" class="header"/>
+																		<textbox id="firstnameTextBox"/>
+																	</row>
+																	<row id="othernameRow" align="center">
+																		<label id="othernameLabel" value="&othernameLabel;" control="othernameTextBox" class="header"/>
+																		<textbox id="othernameTextBox"/>
+																	</row>
+																	<row id="prefixnameRow" align="center">
+																		<label id="prefixnameLabel" value="&prefixnameLabel;" control="prefixnameTextBox" class="header"/>
+																		<textbox id="prefixnameTextBox"/>
+																	</row>
+																	<row id="suffixnameRow" align="center">
+																		<label id="suffixnameLabel" value="&suffixnameLabel;" control="suffixnameTextBox" class="header"/>
+																		<textbox id="suffixnameTextBox"/>
+																	</row>
+																	<row id="nicknameRow" align="center">
+																		<label id="nicknameLabel" value="&nicknameLabel;" control="nicknameTextBox" class="header"/>
+																		<textbox id="nicknameTextBox"/>
+																	</row>
+																	<row id="genderRow" align="center">
+																		<label id="genderLabel" value="&genderLabel;" control="genderTextBox" class="header"/>
+																		<textbox id="genderTextBox"/>
+																	</row>
+																	<row id="bdayRow" align="center">
+																		<label value="&bdayLabel;" control="bdayTextBox" class="header"/>
+																		<textbox id="bdayTextBox"/>
+																	</row>
+																	<row id="customField1NameRow" align="center">
+																		<label id="customField1NameLabel" control="customField1NameTextBox" class="header"/>
+																		<textbox id="customField1NameTextBox"/>
+																	</row>
+																	<row id="customField2NameRow" align="center">
+																		<label id="customField2NameLabel" control="customField2NameTextBox" class="header"/>
+																		<textbox id="customField2NameTextBox"/>
+																	</row>
+																</rows>
+															</grid>
+														</hbox>
+													</groupbox>
+												</hbox>
+												<hbox id="orgBox" flex="1">
+													<groupbox id="orgGroupbox" flex="1">
+														<caption label="&orgTitleLabel;" class="header"/>
+														<hbox flex="1">
+															<image id="dummyOrgPrefBox" class="cardbookNotPrefClass"/>
+															<grid align="center" flex="1">
+																<columns>
+																	<column/>
+																	<column flex="1"/>
+																</columns>
+													
+																<rows id="orgRows"/>
+															</grid>
+														</hbox>
+													</groupbox>
+												</hbox>
+											</vbox>
+											<vbox align="center" width="170px">
+												<hbox id="imageBox" align="center" height="170px">
+													<html:img id="imageForSizing" hidden="true"/>
+													<image id="defaultCardImage"/>
+												</hbox>
+											</vbox>
+										</hbox>
+										<hbox flex="1">
+											<vbox flex="1">
+												<grid align="center" flex="1">
+													<columns>
+														<column/>
+														<column/>
+														<column/>
+														<column flex="1"/>
+													</columns>
+													<rows>
+														<groupbox id="categoriesGroupbox" flex="1">
+															<caption label="&categoriesGroupboxLabel;" class="header"/>
+															<hbox flex="1">
+																<image id="dummyCatPrefBox" class="cardbookNotPrefClass"/>
+																<textbox id="categoriesTextBox" flex="1"/>
+															</hbox>
+														</groupbox>
+														<groupbox id="emailGroupbox" flex="1"/>
+														<groupbox id="telGroupbox" flex="1"/>
+														<groupbox id="adrGroupbox" flex="1"/>
+														<groupbox id="imppGroupbox" flex="1"/>
+														<groupbox id="urlGroupbox" flex="1"/>
+													</rows>
+												</grid>
+											</vbox>
+										</hbox>
+										<hbox flex="1">
+											<groupbox id="noteGroupbox" flex="1">
+												<caption label="&noteTabLabel;" class="header"/>
+												<hbox flex="1">
+													<image id="dummyNotePrefBox" class="cardbookNotPrefClass"/>
+													<vbox flex="1">
+														<textbox id="noteTextBox" multiline="true"/>
+													</vbox>
+												</hbox>
+											</groupbox>
+										</hbox>
+										<spacer flex="100"/>
+									</tabpanel>
+				
+									<tabpanel orient="vertical" style="overflow:auto">
+										<vbox id="listGroupbox" flex="1">
+											<grid align="center" flex="1">
+												<columns>
+													<column/>
+													<column flex="1"/>
+												</columns>
+												<rows>
+													<groupbox id="addedCardsGroupbox" flex="1">
+														<caption label="&addedCardsGroupboxLabel;" class="header"/>
+														<vbox id="addedCardsBox" flex="1"/>
+													</groupbox>
+												</rows>
+											</grid>
+											<spacer flex="100"/>
+										</vbox>
+									</tabpanel>
+				
+									<tabpanel orient="vertical" style="overflow:auto">
+										<groupbox id="mailPopularityReadWriteGroupbox" flex="1">
+											<caption label="&mailPopularityTabLabel;" class="header"/>
+											<grid>
+												<columns flex="1">
+													<column/>
+													<column flex="1"/>
+												</columns>
+												<rows id="mailPopularityRows"/>
+											</grid>
+										</groupbox>
+										<spacer flex="100"/>
+									</tabpanel>
+				
+									<tabpanel orient="vertical" style="overflow:auto">
+										<vbox id="miscBox">
+											<groupbox id="miscGroupbox" flex="1">
+												<caption label="&miscGroupboxLabel;" class="header"/>
+												<hbox flex="1" align="center">
+													<grid align="center" flex="1">
+														<columns>
+															<column/>
+															<column flex="1"/>
+														</columns>
+											
+														<rows>
+															<row id="mailerRow" align="center">
+																<label id="mailerLabel" value="&mailerLabel;" control="mailerTextBox" class="header"/>
+																<textbox id="mailerTextBox"/>
+															</row>
+															<row id="geoRow" align="center">
+																<label id="geoLabel" value="&geoLabel;" control="geoTextBox" class="header"/>
+																<textbox id="geoTextBox"/>
+															</row>
+															<row id="sortstringRow" align="center">
+																<label id="sortstringLabel" value="&sortstringLabel;" control="sortstringTextBox" class="header"/>
+																<textbox id="sortstringTextBox"/>
+															</row>
+															<row id="class1Row" align="center">
+																<label id="class1Label" value="&class1Label;" control="class1TextBox" class="header"/>
+																<textbox id="class1TextBox"/>
+															</row>
+															<row id="tzRow" align="center">
+																<label id="tzLabel" value="&tzLabel;" control="tzTextBox" class="header"/>
+																<textbox id="tzTextBox"/>
+															</row>
+															<row id="agentRow" align="center">
+																<label id="agentLabel" value="&agentLabel;" control="agentTextBox" class="header"/>
+																<textbox id="agentTextBox"/>
+															</row>
+															<row id="keyRow" align="center">
+																<label id="keyLabel" value="&keyLabel;" control="keyTextBox" class="header"/>
+																<textbox id="keyTextBox"/>
+															</row>
+															<row id="photoLocalURIRow" align="center">
+																<label id="photolocalURILabel" value="&photolocalURILabel;" control="photolocalURITextBox" class="header"/>
+																<textbox id="photolocalURITextBox"/>
+															</row>
+															<row id="photoURIRow" align="center">
+																<label id="photoURILabel" value="&photoURILabel;" control="photoURITextBox" class="header"/>
+																<textbox id="photoURITextBox"/>
+															</row>
+															<row id="logoLocalURIRow" align="center">
+																<label id="logolocalURILabel" value="&logolocalURILabel;" control="logolocalURITextBox" class="header"/>
+																<textbox id="logolocalURITextBox"/>
+															</row>
+															<row id="logoURIRow" align="center">
+																<label id="logoURILabel" value="&logoURILabel;" control="logoURITextBox" class="header"/>
+																<textbox id="logoURITextBox"/>
+															</row>
+															<row id="soundLocalURIRow" align="center">
+																<label id="soundlocalURILabel" value="&soundlocalURILabel;" control="soundlocalURITextBox" class="header"/>
+																<textbox id="soundlocalURITextBox"/>
+															</row>
+															<row id="soundURIRow" align="center">
+																<label id="soundURILabel" value="&soundURILabel;" control="soundURITextBox" class="header"/>
+																<textbox id="soundURITextBox"/>
+															</row>
+														</rows>
+													</grid>
+												</hbox>
+											</groupbox>
+										</vbox>
+												
+										<vbox id="techBox">
+											<groupbox id="techGroupbox" flex="1">
+												<caption label="&techGroupboxLabel;" class="header"/>
+												<hbox flex="1" align="center">
+													<grid align="center" flex="1">
+														<columns>
+															<column/>
+															<column flex="1"/>
+														</columns>
+											
+														<rows>
+															<row id="dirPrefIdRow" align="center">
+																<label id="dirPrefIdLabel" value="&dirPrefIdLabel;" control="dirPrefIdTextBox" class="header"/>
+																<textbox id="dirPrefIdTextBox"/>
+															</row>
+															<row id="versionRow" align="center">
+																<label id="versionLabel" value="&versionLabel;" control="versionTextBox" class="header"/>
+																<textbox id="versionTextBox"/>
+															</row>
+															<row id="prodidRow" align="center">
+																<label id="prodidLabel" value="&prodidLabel;" control="prodidTextBox" class="header"/>
+																<textbox id="prodidTextBox"/>
+															</row>
+															<row id="uidRow" align="center">
+																<label id="uidLabel" value="&uidLabel;" control="uidTextBox" class="header"/>
+																<textbox id="uidTextBox"/>
+															</row>
+															<row id="cardurlRow" align="center">
+																<label id="cardurlLabel" value="&cardurlLabel;" control="cardurlTextBox" class="header"/>
+																<textbox id="cardurlTextBox"/>
+															</row>
+															<!-- <row id="cacheuriRow" align="center"> -->
+																<!-- <label id="cacheuriLabel" value="&cacheuriLabel;" control="cacheuriTextBox" class="header"/> -->
+																<!-- <textbox id="cacheuriTextBox"/> -->
+															<!-- </row> -->
+															<row id="revRow" align="center">
+																<label id="revLabel" value="&revLabel;" control="revTextBox" class="header"/>
+																<textbox id="revTextBox"/>
+															</row>
+															<row id="etagRow" align="center">
+																<label id="etagLabel" value="&etagLabel;" control="etagTextBox" class="header"/>
+																<textbox id="etagTextBox"/>
+															</row>
+														</rows>
+													</grid>
+												</hbox>
+											</groupbox>
+										</vbox>
+												
+										<vbox id="othersBox" flex="1">
+											<groupbox id="othersGroupbox" flex="1">
+												<caption label="&othersGroupboxLabel;" class="header"/>
+												<hbox flex="1">
+													<textbox id="othersTextBox" flex="1" multiline="true" wrap="virtual"/>
+												</hbox>
+											</groupbox>
+										</vbox>
+									</tabpanel>
+				
+									<tabpanel orient="vertical" style="overflow:auto">
+										<textbox id="vcardTextBox" flex="1" multiline="true" wrap="virtual"/>
+									</tabpanel>
+								</tabpanels>
+							</tabbox>
+						</vbox>
+					</hbox>
+				</box>
+			</hbox>
+		</vbox>
+	</tabpanels>
+</overlay>

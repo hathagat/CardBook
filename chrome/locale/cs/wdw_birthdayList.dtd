@@ -1,0 +1,12 @@
+<!ENTITY daysLeftColumnLabel "Zbývá dnů">
+<!ENTITY nameColumnLabel "Jméno">
+<!ENTITY ageColumnLabel "Stáří">
+<!ENTITY dateOfBirthColumnLabel "Datum narození">
+<!ENTITY dateOfBirthFoundColumnLabel "Datum nalezeno">
+<!ENTITY emailColumnLabel "E-mail">
+<!ENTITY sendEmailLabel "Poslat e-mail">
+<!ENTITY sendEmailAccesskey "E">
+<!ENTITY syncLightningMenuItemLabel "Synch. s Lightningem">
+<!ENTITY syncLightningMenuAccesskey "S">
+<!ENTITY configurationButtonLabel "Konfigurace">
+<!ENTITY configurationButtonAccesskey "o">

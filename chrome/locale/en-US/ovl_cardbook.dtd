@@ -1,0 +1,39 @@
+<!ENTITY cardbookMenuItemLabel "CardBook">
+<!ENTITY cardbookMenuItemAccesskey "b">
+<!ENTITY cardbookMenuItemTooltip "Switch to the CardBook tab">
+
+<!ENTITY cardbookToolbarButtonLabel "CardBook">
+<!ENTITY cardbookToolbarButtonTooltip "Switch to the CardBook tab">
+
+<!ENTITY cardbookTabButtonLabel "CardBook">
+<!ENTITY cardbookTabButtonTooltip "Switch to the CardBook tab">
+
+<!ENTITY newCardBookCardMenuLabel "CardBook Contact...">
+<!ENTITY newCardBookCardMenuAccesskey "C">
+<!ENTITY addToCardBookMenuLabel "Add CardBook Contact">
+<!ENTITY addToCardBookMenuAccesskey "d">
+<!ENTITY editInCardBookMenuLabel "Edit CardBook Contact">
+<!ENTITY editInCardBookMenuAccesskey "E">
+<!ENTITY deleteInCardBookMenuLabel "Delete CardBook Contact">
+<!ENTITY deleteInCardBookMenuAccesskey "D">
+<!ENTITY IMPPMenuLabel "Connect To">
+<!ENTITY IMPPMenuAccesskey "o">
+<!ENTITY findAllEmailsFromContactMessengerLabel "Find emails related to this contact">
+<!ENTITY findAllEmailsFromContactMessengerAccesskey "c">
+<!ENTITY findEmailsFromEmailMessengerLabel "Find emails related to this email address">
+<!ENTITY findEmailsFromEmailMessengerAccesskey "e">
+<!ENTITY findAllEventsFromContactMessengerLabel "Find calendar events related to this contact">
+<!ENTITY findAllEventsFromContactMessengerAccesskey "c">
+<!ENTITY findEventsFromEmailMessengerLabel "Find calendar events related to this email address">
+<!ENTITY findEventsFromEmailMessengerAccesskey "e">
+
+<!ENTITY mailContext-addToCardBookMenuLabel "Add CardBook Contact...">
+<!ENTITY mailContext-addToCardBookMenuAccesskey "d">
+
+<!ENTITY addAllAttachementsToCardBookMenuLabel "To CardBook All...">
+<!ENTITY addAttachementToCardBookMenuLabel "To CardBook...">
+
+<!ENTITY cardbookABPaneItemLabel "Address Book Pane">
+<!ENTITY cardbookABPaneItemAccesskey "A">
+<!ENTITY cardbookContactPaneItemLabel "Contact Pane">
+<!ENTITY cardbookContactPaneItemAccesskey "O">

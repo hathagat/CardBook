@@ -1,0 +1,49 @@
+.search-value-custom[searchAttribute="cardbook#searchFrom"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerSearch");
+}
+
+.search-value-custom[searchAttribute="cardbook#searchTo"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerSearch");
+}
+
+.search-value-custom[searchAttribute="cardbook#searchCc"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerSearch");
+}
+
+.search-value-custom[searchAttribute="cardbook#searchBcc"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerSearch");
+}
+
+.search-value-custom[searchAttribute="cardbook#searchAll"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerSearch");
+}
+
+toolbarbutton.focusbutton {
+  -moz-user-focus: normal;
+}
+
+.ruleactiontarget[type="cardbook#addFrom"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerAction");
+  -moz-box-flex: 1;
+}
+
+.ruleactiontarget[type="cardbook#addTo"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerAction");
+  -moz-box-flex: 1;
+}
+
+.ruleactiontarget[type="cardbook#addCc"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerAction");
+  -moz-box-flex: 1;
+}
+
+.ruleactiontarget[type="cardbook#addBcc"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerAction");
+  -moz-box-flex: 1;
+}
+
+.ruleactiontarget[type="cardbook#addAll"] {
+  -moz-binding: url("chrome://cardbook/content/filters/bindings.xml#abPickerAction");
+  -moz-box-flex: 1;
+}
+

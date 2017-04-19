@@ -1,0 +1,8 @@
+<!ENTITY listTabLabel "Lista">
+<!ENTITY kindLabel "Tipologia">
+<!ENTITY kindAccesskey "K">
+<!ENTITY availableCardsGroupboxLabel "Contatti disponibili">
+<!ENTITY addedCardsGroupboxLabel "Lista dei contatti">
+<!ENTITY appendlistTreeLabel "Aggiungi alla lista">
+<!ENTITY deletelistTreeLabel "Rimuovi dalla lista">
+<!ENTITY editCardFromListLabel "Modifica questo contatto">

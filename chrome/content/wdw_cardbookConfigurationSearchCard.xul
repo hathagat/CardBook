@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window [
+	<!ENTITY % cardbookConfigurationSearchDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookConfigurationSearchCard.dtd"> %cardbookConfigurationSearchDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="wdw_cardbookConfigurationSearchCard.load();" resizable="true"
+	onclose="wdw_cardbookConfigurationSearchCard.cancel();"
+	id="wdw_cardbookConfigurationSearchCard" title="&wdw_cardbookConfigurationSearchCardTitle;"
+	persist="screenX screenY width height"
+	style="min-width:400px;min-height:200px;">
+	
+	<script src="cardbookUtils.js"/>
+	<script src="cardbookElementTools.js"/>
+	<script src="wdw_cardbookConfigurationSearchCard.js"/>
+
+	<keyset id="wdw_cardbookConfigurationSearchCard-keys">
+		<key keycode="VK_ESCAPE" oncommand="wdw_cardbookConfigurationSearchCard.cancel();"/>
+	</keyset>
+
+	<hbox flex="1">
+		<vbox flex="1">
+			<grid align="center" flex="1">
+				<columns>
+					<column/>
+					<column flex="1"/>
+				</columns>
+				<rows>
+					<row align="center">
+						<label value="&addressbookLabel;" control="addressbookMenulist"/>
+						<menulist id="addressbookMenulist" editable="true" oncommand="wdw_cardbookConfigurationSearchCard.changeAddressbook();">
+							<menupopup id="addressbookMenupopup"/>
+						</menulist>
+					</row>
+					<row align="center">
+						<label value="&contactLabel;" control="contactMenulist"/>
+						<menulist id="contactMenulist" editable="true">
+							<menupopup id="contactMenupopup" onpopupshowing="wdw_cardbookConfigurationSearchCard.loadContacts();"/>
+						</menulist>
+					</row>
+					<row align="center">
+						<label value="&filenameLabel;" control="filenameLabel"/>
+						<textbox id="filenameLabel"/>
+					</row>
+				</rows>
+			</grid>
+		</vbox>
+	</hbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="saveEditionLabel" label="&saveEditionLabel;" accesskey="&saveEditionAccesskey;" oncommand="wdw_cardbookConfigurationSearchCard.save();"/>
+		<button id="cancelEditionLabel" label="&cancelEditionLabel;" accesskey="&cancelEditionAccesskey;" oncommand="wdw_cardbookConfigurationSearchCard.cancel();"/>
+	</hbox>
+</window>

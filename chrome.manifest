@@ -1,0 +1,61 @@
+manifest components/cardbookAutocompleteSearch.manifest
+
+content  cardbook       chrome/content/
+
+locale   cardbook cs    chrome/locale/cs/
+locale   cardbook de    chrome/locale/de/
+locale   cardbook en-US chrome/locale/en-US/
+locale   cardbook fr    chrome/locale/fr/
+locale   cardbook hu    chrome/locale/hu/
+locale   cardbook it    chrome/locale/it/
+locale   cardbook nl    chrome/locale/nl/
+locale   cardbook pl    chrome/locale/pl/
+locale   cardbook pt-PT chrome/locale/pt-PT/
+locale   cardbook ru    chrome/locale/ru/
+
+skin     cardbook       classic/1.0 chrome/skin/
+
+# support for customizing toolbars
+style    chrome://global/content/customizeToolbar.xul chrome://cardbook/skin/toolbarButton.css
+style    chrome://global/content/customizeToolbar.xul chrome://cardbook/skin/cardbookButtons.css
+
+# support for CardBook, yellow stars, creation from emails, formatting email fields
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/ovl_cardbook.xul
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/ovl_cardbookContexts.xul
+
+# support for CardBook menu in composition window
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://cardbook/content/ovl_cardbookComposeMsg.xul
+
+# support for collected mail
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://cardbook/content/collected/ovl_collected.xul
+
+# support for expanding list
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://cardbook/content/lists/ovl_list.xul
+
+# support for search engines
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/filters/ovl_filters.xul
+
+# support for filter messages
+overlay  chrome://messenger/content/FilterEditor.xul chrome://cardbook/content/filters/ovl_filterEditor.xul
+
+# support for Lightning attendees
+overlay  chrome://calendar/content/calendar-event-dialog-attendees.xul chrome://cardbook/content/lightning/ovl_lightningAttendees.xul
+overlay  chrome://lightning/content/lightning-menus.xul chrome://cardbook/content/lightning/ovl_lightningMenus.xul
+
+# support for birthdays
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/birthdays/ovl_birthdays.xul
+
+# support for importing attachments
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/attachments/ovl_attachments.xul
+
+# support for attaching a vCard
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://cardbook/content/attachvCard/ovl_attachvCard.xul
+
+# support for CardBook Tab
+overlay  chrome://messenger/content/messenger.xul chrome://cardbook/content/ovl_cardbookTab.xul
+
+# support for Contacts sidebar
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://cardbook/content/contactsSidebar/ovl_cardbookContactsSidebarMain.xul
+
+# support for the message window
+overlay  chrome://messenger/content/messageWindow.xul chrome://cardbook/content/ovl_cardbookContexts.xul

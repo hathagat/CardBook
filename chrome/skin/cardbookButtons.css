@@ -1,0 +1,68 @@
+﻿#cardbookToolbarAddServerButton {
+	list-style-image: url("chrome://cardbook/skin/add_server_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarAddServerButton {
+	list-style-image: url("chrome://cardbook/skin/add_server_16_16.png");
+}
+
+#cardbookToolbarSyncButton {
+	list-style-image: url("chrome://cardbook/skin/sync_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarSyncButton {
+	list-style-image: url("chrome://cardbook/skin/sync_16_16.png");
+}
+
+#cardbookToolbarConfigurationButton {
+	list-style-image: url("chrome://cardbook/skin/configuration_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarConfigurationButton {
+	list-style-image: url("chrome://cardbook/skin/configuration_16_16.png");
+}
+
+#cardbookToolbarAddButton {
+	list-style-image: url("chrome://cardbook/skin/add_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarAddButton {
+	list-style-image: url("chrome://cardbook/skin/add_16_16.png");
+}
+
+#cardbookToolbarRemoveButton {
+	list-style-image: url("chrome://cardbook/skin/remove_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarRemoveButton {
+	list-style-image: url("chrome://cardbook/skin/remove_16_16.png");
+}
+
+#cardbookToolbarPrintButton {
+	list-style-image: url("chrome://cardbook/skin/print_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarPrintButton {
+	list-style-image: url("chrome://cardbook/skin/print_16_16.png");
+}
+
+#cardbookToolbarEditButton {
+	list-style-image: url("chrome://cardbook/skin/edit_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarEditButton {
+	list-style-image: url("chrome://cardbook/skin/edit_16_16.png");
+}
+
+#cardbookToolbarComplexSearch {
+	list-style-image: url("chrome://cardbook/skin/search_24_24.png");
+}
+
+toolbar[iconsize="small"] #cardbookToolbarComplexSearch {
+	list-style-image: url("chrome://cardbook/skin/search_16_16.png");
+}
+
+
+.cardbookButtonClass {
+	min-width: 20px !important;
+}

@@ -1,0 +1,166 @@
+<!ENTITY wdw_cardbookWindowLabel "CardBook">
+
+<!ENTITY accountsOrCatsTreeLabel "Adresboeken">
+<!ENTITY enableAccountsTooltip "In- of uitschakelen van zoeken en synchroniseren van adresboeken.">
+<!ENTITY colorAccountsTooltip "Kleur adresboek.">
+<!ENTITY readonlyAccountsTooltip "Zet adresboeken in lezen-/schrijven-modus of in alleen lezen-modus">
+
+<!ENTITY cardbookAccountMenuLabel "Adresboek">
+
+<!ENTITY cardbookAccountMenuAddServerLabel "Adresboek toevoegen">
+<!ENTITY cardbookAccountMenuEditServerLabel "Adresboek bewerken">
+<!ENTITY cardbookAccountMenuCloseServerLabel "Adresboek verwijderen">
+<!ENTITY cardbookAccountMenuSyncLabel "Adresboek synchroniseren">
+<!ENTITY cardbookAccountMenuSyncsLabel "Alle adresboeken synchroniseren">
+
+<!ENTITY cardbookContactsMenuLabel "Contactpersonen">
+
+<!ENTITY cardbookToolsMenuLabel "Tools">
+<!ENTITY cardbookToolsMenuBirthdayListLabel "Bekijk geboortedata-lijst">
+<!ENTITY cardbookToolsMenuSyncLightningLabel "Geboortedata toevoegen aan agenda">
+<!ENTITY cardbookToolsMenuFindAllDuplicatesLabel "Zoek overeenkomende contactpersonen in alle adresboeken">
+<!ENTITY cardbookToolsMenuFindSingleDuplicatesLabel "Zoek overeenkomende contactpersonen in huidige adresboek">
+
+<!ENTITY cardbookToolbarLabel "CardBook knoppenbalk">
+<!ENTITY cardbookToolbarAccesskey "C">
+<!ENTITY CustomizeCardBookToolbarLabel "Aanpassen...">
+<!ENTITY CustomizeCardBookToolbarAccesskey "A">
+<!ENTITY cardbookToolbarAddServerButtonLabel "Adresboek toevoegen">
+<!ENTITY cardbookToolbarAddServerButtonTooltip "Locaal of internt adresboek toevoegen">
+<!ENTITY cardbookToolbarSyncButtonLabel "Synchroniseren">
+<!ENTITY cardbookToolbarSyncButtonTooltip "Internet adresboeken synchroniseren">
+<!ENTITY cardbookToolbarConfigurationButtonLabel "Voorkeuren">
+<!ENTITY cardbookToolbarConfigurationButtonTooltip "CardBook voorkeuren">
+<!ENTITY cardbookToolbarAddButtonLabel "Contactpersoon toevoegen">
+<!ENTITY cardbookToolbarAddButtonTooltip "Nieuwe contactpersoon toestaan">
+<!ENTITY cardbookToolbarEditButtonLabel "Contactpersoon wijzigen">
+<!ENTITY cardbookToolbarEditButtonTooltip "Contactpersoon wijzigen toestaan">
+<!ENTITY cardbookToolbarRemoveButtonLabel "Contactpersoon verwijderen">
+<!ENTITY cardbookToolbarRemoveButtonTooltip "Contactpersoon verwijderen toestaan">
+<!ENTITY cardbookToolbarPrintButtonLabel "Afdrukvoorbeeld">
+<!ENTITY cardbookToolbarPrintButtonTooltip "Selectie afdrukken">
+<!ENTITY cardbookToolbarAppMenuButtonLabel "CardBook menu">
+<!ENTITY cardbookToolbarAppMenuButtonTooltip "CardBook menu">
+<!ENTITY cardbookToolbarSearchBoxLabel "Contactpersonen zoeken">
+<!ENTITY cardbookToolbarSearchBoxTooltip "Contactpersonen zoeken">
+<!ENTITY cardbookToolbarComplexSearchLabel "Geavanceerd zoeken">
+<!ENTITY cardbookToolbarComplexSearchTooltip "Via meerdere voorwaarden zoeken">
+<!ENTITY cardbookToolbarThMenuButtonLabel "AppMenu">
+<!ENTITY cardbookToolbarThMenuButtonTooltip "Het &brandShortName;-menu weergeven">
+
+<!ENTITY generalTabLabel "Algemeen">
+<!ENTITY mailPopularityTabLabel "Populariteit">
+<!ENTITY technicalTabLabel "Technisch">
+<!ENTITY vcardTabLabel "vCard">
+
+<!ENTITY lastnameColumnLabel "Achternaam">
+<!ENTITY firstnameColumnLabel "Voornaam">
+<!ENTITY othernameColumnLabel "Extra naam">
+<!ENTITY prefixnameColumnLabel "Voorvoegsel">
+<!ENTITY suffixnameColumnLabel "Achtervoegsel">
+<!ENTITY fnColumnLabel "Getoonde naam">
+<!ENTITY nicknameColumnLabel "Bijnaam">
+<!ENTITY genderColumnLabel "Geslacht">
+<!ENTITY bdayColumnLabel "Geboortedatum">
+<!ENTITY dispadrColumnLabel "Adressen">
+<!ENTITY disphomeadrColumnLabel "Huis adres">
+<!ENTITY dispworkadrColumnLabel "Werk adres">
+<!ENTITY disptelColumnLabel "Telefoonnummers">
+<!ENTITY disphometelColumnLabel "Huis telefoonnummer">
+<!ENTITY dispworktelColumnLabel "Werk telefoonnummer">
+<!ENTITY dispcelltelColumnLabel "Mobiel telefoonnummer">
+<!ENTITY dispemailColumnLabel "Emails">
+<!ENTITY disphomeemailColumnLabel "Huis email">
+<!ENTITY dispworkemailColumnLabel "Werk email">
+<!ENTITY mailerColumnLabel "Mailer">
+<!ENTITY tzColumnLabel "Tijdzone">
+<!ENTITY geoColumnLabel "Geo">
+<!ENTITY titleColumnLabel "Titel">
+<!ENTITY roleColumnLabel "Rol">
+<!ENTITY orgColumnLabel "Organisatie">
+<!ENTITY categoriesColumnLabel "Categorieën">
+<!ENTITY noteColumnLabel "Notities">
+<!ENTITY prodidColumnLabel "Prodid">
+<!ENTITY sortstringColumnLabel "Sorteerkenmerk">
+<!ENTITY uidColumnLabel "Uid">
+<!ENTITY dispurlColumnLabel "URL">
+<!ENTITY versionColumnLabel "Versie">
+<!ENTITY class1ColumnLabel "Klasse">
+<!ENTITY dispimppColumnLabel "Instant Messaging">
+<!ENTITY cardurlColumnLabel "Contactpersoon URL">
+<!ENTITY dirPrefIdColumnLabel "DirPrefId">
+<!ENTITY kindColumnLabel "Soort">
+<!ENTITY revColumnLabel "Rev">
+<!ENTITY etagColumnLabel "Etag">
+
+<!ENTITY categoriesGroupboxLabel "Categorieën">
+<!ENTITY noteTabLabel "Notities">
+
+<!ENTITY miscGroupboxLabel "Overig">
+<!ENTITY othersGroupboxLabel "Overig">
+<!ENTITY techGroupboxLabel "Technisch">
+<!ENTITY labelGroupboxLabel "Labels">
+<!ENTITY class1Label "Klasse">
+<!ENTITY geoLabel "Geo">
+<!ENTITY mailerLabel "Mailer">
+<!ENTITY agentLabel "Agent">
+<!ENTITY keyLabel "Key">
+<!ENTITY photolocalURILabel "Lokale foto">
+<!ENTITY logolocalURILabel "Lokaal logo">
+<!ENTITY soundlocalURILabel "Lokaal geluid">
+<!ENTITY photoURILabel "Foto">
+<!ENTITY logoURILabel "Logo">
+<!ENTITY soundURILabel "Geluid">
+<!ENTITY prodidLabel "Prodid">
+<!ENTITY sortstringLabel "Sorteerkenmerk">
+<!ENTITY uidLabel "UID">
+<!ENTITY versionLabel "Versie">
+<!ENTITY tzLabel "Tijdzone">
+
+<!ENTITY dirPrefIdLabel "dirPrefId">
+<!ENTITY cardurlLabel "Contactpersoon URL">
+<!ENTITY cacheuriLabel "Bestand van vCard">
+<!ENTITY revLabel "Rev">
+<!ENTITY etagLabel "Etag">
+
+<!ENTITY localizeadrTreeLabel "Localiseren">
+<!ENTITY toEmailEmailTreeLabel "Email entry">
+<!ENTITY ccEmailEmailTreeLabel "Email entry (copy / cc)">
+<!ENTITY bccemailemailTreeLabel "Email entry (blind copy / bcc)">
+<!ENTITY findemailemailTreeLabel "Zoek e-mails gerelateerd aan dit e-mail adres">
+<!ENTITY findeventemailTreeLabel "Zoek agenda-gebeurtenissen gerelateerd aan dit e-mail adres">
+<!ENTITY openURLTreeLabel "Open URL">
+
+<!ENTITY copyCardTreeLabel "Kopieëren entry">
+
+<!ENTITY toEmailCardFromAccountsOrCatsLabel "Email contactpersoon">
+<!ENTITY toEmailCardFromCardsLabel "Email contactpersoon">
+<!ENTITY ccEmailCardFromAccountsOrCatsLabel "Email contactpersoon (copy / cc)">
+<!ENTITY ccEmailCardFromCardsLabel "Email contactpersoon (copy / cc)">
+<!ENTITY bccEmailCardFromAccountsOrCatsLabel "Email contactpersoon (blind copy / bcc)">
+<!ENTITY bccEmailCardFromCardsLabel "Email contactpersoon (blind copy / bcc)">
+<!ENTITY categoryLabel "Categorie">
+<!ENTITY findEmailsFromCardsLabel "Zoek e-mails van contactpersoon">
+<!ENTITY findEventsFromCardsLabel "Zoek agenda-gebeurtenissen van contactpersoon">
+<!ENTITY localizeCardFromCardsLabel "Localiseren">
+<!ENTITY openURLCardFromCardsLabel "Open URLs van contactpersoon">
+<!ENTITY cutCardFromAccountsOrCatsLabel "Contactpersoon knippen">
+<!ENTITY cutCardFromCardsLabel "Contactpersoon knippen">
+<!ENTITY copyCardFromAccountsOrCatsLabel "Kopieer contactpersoon naar prikbord">
+<!ENTITY copyCardFromCardsLabel "Kopieer contactpersoon naar prikbord">
+<!ENTITY pasteCardFromAccountsOrCatsLabel "Plak contactpersoon van prikbord">
+<!ENTITY pasteCardFromCardsLabel "Plak contactpersoon van prikbord">
+<!ENTITY exportCardToFileLabel "Exporteer contactpersoon naar een bestand">
+<!ENTITY exportCardToDirLabel "Exporteer contactpersoon naar een map">
+<!ENTITY importCardFromFileLabel "Importeer contactpersoon van een bestand">
+<!ENTITY importCardFromDirLabel "Importeer contactpersoon van een map">
+<!ENTITY renameCatFromAccountsOrCatsLabel "Categorie hernoemen">
+<!ENTITY removeCatFromAccountsOrCatsLabel "Categorie verwijderen">
+<!ENTITY mergeCardsFromCardsLabel "Contactpersonen samenvoegen">
+<!ENTITY duplicateCardFromCardsLabel "Contactpersoon kopiëren">
+<!ENTITY convertListToCategoryFromCardsLabel "Lijst wijzigen naar categorie">
+<!ENTITY editAccountFromAccountsOrCatsLabel "Adresboek bewerken">
+<!ENTITY syncAccountFromAccountsOrCatsLabel "Adresboek synchroniseren">
+<!ENTITY removeAccountFromAccountsOrCatsLabel "Adresboek verwijderen">
+
+<!ENTITY IMPPMenuLabel "Verbinden">

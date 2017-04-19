@@ -1,0 +1,12 @@
+<!ENTITY daysLeftColumnLabel "Nap van hátra">
+<!ENTITY nameColumnLabel "Név">
+<!ENTITY ageColumnLabel "Életkor">
+<!ENTITY dateOfBirthColumnLabel "Születési dátum">
+<!ENTITY dateOfBirthFoundColumnLabel "Dátum talált">
+<!ENTITY emailColumnLabel "Email">
+<!ENTITY sendEmailLabel "Új üzenet">
+<!ENTITY sendEmailAccesskey "ü">
+<!ENTITY syncLightningMenuItemLabel "Lightning szinkronizálása">
+<!ENTITY syncLightningMenuAccesskey "s">
+<!ENTITY configurationButtonLabel "Beállítás">
+<!ENTITY configurationButtonAccesskey "B">

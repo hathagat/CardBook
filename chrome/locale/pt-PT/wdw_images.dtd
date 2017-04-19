@@ -1,0 +1,5 @@
+<!ENTITY addImageCardFromFileLabel "Adicionar imagem de ficheiro">
+<!ENTITY addImageCardFromClipboardLabel "Adicionar imagem do clipboard">
+<!ENTITY addImageCardFromUrlLabel "Adicionar imagem de URL">
+<!ENTITY saveImageCardLabel "Guardar imagem">
+<!ENTITY deleteImageCardLabel "Apagar imagem">

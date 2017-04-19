@@ -1,0 +1,9 @@
+<!ENTITY persTitleLabel "Osobní informace">
+<!ENTITY fnLabel "Zobrazované jméno">
+<!ENTITY lastnameLabel "Příjmení">
+<!ENTITY firstnameLabel "Křestní jméno">
+<!ENTITY othernameLabel "Další jméno">
+<!ENTITY suffixnameLabel "Přípona">
+<!ENTITY prefixnameLabel "Předpona">
+<!ENTITY nicknameLabel "Přezdívka">
+<!ENTITY genderLabel "Pohlaví">

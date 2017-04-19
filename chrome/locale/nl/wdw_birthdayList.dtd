@@ -1,0 +1,12 @@
+<!ENTITY daysLeftColumnLabel "Resterende dagen">
+<!ENTITY nameColumnLabel "Naam">
+<!ENTITY ageColumnLabel "Leeftijd">
+<!ENTITY dateOfBirthColumnLabel "Geboortedatum">
+<!ENTITY dateOfBirthFoundColumnLabel "Gevonden datum">
+<!ENTITY emailColumnLabel "Email">
+<!ENTITY sendEmailLabel "Stuur een email">
+<!ENTITY sendEmailAccesskey "E">
+<!ENTITY syncLightningMenuItemLabel "Synchroniseren met Lightning">
+<!ENTITY syncLightningMenuAccesskey "Y">
+<!ENTITY configurationButtonLabel "Instellingen">
+<!ENTITY configurationButtonAccesskey "I">

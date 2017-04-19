@@ -1,0 +1,39 @@
+<!ENTITY cardbookMenuItemLabel "CardBook">
+<!ENTITY cardbookMenuItemAccesskey "b">
+<!ENTITY cardbookMenuItemTooltip "Переключиться на вкладку CardBook">
+
+<!ENTITY cardbookToolbarButtonLabel "CardBook">
+<!ENTITY cardbookToolbarButtonTooltip "Переключиться на вкладку CardBook">
+
+<!ENTITY cardbookTabButtonLabel "CardBook">
+<!ENTITY cardbookTabButtonTooltip "Переключиться на вкладку CardBook">
+
+<!ENTITY newCardBookCardMenuLabel "Контакт CardBook…">
+<!ENTITY newCardBookCardMenuAccesskey "C">
+<!ENTITY addToCardBookMenuLabel "Создать контакт в CardBook">
+<!ENTITY addToCardBookMenuAccesskey "Н">
+<!ENTITY editInCardBookMenuLabel "Править контакт в CardBook">
+<!ENTITY editInCardBookMenuAccesskey "П">
+<!ENTITY deleteInCardBookMenuLabel "Удалить контакт в CardBook">
+<!ENTITY deleteInCardBookMenuAccesskey "У">
+<!ENTITY IMPPMenuLabel "Соединиться ">
+<!ENTITY IMPPMenuAccesskey "о">
+<!ENTITY findAllEmailsFromContactMessengerLabel "Искать сообщения email, связанные с этим контактом">
+<!ENTITY findAllEmailsFromContactMessengerAccesskey "к">
+<!ENTITY findEmailsFromEmailMessengerLabel "Искать сообщения email, связанные с этим адресом email">
+<!ENTITY findEmailsFromEmailMessengerAccesskey "а">
+<!ENTITY findAllEventsFromContactMessengerLabel "Искать события календаря, связанные с этим контактом">
+<!ENTITY findAllEventsFromContactMessengerAccesskey "к">
+<!ENTITY findEventsFromEmailMessengerLabel "Искать события календаря, связанные с этим адресом email">
+<!ENTITY findEventsFromEmailMessengerAccesskey "а">
+
+<!ENTITY mailContext-addToCardBookMenuLabel "Создать контакт CardBook…">
+<!ENTITY mailContext-addToCardBookMenuAccesskey "Н">
+
+<!ENTITY addAllAttachementsToCardBookMenuLabel "Всё в CardBook…">
+<!ENTITY addAttachementToCardBookMenuLabel "В CardBook…">
+
+<!ENTITY cardbookABPaneItemLabel "Панель адресной книги">
+<!ENTITY cardbookABPaneItemAccesskey "а">
+<!ENTITY cardbookContactPaneItemLabel "Панель контактов">
+<!ENTITY cardbookContactPaneItemAccesskey "к">

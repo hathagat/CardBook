@@ -1,0 +1,60 @@
+<!ENTITY wizard.title "Ajouter un nouveau carnet d'adresses">
+<!ENTITY wizard.label "Ajouter un nouveau carnet d'adresses">
+
+<!ENTITY welcomePage.wizard.description "Bienvenue">
+<!ENTITY welcomePage.description "Il semblerait que cela soit la première fois que vous utilisez CardBook, nous allons donc essayer d'importer les contacts existants dans CardBook.">
+
+<!ENTITY initialPage.wizard.description "Emplacement du nouveau carnet d'adresses.">
+<!ENTITY initialPage.description "Est ce que votre carnet d'adresses est local ou distant ? :">
+<!ENTITY initialPage.computer.label "Local">
+<!ENTITY initialPage.network.label "Distant">
+<!ENTITY initialPage.standard.label "Importer les carnets d'adresses standards">
+<!ENTITY initialPage.search.label "Recherche dans les carnets d'adresses existants">
+
+<!ENTITY localPage.wizard.description "Type et emplacement du nouveau carnet d'adresses local.">
+<!ENTITY localPage.type.description "Quel est le type de votre carnet d'adresses local ? :">
+<!ENTITY localPage.type.label "Type">
+<!ENTITY localPage.createDB.label "Créér un nouveau carnet d'adresses">
+<!ENTITY localPage.createDirectory.label "Créér un nouveau carnet d'adresses (Répertoire)">
+<!ENTITY localPage.createFile.label "Créér un nouveau carnet d'adresses (Fichier)">
+<!ENTITY localPage.openDirectory.label "Ouvrir un carnet d'adresses existant (Répertoire)">
+<!ENTITY localPage.openFile.label "Ouvrir un carnet d'adresses existant (Fichier)">
+<!ENTITY localPage.uri.label "Répertoire ou fichier">
+<!ENTITY localPage.uri.description "Choisissez l'emplacement du nouveau carnet d'adresses local. Si c'est un nouveau fichier, il est conseillé de choisir une extension en .vcf.">
+<!ENTITY locationFirstPage.uri.description "Choisissez l'emplacement des nouveaux carnets d'adresses locaux.">
+<!ENTITY localPage.uributton.label "Naviguer">
+
+<!ENTITY remotePage.wizard.description "Type et emplacement du nouveau carnet d'adresses distant.">
+<!ENTITY remotePage.description "Quel est le type de votre carnet d'adresses distant ? : (Attention avec Google, qui ne respecte pas le standard vCard)">
+<!ENTITY remotePage.type.label "Type">
+<!ENTITY remotePage.carddav.label "CardDAV">
+<!ENTITY remotePage.google.label "Google">
+<!ENTITY remotePage.apple.label "Apple">
+<!ENTITY remotePage.connection.label "Connection">
+<!ENTITY remotePage.uri.description "Pour un type CardDAV, entrez l'URL de votre carnet d'adresses distant. Vous pouvez utiliser une URL partielle (par exemple : http(s)://carddav.example.org). Pour un type Google, ce champ ne doit pas être rempli.">
+<!ENTITY remotePage.uri.label "URL">
+<!ENTITY remotePage.credentials.description "Entrez les identifiants de connection. Pour un type Google, l'utilisateur doit être votre email Google.">
+<!ENTITY remotePage.validatebutton.label "Valider">
+
+<!ENTITY locationSearchPage.wizard.description "Définition de la recherche.">
+<!ENTITY locationSearchPage.label "Recherche avancée">
+
+<!ENTITY googleOauthPage.wizard.description "Authentification Google">
+
+<!ENTITY namePage.wizard.description "Propriétés du carnet d'adresses">
+<!ENTITY namePage.selected.label "Selectionné">
+<!ENTITY namePage.name.label "Nom">
+<!ENTITY namePage.color.label "Couleur">
+<!ENTITY namePage.urnuuid.label "Utiliser urn:uuid">
+<!ENTITY namePage.readonly.label "Mode lecture seule">
+<!ENTITY namePage.vCardVersion.label "vCard">
+
+<!ENTITY namesPage.wizard.description "Propriétés des nouveaux carnets d'adresses">
+<!ENTITY namesPage.name.label "Noms">
+<!ENTITY namesPage.name.description "Plusieurs carnets d'adresses ont été découverts. Choisissez quels carnets d'adresses vous désirez ouvrir ainsi que leurs noms :">
+
+<!ENTITY finishPage.wizard.description "Carnet d'adresses configuré">
+<!ENTITY finishPage.description "Votre nouveau carnet d'adresses a été configuré avec succès.">
+
+<!ENTITY finishsPage.wizard.description "Carnets d'adresses configurés">
+<!ENTITY finishsPage.description "Vos nouveaux carnets d'adresses ont été configurés avec succès.">

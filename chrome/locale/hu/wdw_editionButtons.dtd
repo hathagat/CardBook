@@ -1,0 +1,18 @@
+<!ENTITY viewResultEditionLabel "Eredmény megtekintése">
+<!ENTITY viewResultEditionAccesskey "r">
+<!ENTITY createEditionLabel "Létrehoz">
+<!ENTITY createEditionAccesskey "L">
+<!ENTITY createAndReplaceEditionLabel "Létrehozása és cseréje">
+<!ENTITY createAndReplaceEditionAccesskey "c">
+<!ENTITY saveEditionLabel "Mentés">
+<!ENTITY saveEditionAccesskey "M">
+<!ENTITY validateEditionLabel "Érvényesít">
+<!ENTITY validateEditionAccesskey "É">
+<!ENTITY cancelEditionLabel "Mégse">
+<!ENTITY cancelEditionAccesskey "M">
+<!ENTITY closeEditionLabel "Bezárás">
+<!ENTITY closeEditionAccesskey "B">
+<!ENTITY buttonAppendToListLabel "Hozzáad">
+<!ENTITY buttonAppendToListAccesskey "H">
+<!ENTITY buttonRemoveFromListLabel "Törlés">
+<!ENTITY buttonRemoveFromListAccesskey "T">

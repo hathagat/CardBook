@@ -1,0 +1,60 @@
+<!ENTITY wizard.title "Adicionar nova agenda">
+<!ENTITY wizard.label "Adicionar nova agenda">
+
+<!ENTITY welcomePage.wizard.description "Benvindo">
+<!ENTITY welcomePage.description "Parece ser a primeira vez que utiliza o CardBook, vamos tentar importar os actuais contactos do Thunderbird para o CardBook.">
+
+<!ENTITY initialPage.wizard.description "Localização de nova agenda.">
+<!ENTITY initialPage.description "A agenda é local ou remota?">
+<!ENTITY initialPage.computer.label "Local">
+<!ENTITY initialPage.network.label "Remota">
+<!ENTITY initialPage.standard.label "Importar agendas do Thunderbird">
+<!ENTITY initialPage.search.label "Procurar em agendas existentes">
+
+<!ENTITY localPage.wizard.description "Tipo e localização de nova agenda local.">
+<!ENTITY localPage.type.description "Qual o tipo de agenda local?">
+<!ENTITY localPage.type.label "Tipo">
+<!ENTITY localPage.createDB.label "Criar uma nova agenda">
+<!ENTITY localPage.createDirectory.label "Criar uma nova agenda (Directoria)">
+<!ENTITY localPage.createFile.label "Criar uma nova agenda (Ficherio)">
+<!ENTITY localPage.openDirectory.label "Abrir uma agenda existente (Directoria)">
+<!ENTITY localPage.openFile.label "Abrir uma agenda existente (Ficherio)">
+<!ENTITY localPage.uri.label "Directoria ou Ficheiro">
+<!ENTITY localPage.uri.description "Usando o browser, escolha uma localização para a nova agenda local. Se está a criar uma nova ficherio, especifique .vcf como extensão.">
+<!ENTITY locationFirstPage.uri.description "Escolha a localização da nova agenda local.">
+<!ENTITY localPage.uributton.label "navegue">
+
+<!ENTITY remotePage.wizard.description "Tipo e localização de nova agenda remota.">
+<!ENTITY remotePage.description "Qual o tipo de agenda remota? (Atenção: a aplicação Google Contacts não utiliza standards de vCard)">
+<!ENTITY remotePage.type.label "Tipo">
+<!ENTITY remotePage.carddav.label "CardDAV">
+<!ENTITY remotePage.google.label "Google">
+<!ENTITY remotePage.apple.label "Apple">
+<!ENTITY remotePage.connection.label "Ligação">
+<!ENTITY remotePage.uri.description "Para CardDAV, insira o URL da agenda remota. Deve tentar usar um URL deste tipo (ex: http(s)://carddav.example.org). Para agenda do Google, não coloque nada neste campo.">
+<!ENTITY remotePage.uri.label "URL">
+<!ENTITY remotePage.credentials.description "Coloque as credenciais de acesso à agenda. Para a agenda da Google, o username deverá ser o seu email Google.">
+<!ENTITY remotePage.validatebutton.label "Validar">
+
+<!ENTITY locationSearchPage.wizard.description "Definição da pesquisa avançada.">
+<!ENTITY locationSearchPage.label "Procura avançada">
+
+<!ENTITY googleOauthPage.wizard.description "Autenticação Google">
+
+<!ENTITY namePage.wizard.description "Propriedades da agenda">
+<!ENTITY namePage.selected.label "Seleccionado">
+<!ENTITY namePage.name.label "Nome">
+<!ENTITY namePage.color.label "Cor">
+<!ENTITY namePage.urnuuid.label "Usar urn:uuid">
+<!ENTITY namePage.readonly.label "Modo de só de leitura">
+<!ENTITY namePage.vCardVersion.label "vCard">
+
+<!ENTITY namesPage.wizard.description "Propriedades da agenda">
+<!ENTITY namesPage.name.label "Nomes">
+<!ENTITY namesPage.name.description "Fora descobertas várais agendas. Escolha qual quer abrir e o seu nome: ">
+
+<!ENTITY finishPage.wizard.description "Agenda configurada">
+<!ENTITY finishPage.description "A sua nova agenda foi configurada com sucesso.">
+
+<!ENTITY finishsPage.wizard.description "Agendas configuradas.">
+<!ENTITY finishsPage.description "As novas agendas estão configuradas com sucesso.">

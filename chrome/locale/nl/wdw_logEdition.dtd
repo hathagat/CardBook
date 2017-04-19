@@ -1,0 +1,9 @@
+<!ENTITY wdw_logEditionTitle "Logbestand bekijken">
+
+<!ENTITY logEditionValueLabel "Tijd">
+<!ENTITY flushLogEditionLabel "Leegmaken">
+<!ENTITY flushLogEditionAccesskey "L">
+<!ENTITY clipboardLogEditionLabel "Kopieëren naar prikbord">
+<!ENTITY clipboardLogEditionAccesskey "K">
+<!ENTITY cancelLogEditionLabel "OK">
+<!ENTITY cancelLogEditionAccesskey "O">

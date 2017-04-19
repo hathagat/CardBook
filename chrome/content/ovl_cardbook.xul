@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://cardbook/skin/toolbarButton.css" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE overlay SYSTEM "chrome://cardbook/locale/ovl_cardbook.dtd">
+
+<overlay id="ovl_cardbook"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="wdw_log.js"/>
+	<script src="cardbookObserver.js"/>
+	<script src="cardbookUtils.js"/>
+	<script src="cardbookSynchronization.js"/>
+	<script src="cardbookIndexedDB.js"/>
+	<script src="ovl_synchro.js"/>
+	<script src="cardbookMailPopularity.js"/>
+	<script src="ovl_mailPopularity.js"/>
+	<script src="chrome://cardbook/content/preferences/cardbookPreferences.js"/>
+	<script src="cardbookElementTools.js"/>
+	<script src="wdw_cardbook.js"/>
+	<script src="chrome://cardbook/content/mailContact/ovl_cardbookMailContacts.js"/>
+	<script src="chrome://cardbook/content/layout/ovl_cardbookLayout.js"/>
+	<script src="ovl_cardbook.js"/>
+	
+	<window id="messengerWindow">
+		<broadcasterset id="cardbookBroadcasters">
+			<broadcaster id="cardboookModeBroadcaster" mode="mail"/>
+		</broadcasterset>
+	</window>
+
+	<!-- horrible hack to have the CardBookKey defined -->
+	<keyset id="viewZoomKeys">
+		<key id="CardBookKey" key="&cardbookMenuItemAccesskey;" modifiers="accel, shift" oncommand="ovl_cardbook.open();"/>
+	</keyset>
+
+	<menupopup id="menu_NewPopup">
+		<menuitem id="newCardBookCardMenu" label="&newCardBookCardMenuLabel;" accesskey="&newCardBookCardMenuAccesskey;"
+				insertafter="menu_newCard" oncommand="ovl_cardbookMailContacts.newInCardBook();"/>
+	</menupopup>
+	<menupopup id="view_layout_popup">
+		<menuitem id="cardbookABPaneItem"
+			type="checkbox"
+			label="&cardbookABPaneItemLabel;" accesskey="&cardbookABPaneItemAccesskey;"
+			oncommand="ovl_cardbookLayout.changeResizePanes('viewABPane')"
+			insertafter="menu_showFolderPane"/>
+		<menuitem id="cardbookContactPaneItem"
+			type="checkbox" key="key_toggleMessagePane"
+			label="&cardbookContactPaneItemLabel;" accesskey="&cardbookContactPaneItemAccesskey;"
+			oncommand="ovl_cardbookLayout.changeResizePanes('viewABContact')"
+			insertafter="menu_showMessage"/>
+	</menupopup>
+	<menupopup id="taskPopup">
+		<menuitem id="cardbookMenuItem"
+			label="&cardbookMenuItemLabel;" accesskey="&cardbookMenuItemAccesskey;"
+			key="CardBookKey"
+			tooltiptext="&cardbookMenuItemTooltip;"
+			oncommand="ovl_cardbook.open()"
+			insertafter="addressBook"/>
+	</menupopup>
+	<menupopup id="appmenu_taskPopup">
+		<menuitem id="cardbookAppMenuItem"
+			label="&cardbookMenuItemLabel;" accesskey="&cardbookMenuItemAccesskey;"
+			key="CardBookKey"
+			tooltiptext="&cardbookMenuItemTooltip;"
+			oncommand="ovl_cardbook.open()"
+			insertafter="appmenu_addressBook"/>
+	</menupopup>
+                      
+	<toolbarpalette id="MailToolbarPalette">
+		<toolbarbutton id="cardbookToolbarButton"
+			label="&cardbookToolbarButtonLabel;"
+			tooltiptext="&cardbookToolbarButtonTooltip;"
+			oncommand="ovl_cardbook.open();"
+			class="toolbarbutton-1"/>
+	</toolbarpalette>
+
+	<window id="messengerWindow">
+		<commandset id="cardbook_commands">
+			<command id="cardbookTabButtonOpen"
+				oncommand="ovl_cardbook.open();"/>
+		</commandset>
+	</window>
+  
+	<toolbar id="tabbar-toolbar">
+		<toolbarbutton id="cardbookTabButton"
+			class="toolbarbutton-1"
+			title="&cardbookTabButtonLabel;"
+			tooltiptext="&cardbookTabButtonTooltip;"
+			command="cardbookTabButtonOpen"/>
+	</toolbar>
+
+	<statusbarpanel id="totalMessageCount" onclick="wdw_cardbook.openLogEdition();"/>
+</overlay>

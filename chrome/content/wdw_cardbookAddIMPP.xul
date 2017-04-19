@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % addIMPPDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookAddIMPP.dtd"> %addIMPPDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="wdw_cardbookAddIMPP.load();" resizable="true"
+	onclose="wdw_cardbookAddIMPP.cancel();"
+	id="wdw_cardbookAddIMPP" title="&wdw_cardbookAddIMPPTitle;"
+	persist="screenX screenY width height"
+	style="min-width:200px;min-height:50px;">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://cardbook/content/cardEdition/wdw_cardEdition.js"/>
+	<script src="wdw_cardbookAddIMPP.js"/>
+
+	<keyset id="wdw_cardbookAddIMPP-keys">
+		<key keycode="VK_ESCAPE" oncommand="wdw_cardbookAddIMPP.cancel();"/>
+	</keyset>
+
+	<hbox flex="1">
+		<vbox flex="1">
+			<grid align="center" flex="1">
+				<columns>
+					<column/>
+					<column flex="1"/>
+				</columns>
+	
+				<rows>
+					<row align="center">
+						<label id="IMPPCodeLabel" value="&IMPPCodeLabel;" control="IMPPCodeTextBox"/>
+						<textbox id="IMPPCodeTextBox"/>
+					</row>
+					<row align="center">
+						<label id="IMPPLabelLabel" value="&IMPPLabelLabel;" control="IMPPLabelTextBox"/>
+						<textbox id="IMPPLabelTextBox"/>
+					</row>
+					<row align="center">
+						<label id="IMPPProtocolLabel" value="&IMPPProtocolLabel;" control="IMPPProtocolTextBox"/>
+						<textbox id="IMPPProtocolTextBox"/>
+					</row>
+				</rows>
+			</grid>
+		</vbox>
+	</hbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="saveEditionLabel" label="&saveEditionLabel;" accesskey="&saveEditionAccesskey;" oncommand="wdw_cardbookAddIMPP.save();"/>
+		<button id="cancelEditionLabel" label="&cancelEditionLabel;" accesskey="&cancelEditionAccesskey;" oncommand="wdw_cardbookAddIMPP.cancel();"/>
+	</hbox>
+</window>

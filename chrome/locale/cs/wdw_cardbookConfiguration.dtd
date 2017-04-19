@@ -1,0 +1,208 @@
+<!ENTITY wdw_cardbookConfigurationWindowLabel "Nastavení CardBooku">
+
+<!ENTITY generalTabLabel "Obecné">
+<!ENTITY editionTabLabel "Úpravy">
+<!ENTITY typesTabLabel "Typy">
+<!ENTITY IMPPsTabLabel "Adresy IM">
+<!ENTITY customFieldsTabLabel "Vlastní pole">
+<!ENTITY listsTabLabel "Seznamy">
+<!ENTITY syncTabLabel "Synchronizace">
+<!ENTITY emailTabLabel "E-mail">
+<!ENTITY birthdaylistTabLabel "Narozeniny">
+<!ENTITY synclistTabLabel "Upozornění na narozeniny">
+
+<!ENTITY integrationGroupboxLabel "Integrace do Thunderbirdu">
+<!ENTITY autocompletionLabel "Doplňování e-mailových adres">
+<!ENTITY autocompletionAccesskey "A">
+<!ENTITY autocompletionTooltip "Rozšíří dokončování adres kontaktů Thunderbirdu o adresáře CardBooku">
+<!ENTITY exclusiveLabel "Unikátní zdroj pro kontakty">
+<!ENTITY exclusiveAccesskey "z">
+<!ENTITY exclusiveTooltip "Pokud je zakázáno, tato možnost dovolí Thunderbirdu získat údaje pro žluté hvězdy, zobrazované jméno e-mailů a dokončování z standardního adresáře.">
+<!ENTITY accountsRestrictionsLabel "Omezení e-mailových účtů">
+<!ENTITY accountsRestrictionsEnabledLabel "Povolen">
+<!ENTITY accountsRestrictionsMailNameLabel "E-mailový účet">
+<!ENTITY accountsRestrictionsABNameLabel "Adresář">
+<!ENTITY accountsRestrictionsCatNameLabel "Kategorie">
+<!ENTITY accountsRestrictionsIncludeNameLabel "Typ">
+<!ENTITY addRestrictionLabel "Přidat">
+<!ENTITY addRestrictionAccesskey "P">
+<!ENTITY renameRestrictionLabel "Upravit">
+<!ENTITY renameRestrictionAccesskey "U">
+<!ENTITY deleteRestrictionLabel "Smazat">
+<!ENTITY deleteRestrictionAccesskey "S">
+<!ENTITY emailsCollectionLabel "Sbírat odchozí e-mail">
+<!ENTITY emailsCollectionAccesskey "o">
+<!ENTITY emailsCollectionCatLabel "Ke sesbíraným kontaktům přidat tuto kategorii">
+<!ENTITY emailsCollectionCatAccesskey "K">
+<!ENTITY emailsCollectionTooltip "Rozšiřuje standardní sběr odchozích adres Thunderbirdu. Pokud je povoleno, e-mailové adresy nevyskytující se v žádném adresáři CardBooku budou přidány do vybraného adresáře(ů).">
+<!ENTITY logGroupboxLabel "Protokol">
+<!ENTITY debugModeLabel "Ladící režim">
+<!ENTITY debugModeAccesskey "L">
+<!ENTITY debugModeTooltip "Pro rozšířené protokolování povolte ladící režim.">
+<!ENTITY statusInformationLineNumberLabel "Počet řádků uchovávaných v souboru protokolu">
+<!ENTITY statusInformationLineNumberAccesskey "v">
+
+<!ENTITY tabsEdittingGroupboxLabel "Zobrazit záložky">
+<!ENTITY noteTabLabel "Poznámky">
+<!ENTITY noteTabAccesskey "P">
+<!ENTITY listTabLabel "Seznam">
+<!ENTITY listTabAccesskey "S">
+<!ENTITY mailPopularityTabLabel "Oblíbenost e-mailů">
+<!ENTITY mailPopularityTabAccesskey "E">
+<!ENTITY technicalTabLabel "Technické">
+<!ENTITY technicalTabAccesskey "T">
+<!ENTITY vcardTabLabel "vCard">
+<!ENTITY vcardTabAccesskey "C">
+<!ENTITY localizeEdittingGroupboxLabel "Vyhledat:">
+<!ENTITY localizeEngineOpenStreetMapLabel "OpenStreetMap">
+<!ENTITY localizeEngineOpenStreetMapAccesskey "O">
+<!ENTITY localizeEngineGoogleMapsLabel "Mapy Google">
+<!ENTITY localizeEngineGoogleMapsAccesskey "G">
+<!ENTITY localizeEngineBingMapsLabel "Mapy Bing">
+<!ENTITY localizeEngineBingMapsAccesskey "B">
+<!ENTITY localizeTargetLabel "Otevřít externí odkazy:">
+<!ENTITY localizeTargetInLabel "v Thunderbirdu">
+<!ENTITY localizeTargetInAccesskey "V">
+<!ENTITY localizeTargetOutLabel "mimo Thunderbird">
+<!ENTITY localizeTargetOutAccesskey "M">
+<!ENTITY fnLabelExplanation "Je možné si přizpůsobit, jak CardBook vytváří zobrazované jméno. Tento vzorec se skládá z bloků uzavřených v '()'. V těchto blocích jsou dvě části oddělené '|'. 
+				První část se použije, když je zmíněný termín, například {{1}} nenulový, druhá se použije, když je zmíněný termín nulový.">
+<!ENTITY fnFormulaLabel "Vytvořit zobrazované jméno">
+<!ENTITY fnFormulaAccesskey "z">
+<!ENTITY resetfnFormulaLabel "Obnovit na výchozí hodnotu">
+<!ENTITY resetFnFormulaAccesskey "h">
+<!ENTITY miscEdittingGroupboxLabel "Ost.">
+<!ENTITY cardCreationVersionLabel "Výchozí verze vCard:">
+<!ENTITY preferEmailEditionLabel "Dvojklik na kontakt ho upraví namísto odeslání e-mailu">
+<!ENTITY preferEmailEditionAccesskey "D">
+
+<!ENTITY typesGroupboxLabel "Typy">
+<!ENTITY typesCategoryAdrLabel "Adresa">
+<!ENTITY typesCategoryAdrAccesskey "A">
+<!ENTITY typesCategoryEmailLabel "E-mail">
+<!ENTITY typesCategoryEmailAccesskey "E">
+<!ENTITY typesCategoryImppLabel "IMPP">
+<!ENTITY typesCategoryImppAccesskey "I">
+<!ENTITY typesCategoryTelLabel "Telefon">
+<!ENTITY typesCategoryTelAccesskey "T">
+<!ENTITY typesCategoryUrlLabel "URL">
+<!ENTITY typesCategoryUrlAccesskey "L">
+<!ENTITY typesCodeLabel "Kód">
+<!ENTITY typesLabelLabel "Popisek">
+<!ENTITY addTypeLabel "Přidat">
+<!ENTITY addTypeAccesskey "P">
+<!ENTITY renameTypeLabel "Upravit">
+<!ENTITY renameTypeAccesskey "U">
+<!ENTITY deleteTypeLabel "Smazat">
+<!ENTITY deleteTypeAccesskey "S">
+<!ENTITY preferenceGroupboxLabel "Pole PREF">
+<!ENTITY preferenceLabel "Popisek pro pole PREF">
+<!ENTITY preferenceAccesskey "R">
+<!ENTITY preferenceValueLabel "Popisek hodnotového pole PREF (pouze pro vCard 4.0)">
+<!ENTITY preferenceValueAccesskey "O">
+
+<!ENTITY IMPPGroupboxWarn "Toto nastavení umožňuje přímé otevření adresy IM s použitím správného protokolu.">
+<!ENTITY IMPPGroupboxLabel "Adresy IM">
+<!ENTITY IMPPCodeLabel "Kód">
+<!ENTITY IMPPLabelLabel "Popisek">
+<!ENTITY IMPPProtocolLabel "Protokol">
+<!ENTITY addIMPPLabel "Přidat">
+<!ENTITY addIMPPAccesskey "P">
+<!ENTITY renameIMPPLabel "Upravit">
+<!ENTITY renameIMPPAccesskey "U">
+<!ENTITY deleteIMPPLabel "Smazat">
+<!ENTITY deleteIMPPAccesskey "S">
+
+<!ENTITY customFieldsPanelLabel "Definujte vaše vlastní pole.">
+<!ENTITY customFieldName "Název pole">
+<!ENTITY customFieldLabel "Popisek pole">
+
+<!ENTITY orgWarn "Pole ORG může obsahovat strukturovanou textovou hodnotu obsahující komponenty oddělené STŘEDNÍKEM (například : vašespolečnost;vašeslužba;vašeoddělení). Pole níže popisují popisky komponent obsažených v této struktuře.">
+
+<!ENTITY listPanelLabel "Pokud váš server nepodporuje kategorie (jako Google, Apple, Zimbra, atd...), seznamy jsou dobrý způsob, ak posílat e-maily skupinám. vCard 3.0 nativne seznamy nepodporuje, ale to lze obejít pomocí vlastních polí, takže pokud ve vCard 3.0 chcete použít seznamy, musíte definovat tato pole.">
+<!ENTITY listGroupboxLabel "Vlastní pole pro seznamy">
+<!ENTITY kindCustomLabel "Druh">
+<!ENTITY kindCustomAccesskey "D">
+<!ENTITY memberCustomLabel "Člen">
+<!ENTITY memberCustomAccesskey "Č">
+
+<!ENTITY syncGroupboxLabel "Synch.">
+<!ENTITY syncWarn "Synchronizace zajistí odeslání vašich úprav na server a úprav na serveru k vám.">
+<!ENTITY initialSyncLabel "Provést prvotní synchronizaci při startu Thunderbirdu">
+<!ENTITY initialSyncAccesskey "S">
+<!ENTITY solveConflictsLabel "Pokud byl kontakt upraven jak na serveru, tak místně:">
+<!ENTITY solveConflictsLocalLabel "Upřednostnit místní změnu">
+<!ENTITY solveConflictsLocalAccesskey "M">
+<!ENTITY solveConflictsRemoteLabel "Upřednostnit změnu ze serveru">
+<!ENTITY solveConflictsRemoteAccesskey "S">
+<!ENTITY solveConflictsUserLabel "Zeptat se uživatele">
+<!ENTITY solveConflictsUserAccesskey "Z">
+<!ENTITY autoSyncGroupboxLabel "Opakovaná synchronizace">
+<!ENTITY autoSyncLabel "Povolit opakovanou synchronizaci">
+<!ENTITY autoSyncAccesskey "P">
+<!ENTITY autoSyncIntervalLabel "Interval opakované synchronizace (minuty)">
+<!ENTITY autoSyncIntervalAccesskey "T">
+<!ENTITY requestsGroupboxLabel "Požadavky">
+<!ENTITY requestsTimeoutLabel "Časový limit (sekundy)">
+<!ENTITY requestsTimeoutAccesskey "L">
+<!ENTITY multigetLabel "Velikost skupiny při GET požadavcích">
+<!ENTITY multigetAccesskey "V">
+<!ENTITY advancedSyncGroupboxLabel "Pokročilé vlastnosti">
+<!ENTITY decodeReportLabel "Dekódovat URL pro REPORT požadavky">
+<!ENTITY decodeReportAccesskey "D">
+
+<!ENTITY miscEmailGroupboxLabel "Posílání e-mailů">
+<!ENTITY preferEmailPrefLabel "Upřednostnit e-mailové adresy označené jako PREFerované">
+<!ENTITY preferEmailPrefAccesskey "W">
+<!ENTITY preferEmailPrefWarn "Pokud není žádná z adres označena jako 'PREFerovaná', zprávaje poslána na všechny adresy kontaktu.">
+<!ENTITY attachvCardWarn "Pokud chcete ke každé zprávě automaticky přiložit svou vizitku, zvolte pro každý e-mailový účet, která se má použít. Pokud je aktivní, CardBook automaticky přiloží vybranou vizitku ke každé odchozí zprávě.">
+<!ENTITY attachvCardGroupboxLabel "Připojit vCard">
+<!ENTITY mailAccountsEnabledLabel "Povolen">
+<!ENTITY mailAccountsNameLabel "E-mailový účet">
+<!ENTITY mailAccountsFileNameLabel "Přiložený soubor">
+<!ENTITY mailAccountsFnLabel "Kontakt">
+<!ENTITY choosevCardLabel "Zvolit vCard">
+<!ENTITY choosevCardAccesskey "Z">
+<!ENTITY displayvCardLabel "Zobrazit vCard">
+<!ENTITY displayvCardAccesskey "B">
+
+<!ENTITY birthdayListWarn "Narozeniny jsou hledány pouze v adresářích CardBooku.">
+<!ENTITY addressBooksGroupboxLabel "Adresáře">
+<!ENTITY calendarsGroupboxLabel "Kalendáře">
+<!ENTITY searchGroupboxLabel "Hledat">
+<!ENTITY searchInNoteLabel "Hledat narozeniny v poli s poznámkami">
+<!ENTITY searchInNoteTooltip "Přidejte řádky do poznámek podobné následujícímu oddělovač by měl být : a formát data by měl odpovídat danému níže) : Birthday:You and me, first kiss:02.12.2006">
+<!ENTITY searchInNoteAccesskey "H">
+<!ENTITY dateFormatLabel "Očekávaný formát data">
+<!ENTITY dateFormatAccesskey "O">
+
+<!ENTITY remindersTabLabel "Připomínky">
+<!ENTITY remindViaPopupWindowGroupboxLabel "Připomenout pomocí vyskakovacího okna">
+<!ENTITY numberOfDaysForSearchingLabel "Počet dnů pro kontrolu narozenin">
+<!ENTITY numberOfDaysForSearchingAccesskey "P">
+<!ENTITY showPopupOnStartupLabel "Zobrazit vyskakovací okno při startu">
+<!ENTITY showPopupOnStartupAccesskey "Z">
+<!ENTITY showPeriodicPopupLabel "Zobrazit denní vyskakovací okno">
+<!ENTITY showPeriodicPopupAccesskey "d">
+<!ENTITY periodicPopupTimeLabel "Čas zobrazení (hh:mm)">
+<!ENTITY periodicPopupTimeAccesskey "a">
+<!ENTITY showPopupEvenIfNoBirthdayLabel "Zobrazovat vyskakovací okno, když je seznam narozenin prázdný">
+<!ENTITY showPopupEvenIfNoBirthdayAccesskey "o">
+<!ENTITY remindViaLightningGroupboxLabel "Připomenout pomocí doplňku Thunderbirdu pro kalendář Lightning">
+<!ENTITY numberOfDaysForWritingLabel "Počet dnů pro zapsání narozenin">
+<!ENTITY numberOfDaysForWritingAccesskey "z">
+<!ENTITY syncWithLightningOnStartupLabel "Synchronizovat s Lightningem při startu">
+<!ENTITY syncWithLightningOnStartupAccesskey "L">
+<!ENTITY calendarEntryTitleLabel "Titulek události v kalendáři">
+<!ENTITY calendarEntryTitleTooltip "Šablona titulku pro událost v kalendáři. Měla by obsahovat dva zástupné znaky &#37;S, které budou nahrazeny jménem a věkem. Pokud je pole prázdné, použije se standardní zpráva.">
+<!ENTITY calendarEntryTitleAccesskey "T">
+<!ENTITY calendarEntryTimeLabel "Čas události v kalendáři (hh:mm)">
+<!ENTITY calendarEntryTimeAccesskey "s">
+<!ENTITY calendarEntryWholeDayLabel "Událost v kalendáři na  celý den">
+<!ENTITY calendarEntryWholeDayAccesskey "e">
+<!ENTITY calendarEntryAlarmLabel "Upozornění n dnů před událostí v kalendáři">
+<!ENTITY calendarEntryAlarmTooltip "Zadejte, kolik dnů před událostí vám má upozornění Lightningu události připomenout. Bez data. Pokud je pole prázdné, nebude žádné upozornění.">
+<!ENTITY calendarEntryAlarmAccesskey "p">
+<!ENTITY calendarEntryCategoriesLabel "Kategorie pro událost v kalendáři">
+<!ENTITY calendarEntryCategoriesTooltip "Jedna nebo více kategorií oddělených čárkou. Pokud je pole prázdné, žádné kategorie nebudou nastaveny.">
+<!ENTITY calendarEntryCategoriesAccesskey "g">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/logEdition.css" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % logDTD SYSTEM "chrome://cardbook/locale/wdw_logEdition.dtd"> %logDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="wdw_logEdition.load();" resizable="true"
+	onclose="wdw_logEdition.cancel();"
+	id="wdw_logEdition" title="&wdw_logEditionTitle;"
+	persist="screenX screenY width height"
+	style="min-width:400px;min-height:100px;">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="cardbookUtils.js"/>
+	<script src="wdw_log.js"/>
+	<script src="wdw_logEdition.js"/>
+
+	<keyset id="wdw_logEdition-keys">
+		<key id="escapeKey" keycode="VK_ESCAPE" oncommand="wdw_logEdition.cancel();"/>
+		<key id="selectAllKey" modifiers="control" key="a" oncommand="wdw_logEdition.selectAllKey();"/>
+		<key id="copyKey" modifiers="control" key="c" oncommand="wdw_logEdition.clipboard();"/>
+	</keyset>
+
+	<hbox flex="1">
+		<tree id="logEditionTree" class="cardbookTreeChildrenLogEditionClass" flex="1" hidecolumnpicker="true">
+			<treecols>
+				<treecol id="logEditionValue" label="&logEditionValueLabel;" flex="1" persist="width ordinal" style="text-align:left"/>
+				<treecol id="logEditionType" hidden="true"/>
+			</treecols>
+			<treechildren/>
+		</tree>
+	</hbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="flushLogEditionLabel" label="&flushLogEditionLabel;" accesskey="&flushLogEditionAccesskey;" oncommand="wdw_logEdition.flush();"/>
+		<button id="clipboardLogEditionLabel" label="&clipboardLogEditionLabel;" accesskey="&clipboardLogEditionAccesskey;" oncommand="wdw_logEdition.clipboard();"/>
+		<button id="cancelLogEditionLabel" label="&cancelLogEditionLabel;" accesskey="&cancelLogEditionAccesskey;" oncommand="wdw_logEdition.cancel();"/>
+	</hbox>
+</window>

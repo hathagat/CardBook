@@ -1,0 +1,9 @@
+<!ENTITY persTitleLabel "Informations personnelles">
+<!ENTITY fnLabel "Nom affiché">
+<!ENTITY lastnameLabel "Nom">
+<!ENTITY firstnameLabel "Prénom">
+<!ENTITY othernameLabel "Autre nom">
+<!ENTITY suffixnameLabel "Suffixe">
+<!ENTITY prefixnameLabel "Préfixe">
+<!ENTITY nicknameLabel "Surnom">
+<!ENTITY genderLabel "Genre">

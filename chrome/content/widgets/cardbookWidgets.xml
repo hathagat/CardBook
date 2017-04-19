@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- adapted from Lightning -->
+<!DOCTYPE dialog [
+	<!ENTITY % cardbookWidgetsDTD SYSTEM "chrome://cardbook/locale/wdw_categoriesEdition.dtd"> %cardbookWidgetsDTD;
+]>
+
+<bindings id="cardbookWidgets"
+	xmlns="http://www.mozilla.org/xbl"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<!-- Unfortunately, the normal menulist binding doesn't allow a panel child
+	This binding replaces the usual menulist to allow a panel -->
+	<binding id="cardbookPanelMenulist" extends="chrome://global/content/bindings/menulist.xml#menulist">
+		<content sizetopopup="pref">
+			<xul:hbox class="menulist-label-box" flex="1">
+				<xul:image class="menulist-icon" xbl:inherits="src=image,src"/>
+				<xul:label class="menulist-label" xbl:inherits="value=label,crop,accesskey" crop="right" flex="1"/>
+			</xul:hbox>
+			<xul:dropmarker class="menulist-dropmarker" type="menu" xbl:inherits="disabled,open"/>
+			<children includes="menupopup|panel"/>
+		</content>
+	</binding>
+	
+	<binding id="cardbookCategoryPanel" extends="chrome://global/content/bindings/popup.xml#panel">
+		<resources>
+			<stylesheet src="chrome://cardbook/skin/cardbookWidgets.css"/>
+		</resources>
+		<content>
+			<xul:textbox anonid="categoryTextbox"
+				class="categoriesTextboxClass"
+				type="search"
+				searchbutton="true"
+				placeholder="&categoryTextboxLabel;"
+				oncommand="document.getBindingParent(this).addNewCategory();"
+				flex="1"/>
+			<xul:listbox anonid="categoriesListbox" class="categoriesListboxClass" selType="multiple">
+				<children/>
+			</xul:listbox>
+		</content>
+		<implementation>
+			<field name="sourceCategories">[]</field>
+			<property name="categories" readonly="true">
+				<getter><![CDATA[
+					return this.getCategories();
+				]]></getter>
+			</property>
+			<method name="addNewCategory">
+				<body><![CDATA[
+					let categoryListbox = document.getAnonymousElementByAttribute(this, "anonid", "categoriesListbox");
+					let categoryTextbox = document.getAnonymousElementByAttribute(this, "anonid", "categoryTextbox");
+					let category = categoryTextbox.value;
+					
+					if (!category) {
+						return;
+					}
+					
+					this.sourceCategories.push(category);
+					this.sourceCategories = cardbookUtils.sortArrayByString(cardbookRepository.arrayUnique(this.sourceCategories),-1,1);
+					let itemCategories = this.getCategories();
+					itemCategories.push(category);
+					itemCategories = cardbookUtils.sortArrayByString(cardbookRepository.arrayUnique(itemCategories),-1,1);
+					
+					categoryTextbox.value = "";
+					this.loadCategories(this.sourceCategories, itemCategories);
+				]]></body>
+			</method>
+			<method name="getCategories">
+				<body><![CDATA[
+					let categoryListbox = document.getAnonymousElementByAttribute(this, "anonid", "categoriesListbox");
+					let myCategoryList = [];
+					for (var i=0; i<categoryListbox.itemCount; i++) {
+						var aItem = categoryListbox.getItemAtIndex(i);
+						var aItemChecked = aItem.getAttribute('checked');
+						aItemChecked = typeof aItemChecked == "boolean" ? aItemChecked : (aItemChecked == 'true' ? true : false);
+						if (aItemChecked) {
+							myCategoryList.push(aItem.getAttribute('value').trim());
+						}
+					}
+					return myCategoryList;
+				]]></body>
+			</method>
+			<method name="loadCategories">
+				<parameter name="aSourceList"/>
+				<parameter name="aItemList"/>
+				<body><![CDATA[
+					let categoryListbox = document.getAnonymousElementByAttribute(this, "anonid", "categoriesListbox");
+				
+					while (categoryListbox.firstChild) {
+						categoryListbox.removeChild(categoryListbox.firstChild);
+					}
+					
+					if (aSourceList) {
+						for (var i = 0; i < aSourceList.length; i++) {
+							var aItem = categoryListbox.appendItem(aSourceList[i], aSourceList[i]);
+							aItem.setAttribute('id', aSourceList[i]);
+							aItem.setAttribute('type', 'checkbox');
+						}
+						for (var i = 0; i < aItemList.length; i++) {
+							if (document.getElementById(aItemList[i])) {
+								var aItem = document.getElementById(aItemList[i]);
+								aItem.setAttribute('checked', true);
+							}
+						}
+					}
+					this.sourceCategories= JSON.parse(JSON.stringify(aSourceList));
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+</bindings>

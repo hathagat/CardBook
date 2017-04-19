@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE overlay>
+
+<overlay id="ovl_cardbookautocomplete"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<!-- for MailServices -->
+	<script type="application/javascript" src="chrome://messenger/content/addressbook/abCommon.js"/>
+
+	<script src="chrome://cardbook/content/wdw_log.js"/>
+	<script src="chrome://cardbook/content/cardbookUtils.js"/>
+	<script src="chrome://cardbook/content/lists/ovl_list.js"/>
+
+</overlay>

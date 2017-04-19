@@ -1,0 +1,8 @@
+<!ENTITY listTabLabel "Seznam">
+<!ENTITY kindLabel "Druh">
+<!ENTITY kindAccesskey "D">
+<!ENTITY availableCardsGroupboxLabel "Dostupné kontakty">
+<!ENTITY addedCardsGroupboxLabel "Seznam kontaktů">
+<!ENTITY appendlistTreeLabel "Přidat do seznamu">
+<!ENTITY deletelistTreeLabel "Odstranit ze seznamu">
+<!ENTITY editCardFromListLabel "Upravit tento kontakt">

@@ -1,0 +1,18 @@
+<!ENTITY viewResultEditionLabel "Zobrazit výsledek">
+<!ENTITY viewResultEditionAccesskey "V">
+<!ENTITY createEditionLabel "Vytvořit">
+<!ENTITY createEditionAccesskey "T">
+<!ENTITY createAndReplaceEditionLabel "Vytvořit a nahradit">
+<!ENTITY createAndReplaceEditionAccesskey "N">
+<!ENTITY saveEditionLabel "Uložit">
+<!ENTITY saveEditionAccesskey "U">
+<!ENTITY validateEditionLabel "Ověřit">
+<!ENTITY validateEditionAccesskey "O">
+<!ENTITY cancelEditionLabel "Zrušit">
+<!ENTITY cancelEditionAccesskey "Z">
+<!ENTITY closeEditionLabel "Zavřít">
+<!ENTITY closeEditionAccesskey "Z">
+<!ENTITY buttonAppendToListLabel "Přidat">
+<!ENTITY buttonAppendToListAccesskey "P">
+<!ENTITY buttonRemoveFromListLabel "Odstranit">
+<!ENTITY buttonRemoveFromListAccesskey "O">

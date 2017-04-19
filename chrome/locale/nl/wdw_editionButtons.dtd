@@ -1,0 +1,18 @@
+<!ENTITY viewResultEditionLabel "Resultaat tonen">
+<!ENTITY viewResultEditionAccesskey "R">
+<!ENTITY createEditionLabel "Maken">
+<!ENTITY createEditionAccesskey "M">
+<!ENTITY createAndReplaceEditionLabel "Maken en vervangen">
+<!ENTITY createAndReplaceEditionAccesskey "V">
+<!ENTITY saveEditionLabel "Opslaan">
+<!ENTITY saveEditionAccesskey "O">
+<!ENTITY validateEditionLabel "Valideren">
+<!ENTITY validateEditionAccesskey "V">
+<!ENTITY cancelEditionLabel "Annuleren">
+<!ENTITY cancelEditionAccesskey "A">
+<!ENTITY closeEditionLabel "Sluiten">
+<!ENTITY closeEditionAccesskey "S">
+<!ENTITY buttonAppendToListLabel "Afdrukken">
+<!ENTITY buttonAppendToListAccesskey "A">
+<!ENTITY buttonRemoveFromListLabel "Verwijderen">
+<!ENTITY buttonRemoveFromListAccesskey "W">

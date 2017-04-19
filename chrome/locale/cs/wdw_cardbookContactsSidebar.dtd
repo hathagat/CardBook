@@ -1,0 +1,11 @@
+<!ENTITY categoriesPicker.label "Filtr kategorií:">
+<!ENTITY categoriesPicker.accesskey "t">
+<!ENTITY editAddrBookCard.label "Upravit">
+<!ENTITY editAddrBookCard.accesskey "U">
+<!ENTITY searchContacts.label "Hledat:">
+<!ENTITY searchContacts.accesskey "H">
+<!ENTITY name.label "Jméno">
+<!ENTITY addtoReplytoFieldMenu.label "Přidat do Odpověd">
+<!ENTITY addtoReplytoFieldMenu.accesskey "O">
+<!ENTITY replytoButton.label "Odpověd">
+<!ENTITY replytoButton.accesskey "O">

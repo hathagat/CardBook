@@ -1,0 +1,9 @@
+<!ENTITY wdw_logEditionTitle "Naplómegjelenítő">
+
+<!ENTITY logEditionValueLabel "Időbélyeg esemény">
+<!ENTITY flushLogEditionLabel "Lista törlése">
+<!ENTITY flushLogEditionAccesskey "L">
+<!ENTITY clipboardLogEditionLabel "Másolás a vágólapra">
+<!ENTITY clipboardLogEditionAccesskey "v">
+<!ENTITY cancelLogEditionLabel "Rendben">
+<!ENTITY cancelLogEditionAccesskey "R">

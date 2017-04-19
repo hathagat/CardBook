@@ -1,0 +1,39 @@
+<!ENTITY cardbookMenuItemLabel "Névjegyzék">
+<!ENTITY cardbookMenuItemAccesskey "j">
+<!ENTITY cardbookMenuItemTooltip "A névjegyzék megjelenítése">
+
+<!ENTITY cardbookToolbarButtonLabel "Névjegyzék">
+<!ENTITY cardbookToolbarButtonTooltip "A névjegyzék megjelenítése">
+
+<!ENTITY cardbookTabButtonLabel "Névjegyzék">
+<!ENTITY cardbookTabButtonTooltip "Átváltás a névjegyzék lapra">
+
+<!ENTITY newCardBookCardMenuLabel "Névjegy (Névjegyzék)...">
+<!ENTITY newCardBookCardMenuAccesskey "j">
+<!ENTITY addToCardBookMenuLabel "Felvétel a névjegyzékbe (Névjegyzék)">
+<!ENTITY addToCardBookMenuAccesskey "v">
+<!ENTITY editInCardBookMenuLabel "Névjegy szerkesztése (Névjegyzék)">
+<!ENTITY editInCardBookMenuAccesskey "v">
+<!ENTITY deleteInCardBookMenuLabel "Névjegy törlése (Névjegyzék)">
+<!ENTITY deleteInCardBookMenuAccesskey "t">
+<!ENTITY IMPPMenuLabel "Csatlakozni">
+<!ENTITY IMPPMenuAccesskey "C">
+<!ENTITY findAllEmailsFromContactMessengerLabel "Üzenetek az névjegy keresése">
+<!ENTITY findAllEmailsFromContactMessengerAccesskey "Ü">
+<!ENTITY findEmailsFromEmailMessengerLabel "Üzenetek az email keresése">
+<!ENTITY findEmailsFromEmailMessengerAccesskey "k">
+<!ENTITY findAllEventsFromContactMessengerLabel "Eseménynaptár az névjegy keresése">
+<!ENTITY findAllEventsFromContactMessengerAccesskey "E">
+<!ENTITY findEventsFromEmailMessengerLabel "Eseménynaptár az email keresése">
+<!ENTITY findEventsFromEmailMessengerAccesskey "r">
+
+<!ENTITY mailContext-addToCardBookMenuLabel "Felvétel a névjegyzékbe (Névjegyzék)...">
+<!ENTITY mailContext-addToCardBookMenuAccesskey "v">
+
+<!ENTITY addAllAttachementsToCardBookMenuLabel "Összes mentése névjegyzékbe">
+<!ENTITY addAttachementToCardBookMenuLabel "Mentés névjegyzékbe">
+
+<!ENTITY cardbookABPaneItemLabel "Mappa oldalsáv">
+<!ENTITY cardbookABPaneItemAccesskey "M">
+<!ENTITY cardbookContactPaneItemLabel "Névjegy oldalsáv">
+<!ENTITY cardbookContactPaneItemAccesskey "N">

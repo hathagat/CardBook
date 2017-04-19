@@ -1,0 +1,9 @@
+<!ENTITY persTitleLabel "Persoonlijke informatie">
+<!ENTITY fnLabel "Getoonde naam">
+<!ENTITY lastnameLabel "Achternaam">
+<!ENTITY firstnameLabel "Roepnaam">
+<!ENTITY othernameLabel "Extra naam">
+<!ENTITY suffixnameLabel "Achtervoegsel">
+<!ENTITY prefixnameLabel "Voorvoegsel">
+<!ENTITY nicknameLabel "Bijnaam">
+<!ENTITY genderLabel "Geslacht">

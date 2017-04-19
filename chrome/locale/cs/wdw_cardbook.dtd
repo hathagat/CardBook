@@ -1,0 +1,166 @@
+<!ENTITY wdw_cardbookWindowLabel "CardBook">
+
+<!ENTITY accountsOrCatsTreeLabel "Adresáře">
+<!ENTITY enableAccountsTooltip "Povolit nebo zakázat vyhledávání a synchronizaci adresářů.">
+<!ENTITY colorAccountsTooltip "Obarvit výsledky vyhledáváání (použít když vyhledávání zahrnují více adresářů).">
+<!ENTITY readonlyAccountsTooltip "Nastavte adresáře jako zapisovatelné, nebo jako jen pro čtení.">
+
+<!ENTITY cardbookAccountMenuLabel "Adresář">
+
+<!ENTITY cardbookAccountMenuAddServerLabel "Přidat adresář">
+<!ENTITY cardbookAccountMenuEditServerLabel "Upravit adresář">
+<!ENTITY cardbookAccountMenuCloseServerLabel "Smazat adresář">
+<!ENTITY cardbookAccountMenuSyncLabel "Synchronizovat adresář">
+<!ENTITY cardbookAccountMenuSyncsLabel "Synchronizovat všechny adresáře">
+
+<!ENTITY cardbookContactsMenuLabel "Kontakty">
+
+<!ENTITY cardbookToolsMenuLabel "Nástroje">
+<!ENTITY cardbookToolsMenuBirthdayListLabel "Zobrazit seznam narozenin">
+<!ENTITY cardbookToolsMenuSyncLightningLabel "Přidat narozeniny do kalendáře">
+<!ENTITY cardbookToolsMenuFindAllDuplicatesLabel "Najít duplicitní kontakty ve všech adresářích">
+<!ENTITY cardbookToolsMenuFindSingleDuplicatesLabel "Najít duplicitní kontakty v aktuálním adresáři">
+
+<!ENTITY cardbookToolbarLabel "Panel nástrojů CardBooku">
+<!ENTITY cardbookToolbarAccesskey "C">
+<!ENTITY CustomizeCardBookToolbarLabel "Vlastní...">
+<!ENTITY CustomizeCardBookToolbarAccesskey "V">
+<!ENTITY cardbookToolbarAddServerButtonLabel "Přidat adresář">
+<!ENTITY cardbookToolbarAddServerButtonTooltip "Přidat místní nebo vzdálený adresář">
+<!ENTITY cardbookToolbarSyncButtonLabel "Synchronizovat">
+<!ENTITY cardbookToolbarSyncButtonTooltip "Synchronizovat všechny adresáře">
+<!ENTITY cardbookToolbarConfigurationButtonLabel "Předvolby">
+<!ENTITY cardbookToolbarConfigurationButtonTooltip "Nastavení CardBooku">
+<!ENTITY cardbookToolbarAddButtonLabel "Přidat kontakt">
+<!ENTITY cardbookToolbarAddButtonTooltip "Dovoluje přidat kontakt">
+<!ENTITY cardbookToolbarEditButtonLabel "Upravit kontakt">
+<!ENTITY cardbookToolbarEditButtonTooltip "Dovoluje úpravu kontaktu">
+<!ENTITY cardbookToolbarRemoveButtonLabel "Smazat kontakt">
+<!ENTITY cardbookToolbarRemoveButtonTooltip "Umožňuje smazání kontaktu">
+<!ENTITY cardbookToolbarPrintButtonLabel "Náhled tisku">
+<!ENTITY cardbookToolbarPrintButtonTooltip "Umožňue tisknout výběr">
+<!ENTITY cardbookToolbarAppMenuButtonLabel "Menu CardBooku">
+<!ENTITY cardbookToolbarAppMenuButtonTooltip "Menu CardBooku">
+<!ENTITY cardbookToolbarSearchBoxLabel "Hledání v kontaktech">
+<!ENTITY cardbookToolbarSearchBoxTooltip "Hledání v kontaktech">
+<!ENTITY cardbookToolbarComplexSearchLabel "Pokročilé vyhledávání">
+<!ENTITY cardbookToolbarComplexSearchTooltip "Vyhledávajte pomocí více podmínek">
+<!ENTITY cardbookToolbarThMenuButtonLabel "Nabídka aplikace">
+<!ENTITY cardbookToolbarThMenuButtonTooltip "Zobrazí nabídku aplikace &brandShortName;">
+
+<!ENTITY generalTabLabel "Obecné">
+<!ENTITY mailPopularityTabLabel "Oblíbenost e-mailů">
+<!ENTITY technicalTabLabel "Technické">
+<!ENTITY vcardTabLabel "vCard">
+
+<!ENTITY lastnameColumnLabel "Příjmení">
+<!ENTITY firstnameColumnLabel "Křestní jméno">
+<!ENTITY othernameColumnLabel "Další jméno">
+<!ENTITY prefixnameColumnLabel "Předpona">
+<!ENTITY suffixnameColumnLabel "Přípona">
+<!ENTITY fnColumnLabel "Zobrazované jméno">
+<!ENTITY nicknameColumnLabel "Přezdívka">
+<!ENTITY genderColumnLabel "Pohlaví">
+<!ENTITY bdayColumnLabel "Narozeniny">
+<!ENTITY dispadrColumnLabel "Adresy">
+<!ENTITY disphomeadrColumnLabel "Domácí adresy">
+<!ENTITY dispworkadrColumnLabel "Pracovní adresy">
+<!ENTITY disptelColumnLabel "Telefony">
+<!ENTITY disphometelColumnLabel "Domácí telefony">
+<!ENTITY dispworktelColumnLabel "Pracovní telefony">
+<!ENTITY dispcelltelColumnLabel "Mobilní telefony">
+<!ENTITY dispemailColumnLabel "E-maily">
+<!ENTITY disphomeemailColumnLabel "Domácí e-maily">
+<!ENTITY dispworkemailColumnLabel "Pracovní e-maily">
+<!ENTITY mailerColumnLabel "Mailer">
+<!ENTITY tzColumnLabel "TZ">
+<!ENTITY geoColumnLabel "Geo">
+<!ENTITY titleColumnLabel "Titul">
+<!ENTITY roleColumnLabel "Role">
+<!ENTITY orgColumnLabel "Organizace">
+<!ENTITY categoriesColumnLabel "Kategorie">
+<!ENTITY noteColumnLabel "Poznámky">
+<!ENTITY prodidColumnLabel "Prodid">
+<!ENTITY sortstringColumnLabel "Řadící řetězec">
+<!ENTITY uidColumnLabel "Uid">
+<!ENTITY dispurlColumnLabel "URL">
+<!ENTITY versionColumnLabel "Verze">
+<!ENTITY class1ColumnLabel "Třída">
+<!ENTITY dispimppColumnLabel "Rychlé zprávy">
+<!ENTITY cardurlColumnLabel "URL kontaktu">
+<!ENTITY dirPrefIdColumnLabel "DirPrefId">
+<!ENTITY kindColumnLabel "Druh">
+<!ENTITY revColumnLabel "Rev">
+<!ENTITY etagColumnLabel "Etag">
+
+<!ENTITY categoriesGroupboxLabel "Kategorie">
+<!ENTITY noteTabLabel "Poznámky">
+
+<!ENTITY miscGroupboxLabel "Další">
+<!ENTITY othersGroupboxLabel "Ostatní">
+<!ENTITY techGroupboxLabel "Technické">
+<!ENTITY labelGroupboxLabel "Popisky">
+<!ENTITY class1Label "Třída">
+<!ENTITY geoLabel "Geo">
+<!ENTITY mailerLabel "Mailer">
+<!ENTITY agentLabel "Agent">
+<!ENTITY keyLabel "Klíč">
+<!ENTITY photolocalURILabel "Místní fotka">
+<!ENTITY logolocalURILabel "místní logo">
+<!ENTITY soundlocalURILabel "Místní zvuk">
+<!ENTITY photoURILabel "Fotka">
+<!ENTITY logoURILabel "Logo">
+<!ENTITY soundURILabel "Zvuk">
+<!ENTITY prodidLabel "Prodid">
+<!ENTITY sortstringLabel "Třídící řetězec">
+<!ENTITY uidLabel "UID">
+<!ENTITY versionLabel "Verze">
+<!ENTITY tzLabel "Časové pásmo">
+
+<!ENTITY dirPrefIdLabel "dirPrefId">
+<!ENTITY cardurlLabel "Card URL">
+<!ENTITY cacheuriLabel "Uložit URI do mezipaměti">
+<!ENTITY revLabel "Rev">
+<!ENTITY etagLabel "Etag">
+
+<!ENTITY localizeadrTreeLabel "Vyhledat">
+<!ENTITY toEmailEmailTreeLabel "Poslat e-mail">
+<!ENTITY ccEmailEmailTreeLabel "Poslat e-mail (kopie / cc)">
+<!ENTITY bccemailemailTreeLabel "Poslat e-mail (skrytá kopie / bcc)">
+<!ENTITY findemailemailTreeLabel "Najít e-maily vztahující se k této e-mailové adrese">
+<!ENTITY findeventemailTreeLabel "Najít v kalendáři události vztahující se k této e-mailové adrese">
+<!ENTITY openURLTreeLabel "Otevřít URL">
+
+<!ENTITY copyCardTreeLabel "Kopírovat záznam">
+
+<!ENTITY toEmailCardFromAccountsOrCatsLabel "Poslat e-mail kontaktům">
+<!ENTITY toEmailCardFromCardsLabel "Poslat e-mail kontaktům">
+<!ENTITY ccEmailCardFromAccountsOrCatsLabel "Poslat e-mail kontaktům (kopie / cc)">
+<!ENTITY ccEmailCardFromCardsLabel "Poslat e-mail kontaktům (kopie / cc)">
+<!ENTITY bccEmailCardFromAccountsOrCatsLabel "Poslat e-mail kontaktům (skrytá kopie / bcc)">
+<!ENTITY bccEmailCardFromCardsLabel "Poslat e-mail kontaktům (skrytá kopie / bcc)">
+<!ENTITY categoryLabel "Kategorie">
+<!ENTITY findEmailsFromCardsLabel "Najít e-maily kontaktu">
+<!ENTITY findEventsFromCardsLabel "Najít v kalendáři události vztahující se k tomuto kontaktu">
+<!ENTITY localizeCardFromCardsLabel "Vyhledat">
+<!ENTITY openURLCardFromCardsLabel "Otevřít URL kontaktu">
+<!ENTITY cutCardFromAccountsOrCatsLabel "Vyjmout kontakt">
+<!ENTITY cutCardFromCardsLabel "Vyjmout kontakt">
+<!ENTITY copyCardFromAccountsOrCatsLabel "Kopírovat kontakt">
+<!ENTITY copyCardFromCardsLabel "Kopírovat kontakt">
+<!ENTITY pasteCardFromAccountsOrCatsLabel "Vložit kontakt">
+<!ENTITY pasteCardFromCardsLabel "Vložit kontakt">
+<!ENTITY exportCardToFileLabel "Exportovat kontakt do souboru">
+<!ENTITY exportCardToDirLabel "Exportovat kontakt do adresáře">
+<!ENTITY importCardFromFileLabel "Importovat kontakty ze souboru">
+<!ENTITY importCardFromDirLabel "Importovat kontakty z adresáře">
+<!ENTITY renameCatFromAccountsOrCatsLabel "Přejmenovat kategorii">
+<!ENTITY removeCatFromAccountsOrCatsLabel "Odstranit kategorii">
+<!ENTITY mergeCardsFromCardsLabel "Sloučit kontakty">
+<!ENTITY duplicateCardFromCardsLabel "Duplicitní kontakt">
+<!ENTITY convertListToCategoryFromCardsLabel "Převést seznam na kategorii">
+<!ENTITY editAccountFromAccountsOrCatsLabel "Upravit adresář">
+<!ENTITY syncAccountFromAccountsOrCatsLabel "Synchronizovat adresář">
+<!ENTITY removeAccountFromAccountsOrCatsLabel "Smazat adresář">
+
+<!ENTITY IMPPMenuLabel "Připojit">

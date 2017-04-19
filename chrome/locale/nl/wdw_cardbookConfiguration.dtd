@@ -1,0 +1,208 @@
+<!ENTITY wdw_cardbookConfigurationWindowLabel "CardBook voorkeuren">
+
+<!ENTITY generalTabLabel "Algemeen">
+<!ENTITY editionTabLabel "Bewerken">
+<!ENTITY typesTabLabel "Types">
+<!ENTITY IMPPsTabLabel "Instant Messenger adressen">
+<!ENTITY customFieldsTabLabel "Eigen rubrieken">
+<!ENTITY listsTabLabel "Lijsten">
+<!ENTITY syncTabLabel "Synchroniseren">
+<!ENTITY emailTabLabel "Email">
+<!ENTITY birthdaylistTabLabel "Geboortedata">
+<!ENTITY synclistTabLabel "Verjaardagsherinneringen">
+
+<!ENTITY integrationGroupboxLabel "Integratie in Thunderbird">
+<!ENTITY autocompletionLabel "Auto-aanvullen bij het typen van email adressen">
+<!ENTITY autocompletionAccesskey "A">
+<!ENTITY autocompletionTooltip "Auto-aanvullen bij het typen van email adressen vanuit CardBook.">
+<!ENTITY exclusiveLabel "CardBook als enige bron voor contactpersonen">
+<!ENTITY exclusiveAccesskey "e">
+<!ENTITY exclusiveTooltip "Als deze optie ingeschakeld is, dan wordt bij het typen uitsluitend naar email adressen in CardBook gezocht; als de optie uit staat, dan wordt ook in de Thunderbird-boeken gezocht.">
+<!ENTITY accountsRestrictionsLabel "Beperkingen">
+<!ENTITY accountsRestrictionsEnabledLabel "Ingeschakeld">
+<!ENTITY accountsRestrictionsMailNameLabel "Mail account">
+<!ENTITY accountsRestrictionsABNameLabel "Adresboek">
+<!ENTITY accountsRestrictionsCatNameLabel "Categorie">
+<!ENTITY accountsRestrictionsIncludeNameLabel "Type">
+<!ENTITY addRestrictionLabel "Toevoegen">
+<!ENTITY addRestrictionAccesskey "T">
+<!ENTITY renameRestrictionLabel "Bewerken">
+<!ENTITY renameRestrictionAccesskey "B">
+<!ENTITY deleteRestrictionLabel "Verwijderen">
+<!ENTITY deleteRestrictionAccesskey "V">
+<!ENTITY emailsCollectionLabel "Contactpersoon toevoegen bij uitgaande berichten">
+<!ENTITY emailsCollectionAccesskey "C">
+<!ENTITY emailsCollectionCatLabel "Categorie koppelen aan verzamelde contactpersonen">
+<!ENTITY emailsCollectionCatAccesskey "C">
+<!ENTITY emailsCollectionTooltip "Contactpersoon toevoegen bij uitgaande berichten als het email adres nog niet in CardBook voorkomt.">
+<!ENTITY logGroupboxLabel "Logbestand">
+<!ENTITY debugModeLabel "Debug modus">
+<!ENTITY debugModeAccesskey "D">
+<!ENTITY debugModeTooltip "Debug modus inschakelen voor uitgebreide logging.">
+<!ENTITY statusInformationLineNumberLabel "Aantal regels in log-bestand">
+<!ENTITY statusInformationLineNumberAccesskey "r">
+
+<!ENTITY tabsEdittingGroupboxLabel "Toon tabbladen">
+<!ENTITY noteTabLabel "Notities">
+<!ENTITY noteTabAccesskey "N">
+<!ENTITY listTabLabel "Lijst">
+<!ENTITY listTabAccesskey "L">
+<!ENTITY mailPopularityTabLabel "Populariteit">
+<!ENTITY mailPopularityTabAccesskey "P">
+<!ENTITY technicalTabLabel "Technisch">
+<!ENTITY technicalTabAccesskey "T">
+<!ENTITY vcardTabLabel "vCard">
+<!ENTITY vcardTabAccesskey "V">
+<!ENTITY localizeEdittingGroupboxLabel "Locatie bepalen:">
+<!ENTITY localizeEngineOpenStreetMapLabel "OpenStreetMap">
+<!ENTITY localizeEngineOpenStreetMapAccesskey "O">
+<!ENTITY localizeEngineGoogleMapsLabel "Google Maps">
+<!ENTITY localizeEngineGoogleMapsAccesskey "G">
+<!ENTITY localizeEngineBingMapsLabel "Bing Maps">
+<!ENTITY localizeEngineBingMapsAccesskey "B">
+<!ENTITY localizeTargetLabel "Open externe links:">
+<!ENTITY localizeTargetInLabel "In Thunderbird">
+<!ENTITY localizeTargetInAccesskey "I">
+<!ENTITY localizeTargetOutLabel "Buiten Thunderbird">
+<!ENTITY localizeTargetOutAccesskey "U">
+<!ENTITY fnLabelExplanation "Het is mogelijk om in te stellen hoe CardBook de 'Getoonde naam' samenstelt. De formule bestaat uit blokken, omsloten door haakjes, (). In die blokken zitten twee delen, gescheiden door een verticaal streepje, |.
+					Het eerste deel is van toepassing als het betreffende deel {{1}} ingevuld is, het tweede deel als het niet ingevuld is.">
+<!ENTITY fnFormulaLabel "'Getoonde naam' samenstellen">
+<!ENTITY fnFormulaAccesskey "s">
+<!ENTITY resetfnFormulaLabel "Herstellen naar standaardwaarde">
+<!ENTITY resetFnFormulaAccesskey "H">
+<!ENTITY miscEdittingGroupboxLabel "Overig">
+<!ENTITY cardCreationVersionLabel "Default vCard versie:">
+<!ENTITY preferEmailEditionLabel "Dubbelklikken op contactpersoon start wijzigen (i.p.v. bericht verzenden)">
+<!ENTITY preferEmailEditionAccesskey "D">
+
+<!ENTITY typesGroupboxLabel "Verschillende types gegevens">
+<!ENTITY typesCategoryAdrLabel "Adressen">
+<!ENTITY typesCategoryAdrAccesskey "A">
+<!ENTITY typesCategoryEmailLabel "Email">
+<!ENTITY typesCategoryEmailAccesskey "E">
+<!ENTITY typesCategoryImppLabel "IMPP">
+<!ENTITY typesCategoryImppAccesskey "I">
+<!ENTITY typesCategoryTelLabel "Telefoonnummer">
+<!ENTITY typesCategoryTelAccesskey "F">
+<!ENTITY typesCategoryUrlLabel "URL">
+<!ENTITY typesCategoryUrlAccesskey "U">
+<!ENTITY typesCodeLabel "Code">
+<!ENTITY typesLabelLabel "Naam">
+<!ENTITY addTypeLabel "Toevoegen">
+<!ENTITY addTypeAccesskey "T">
+<!ENTITY renameTypeLabel "Bewerken">
+<!ENTITY renameTypeAccesskey "B">
+<!ENTITY deleteTypeLabel "Verwijderen">
+<!ENTITY deleteTypeAccesskey "V">
+<!ENTITY preferenceGroupboxLabel "Rubriek 'Voorkeur'">
+<!ENTITY preferenceLabel "Naam van de rubriek 'Voorkeur'">
+<!ENTITY preferenceAccesskey "N">
+<!ENTITY preferenceValueLabel "Naam van de rubriek 'Voorkeur' (uitsluitend voor vCard 4.0)">
+<!ENTITY preferenceValueAccesskey "R">
+
+<!ENTITY IMPPGroupboxWarn "Deze instelling opent een IM-adres met gebruikmaking van het protocol.">
+<!ENTITY IMPPGroupboxLabel "Instant Messenger adressen">
+<!ENTITY IMPPCodeLabel "Code">
+<!ENTITY IMPPLabelLabel "Naam">
+<!ENTITY IMPPProtocolLabel "Protocol">
+<!ENTITY addIMPPLabel "Toevoegen">
+<!ENTITY addIMPPAccesskey "T">
+<!ENTITY renameIMPPLabel "Bewerken">
+<!ENTITY renameIMPPAccesskey "B">
+<!ENTITY deleteIMPPLabel "Verwijderen">
+<!ENTITY deleteIMPPAccesskey "V">
+
+<!ENTITY customFieldsPanelLabel "Definieer eigen rubrieken">
+<!ENTITY customFieldName "Rubriek naam">
+<!ENTITY customFieldLabel "Rubriek label">
+
+<!ENTITY orgWarn "De rubriek ORG kan bestaan uit tekst, gescheiden door puntkomma's. Bijvoorbeeld: bedrijfsnaam;dienstnaam;afdelingsnaam. De rubrieken hieronder beschrijven de namen van de onderdelen daarvan.">
+
+<!ENTITY listPanelLabel "Als de server geen categorieën ondersteunt (zoals Google, Apple, Zimbra, etc...), dan zijn lijsten een goede manier om emails aan groepen contactpersonen te versturen. (In geval van vCard 3.0 werkt dit alleen met eigen rubrieken.)">
+<!ENTITY listGroupboxLabel "Eigen rubrieken voor lijsten">
+<!ENTITY kindCustomLabel "Soort">
+<!ENTITY kindCustomAccesskey "S">
+<!ENTITY memberCustomLabel "Lid">
+<!ENTITY memberCustomAccesskey "L">
+
+<!ENTITY syncGroupboxLabel "Voorrang">
+<!ENTITY syncWarn "Synchroniseren werkt de wijzigingen in CardBook bij naar de server en de wijzigingen op de server naar CardBook.">
+<!ENTITY initialSyncLabel "Automatische synchronisatie bij iedere start van Thunderbird">
+<!ENTITY initialSyncAccesskey "A">
+<!ENTITY solveConflictsLabel "Als een contactpersoon zowel op de server als lokaal gewijzigd is:">
+<!ENTITY solveConflictsLocalLabel "Prevaleer de lokale wijziging">
+<!ENTITY solveConflictsLocalAccesskey "L">
+<!ENTITY solveConflictsRemoteLabel "Prevaleer de wijziging op de server">
+<!ENTITY solveConflictsRemoteAccesskey "S">
+<!ENTITY solveConflictsUserLabel "Vraag mij">
+<!ENTITY solveConflictsUserAccesskey "V">
+<!ENTITY autoSyncGroupboxLabel "Periodiek synchroniseren">
+<!ENTITY autoSyncLabel "Periodiek synchroniseren inschakelen">
+<!ENTITY autoSyncAccesskey "P">
+<!ENTITY autoSyncIntervalLabel "Interval (in minuten) voor periodiek synchroniseren">
+<!ENTITY autoSyncIntervalAccesskey "I">
+<!ENTITY requestsGroupboxLabel "Verzoeken">
+<!ENTITY requestsTimeoutLabel "Timeout (in seconden)">
+<!ENTITY requestsTimeoutAccesskey "T">
+<!ENTITY multigetLabel "Bij het ophalen van gegevens, groeperen op">
+<!ENTITY multigetAccesskey "G">
+<!ENTITY advancedSyncGroupboxLabel "Geavanceerde instellingen">
+<!ENTITY decodeReportLabel "URL's ontcijferen voor rapportage-verzoeken">
+<!ENTITY decodeReportAccesskey "O">
+
+<!ENTITY miscEmailGroupboxLabel "Versturen emails">
+<!ENTITY preferEmailPrefLabel "Voorkeur voor email adressen die als 'Voorkeur' gemarkeerd zijn">
+<!ENTITY preferEmailPrefAccesskey "V">
+<!ENTITY preferEmailPrefWarn "Als er geen email adres gemarkeerd is, dan worden berichten naar alle adressen van de betreffende contactpersoon verstuurd.">
+<!ENTITY attachvCardWarn "Selecteer voor elke email-account een vCard om aan alle uitgaande berichten van die account(s) de betreffende vCard toe te voegen. Dit gebeurt automatisch als deze voorziening ingeschakeld is in de instellingen.">
+<!ENTITY attachvCardGroupboxLabel "vCard aan uitgaande emails toevoegen ">
+<!ENTITY mailAccountsEnabledLabel "Ingeschakeld">
+<!ENTITY mailAccountsNameLabel "Mail account">
+<!ENTITY mailAccountsFileNameLabel "Bijlage">
+<!ENTITY mailAccountsFnLabel "Contactpersoon">
+<!ENTITY choosevCardLabel "Kies een vCard">
+<!ENTITY choosevCardAccesskey "K">
+<!ENTITY displayvCardLabel "Bekijk de vCard">
+<!ENTITY displayvCardAccesskey "B">
+
+<!ENTITY birthdayListWarn "Let op: geboortedata worden uitsluitend in CardBook adresboeken gezocht.">
+<!ENTITY addressBooksGroupboxLabel "Adresboeken">
+<!ENTITY calendarsGroupboxLabel "Agenda's">
+<!ENTITY searchGroupboxLabel "Zoeken">
+<!ENTITY searchInNoteLabel "Zoek bijzondere gebeurtenissen in de rubriek Notities">
+<!ENTITY searchInNoteTooltip "Bijzondere gebeurtenissen in de rubriek Notities toevoegen (Scheidingsteken : en datumformaat zoals hieronder) : Verjaardag:Onze eerste zoen:02.12.1996">
+<!ENTITY searchInNoteAccesskey "Z">
+<!ENTITY dateFormatLabel "Datumformaat">
+<!ENTITY dateFormatAccesskey "D">
+
+<!ENTITY remindersTabLabel "Verjaardagsherinneringen">
+<!ENTITY remindViaPopupWindowGroupboxLabel "Verjaardagsherinneringen via popup-scherm">
+<!ENTITY numberOfDaysForSearchingLabel "Aantal dagen vooruit kijken bij het zoeken naar verjaardagen">
+<!ENTITY numberOfDaysForSearchingAccesskey "A">
+<!ENTITY showPopupOnStartupLabel "Toon popup-scherm bij opstarten">
+<!ENTITY showPopupOnStartupAccesskey "T">
+<!ENTITY showPeriodicPopupLabel "Toon dagelijks popup-scherm">
+<!ENTITY showPeriodicPopupAccesskey "d">
+<!ENTITY periodicPopupTimeLabel "Toon de tijd (hh:mm)">
+<!ENTITY periodicPopupTimeAccesskey "o">
+<!ENTITY showPopupEvenIfNoBirthdayLabel "Toon popup-scherm als verjaardagenlijst leeg is">
+<!ENTITY showPopupEvenIfNoBirthdayAccesskey "l">
+<!ENTITY remindViaLightningGroupboxLabel "Verjaardagsherinneringen via de kalender van Thunderbird's add on Lightning">
+<!ENTITY numberOfDaysForWritingLabel "Aantal dagen voor het vastleggen van verjaardagen">
+<!ENTITY numberOfDaysForWritingAccesskey "n">
+<!ENTITY syncWithLightningOnStartupLabel "Synchroniseren met Lightning bij opstarten">
+<!ENTITY syncWithLightningOnStartupAccesskey "S">
+<!ENTITY calendarEntryTitleLabel "Titel voor herinnering in agenda">
+<!ENTITY calendarEntryTitleTooltip "Standaard-titel voor herinnering. Deze moet twee onderdelen &#37;S bevatten, voor naam en leeftijd. Indien leeg, dan wordt een standaardherinnering gebruikt.">
+<!ENTITY calendarEntryTitleAccesskey "v">
+<!ENTITY calendarEntryTimeLabel "Tijd voor herinnering (hh:mm)">
+<!ENTITY calendarEntryTimeAccesskey "i">
+<!ENTITY calendarEntryWholeDayLabel "Herinnering voor de hele dag">
+<!ENTITY calendarEntryWholeDayAccesskey "h">
+<!ENTITY calendarEntryAlarmLabel "Herinnering x dagen voor gebeurtenis">
+<!ENTITY calendarEntryAlarmTooltip "Stel het aantal dagen in vóór de verjaardag waarop Lightning een herinnering moet geven. Indien leeg, dan wordt er geen herinnering gegeven.">
+<!ENTITY calendarEntryAlarmAccesskey "H">
+<!ENTITY calendarEntryCategoriesLabel "Categorie(ën) voor herinnering">
+<!ENTITY calendarEntryCategoriesTooltip "Eén of meer categorieën, gescheiden door komma's. Indien leeg, dan is er geen categorie.">
+<!ENTITY calendarEntryCategoriesAccesskey "C">

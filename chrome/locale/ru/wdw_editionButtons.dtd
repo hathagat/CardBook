@@ -1,0 +1,18 @@
+<!ENTITY viewResultEditionLabel "Посмотреть результат">
+<!ENTITY viewResultEditionAccesskey "П">
+<!ENTITY createEditionLabel "Создать">
+<!ENTITY createEditionAccesskey "С">
+<!ENTITY createAndReplaceEditionLabel "Создать и заменить">
+<!ENTITY createAndReplaceEditionAccesskey "З">
+<!ENTITY saveEditionLabel "Сохранить">
+<!ENTITY saveEditionAccesskey "С">
+<!ENTITY validateEditionLabel "Проверить">
+<!ENTITY validateEditionAccesskey "П">
+<!ENTITY cancelEditionLabel "Отменить">
+<!ENTITY cancelEditionAccesskey "О">
+<!ENTITY closeEditionLabel "Закрыть">
+<!ENTITY closeEditionAccesskey "З">
+<!ENTITY buttonAppendToListLabel "Добавить">
+<!ENTITY buttonAppendToListAccesskey "Д">
+<!ENTITY buttonRemoveFromListLabel "Удалить">
+<!ENTITY buttonRemoveFromListAccesskey "У">

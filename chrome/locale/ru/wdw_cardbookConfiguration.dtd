@@ -1,0 +1,208 @@
+<!ENTITY wdw_cardbookConfigurationWindowLabel "Настройки CardBook">
+
+<!ENTITY generalTabLabel "Основные">
+<!ENTITY editionTabLabel "Редактирование">
+<!ENTITY typesTabLabel "Типы">
+<!ENTITY IMPPsTabLabel "Интернет–вызовы">
+<!ENTITY customFieldsTabLabel "Пользовательсткие поля">
+<!ENTITY listsTabLabel "Списки">
+<!ENTITY syncTabLabel "Синхронизация">
+<!ENTITY emailTabLabel "Email">
+<!ENTITY birthdaylistTabLabel "Дни рождения">
+<!ENTITY synclistTabLabel "Напоминания о днях рождения">
+
+<!ENTITY integrationGroupboxLabel "Интеграция в Thunderbird">
+<!ENTITY autocompletionLabel "Автозавершение адресов email">
+<!ENTITY autocompletionAccesskey "А">
+<!ENTITY autocompletionTooltip "Расширяет стандартное автоматическое завершение ввода для контактов из адресной книги Thunderbird добавлением контактов из CardBook.">
+<!ENTITY exclusiveLabel "Единственный источник контактов">
+<!ENTITY exclusiveAccesskey "Е">
+<!ENTITY exclusiveTooltip "Отключение этой настройки позволяет Thunderbird запрашивать контакты из стандартной адресной книги для жёлтых звёздочек, отображаемого имени в сообщениях и автозавершения адресов email.">
+<!ENTITY accountsRestrictionsLabel "Ограничения для учётных записей">
+<!ENTITY accountsRestrictionsEnabledLabel "Включено">
+<!ENTITY accountsRestrictionsMailNameLabel "Потовый аккаунт">
+<!ENTITY accountsRestrictionsABNameLabel "Адресная книга">
+<!ENTITY accountsRestrictionsCatNameLabel "Категория">
+<!ENTITY accountsRestrictionsIncludeNameLabel "Тип">
+<!ENTITY addRestrictionLabel "Добавить">
+<!ENTITY addRestrictionAccesskey "Д">
+<!ENTITY renameRestrictionLabel "Правка">
+<!ENTITY renameRestrictionAccesskey "П">
+<!ENTITY deleteRestrictionLabel "Удалить">
+<!ENTITY deleteRestrictionAccesskey "У">
+<!ENTITY emailsCollectionLabel "Сохранять адреса из исходящей почты">
+<!ENTITY emailsCollectionAccesskey "С">
+<!ENTITY emailsCollectionCatLabel "Категория для назначения собранным контактам">
+<!ENTITY emailsCollectionCatAccesskey "К">
+<!ENTITY emailsCollectionTooltip "Дополняет стандартный для Thunderbird сбор адресов получателей из исходящий сообщений. При включении, адреса email, не присутствующие ни в одной из адресных книг, будут добавлены в выбранную адресную книгу (книги).">
+<!ENTITY logGroupboxLabel "Журнал">
+<!ENTITY debugModeLabel "Режим отладки">
+<!ENTITY debugModeAccesskey "о">
+<!ENTITY debugModeTooltip "Включает режим отладки для расширенного протоколирования.">
+<!ENTITY statusInformationLineNumberLabel "Максимальное количество строк для файла журнала">
+<!ENTITY statusInformationLineNumberAccesskey "к">
+
+<!ENTITY tabsEdittingGroupboxLabel "Показывать вкладки">
+<!ENTITY noteTabLabel "Заметки">
+<!ENTITY noteTabAccesskey "З">
+<!ENTITY listTabLabel "Список">
+<!ENTITY listTabAccesskey "С">
+<!ENTITY mailPopularityTabLabel "Рейтинг email">
+<!ENTITY mailPopularityTabAccesskey "Р">
+<!ENTITY technicalTabLabel "Тех.данные">
+<!ENTITY technicalTabAccesskey "Т">
+<!ENTITY vcardTabLabel "vCard">
+<!ENTITY vcardTabAccesskey "V">
+<!ENTITY localizeEdittingGroupboxLabel "Использовать для показа местополжения:">
+<!ENTITY localizeEngineOpenStreetMapLabel "OpenStreetMap">
+<!ENTITY localizeEngineOpenStreetMapAccesskey "O">
+<!ENTITY localizeEngineGoogleMapsLabel "Карты Google">
+<!ENTITY localizeEngineGoogleMapsAccesskey "G">
+<!ENTITY localizeEngineBingMapsLabel "Карты Bing">
+<!ENTITY localizeEngineBingMapsAccesskey "B">
+<!ENTITY localizeTargetLabel "Открывать внешние ссылки:">
+<!ENTITY localizeTargetInLabel "Внутри Thunderbird">
+<!ENTITY localizeTargetInAccesskey "у">
+<!ENTITY localizeTargetOutLabel "Вне Thunderbird">
+<!ENTITY localizeTargetOutAccesskey "е">
+<!ENTITY fnLabelExplanation "Возможна настройка правила, согласно которому CardBook заполняет поле «Отображаемое имя». Эта формула состоит из блоков, ограниченных «()». В каждом из блоков есть две части, разделяемые «|». 
+								Первая часть применяется, если указанное поле присутствует, например {{1}} — не пустое значение, вторая часть применяется если указанное значение является пустым.">
+<!ENTITY fnFormulaLabel "Формировать отображаемое имя">
+<!ENTITY fnFormulaAccesskey "Ф">
+<!ENTITY resetfnFormulaLabel "Сбросить до значений по умолчанию">
+<!ENTITY resetFnFormulaAccesskey "у">
+<!ENTITY miscEdittingGroupboxLabel "Различное">
+<!ENTITY cardCreationVersionLabel "Версия протокола vCard по умолчанию:">
+<!ENTITY preferEmailEditionLabel "Двойной щелчок открывает контакт для редактирования, а не для отправки email">
+<!ENTITY preferEmailEditionAccesskey "Д">
+
+<!ENTITY typesGroupboxLabel "Типы">
+<!ENTITY typesCategoryAdrLabel "Адрес">
+<!ENTITY typesCategoryAdrAccesskey "А">
+<!ENTITY typesCategoryEmailLabel "Email">
+<!ENTITY typesCategoryEmailAccesskey "E">
+<!ENTITY typesCategoryImppLabel "IMPP">
+<!ENTITY typesCategoryImppAccesskey "I">
+<!ENTITY typesCategoryTelLabel "Телефон">
+<!ENTITY typesCategoryTelAccesskey "Т">
+<!ENTITY typesCategoryUrlLabel "URL">
+<!ENTITY typesCategoryUrlAccesskey "U">
+<!ENTITY typesCodeLabel "Код">
+<!ENTITY typesLabelLabel "Метка">
+<!ENTITY addTypeLabel "Добавить">
+<!ENTITY addTypeAccesskey "Д">
+<!ENTITY renameTypeLabel "Править">
+<!ENTITY renameTypeAccesskey "П">
+<!ENTITY deleteTypeLabel "Удалить">
+<!ENTITY deleteTypeAccesskey "У">
+<!ENTITY preferenceGroupboxLabel "Поле ПРИОРитет">
+<!ENTITY preferenceLabel "Метка поля ПРИОРитет">
+<!ENTITY preferenceAccesskey "М">
+<!ENTITY preferenceValueLabel "Метка для значения поля ПРИОРитет (только для vCard 4.0)">
+<!ENTITY preferenceValueAccesskey "з">
+
+<!ENTITY IMPPGroupboxWarn "Эти настройки позволяют осуществлять связь через Интернет, используя указанный протокол.">
+<!ENTITY IMPPGroupboxLabel "Интернет–связь">
+<!ENTITY IMPPCodeLabel "Код">
+<!ENTITY IMPPLabelLabel "Метка">
+<!ENTITY IMPPProtocolLabel "Протокол">
+<!ENTITY addIMPPLabel "Добавить">
+<!ENTITY addIMPPAccesskey "Д">
+<!ENTITY renameIMPPLabel "Править">
+<!ENTITY renameIMPPAccesskey "П">
+<!ENTITY deleteIMPPLabel "Удалить">
+<!ENTITY deleteIMPPAccesskey "У">
+
+<!ENTITY customFieldsPanelLabel "Задать собственные поля.">
+<!ENTITY customFieldName "Открывать внешние ссылки:">
+<!ENTITY customFieldLabel "Метка поля">
+
+<!ENTITY orgWarn "Поле ORG может содержать структурированное текстовое значение, состоящее из компонентов, разделённых символом «;» (например: компания;служба;отделение). Поля ниже описывают метки компонентов этой этой структуры.">
+
+<!ENTITY listPanelLabel "Если ваш сервер не поддерживает категории (как, например, Google, Apple, Zimbra, и т.д.…), то списки — это хороший способ для отправки email группам получателей. Протокол vCard версии 3.0 не поддерживает списки, но этого можно добиться используя пользовательские поля. Поэтому, для использования списков в vCard версии 3.0, необходимо определить эти поля.">
+<!ENTITY listGroupboxLabel "Пользовательские поля для списков">
+<!ENTITY kindCustomLabel "Тип">
+<!ENTITY kindCustomAccesskey "Т">
+<!ENTITY memberCustomLabel "Участник">
+<!ENTITY memberCustomAccesskey "У">
+
+<!ENTITY syncGroupboxLabel "Синхронизация">
+<!ENTITY syncWarn "Синхронизация переносит локальные изменения на удалённый сервер и изменения с сервера на диск.">
+<!ENTITY initialSyncLabel "Выполнять синхронизацию при запуске Thunderbird">
+<!ENTITY initialSyncAccesskey "з">
+<!ENTITY solveConflictsLabel "Если контакт был изменён и на сервере и локально:">
+<!ENTITY solveConflictsLocalLabel "Предпочитать локальное изменение">
+<!ENTITY solveConflictsLocalAccesskey "л">
+<!ENTITY solveConflictsRemoteLabel "Предпочитать изменение с сервера">
+<!ENTITY solveConflictsRemoteAccesskey "с">
+<!ENTITY solveConflictsUserLabel "Спрашивать">
+<!ENTITY solveConflictsUserAccesskey "С">
+<!ENTITY autoSyncGroupboxLabel "Переодическая синхронизация">
+<!ENTITY autoSyncLabel "Включить периодическую синхронизацию">
+<!ENTITY autoSyncAccesskey "П">
+<!ENTITY autoSyncIntervalLabel "Интервал между синхронизациями (минут)">
+<!ENTITY autoSyncIntervalAccesskey "И">
+<!ENTITY requestsGroupboxLabel "Запросы к серверу">
+<!ENTITY requestsTimeoutLabel "Таймаут (секунд)">
+<!ENTITY requestsTimeoutAccesskey "Т">
+<!ENTITY multigetLabel "Для запросов типа GET, группировать контакты по">
+<!ENTITY multigetAccesskey "G">
+<!ENTITY advancedSyncGroupboxLabel "Расширенные настройки">
+<!ENTITY decodeReportLabel "Декодировать URL для запросов REPORT">
+<!ENTITY decodeReportAccesskey "Д">
+
+<!ENTITY miscEmailGroupboxLabel "Отправка email">
+<!ENTITY preferEmailPrefLabel "Предпочитать адрес email, помеченный как ПРИОРитетный">
+<!ENTITY preferEmailPrefAccesskey "П">
+<!ENTITY preferEmailPrefWarn "Если адреса, отмеченные как ПРИОРитетные, отсутствуют, отправлять сообщения на все адреса email контакта.">
+<!ENTITY attachvCardWarn "Добавлять визитку vCard к отправляемым email. Выберите карточку для каждого из аккаунтов. Если эта настройка включена, CardBook будет вкладывать указанную визитку vCard к каждому исходящему email аккаунта.">
+<!ENTITY attachvCardGroupboxLabel "Добавлять визитку vCard">
+<!ENTITY mailAccountsEnabledLabel "Включено">
+<!ENTITY mailAccountsNameLabel "Почтовый аккаунт">
+<!ENTITY mailAccountsFileNameLabel "Вложенный файл">
+<!ENTITY mailAccountsFnLabel "Контакт">
+<!ENTITY choosevCardLabel "Выбрать визитку vCard">
+<!ENTITY choosevCardAccesskey "В">
+<!ENTITY displayvCardLabel "Посмотреть визитку vCard">
+<!ENTITY displayvCardAccesskey "П">
+
+<!ENTITY birthdayListWarn "Поиск дней рождения производиться только по адресным книгам CardBook.">
+<!ENTITY addressBooksGroupboxLabel "Контакты">
+<!ENTITY calendarsGroupboxLabel "Календари">
+<!ENTITY searchGroupboxLabel "Поиск">
+<!ENTITY searchInNoteLabel "Искать дни рождения в поле «Заметка»">
+<!ENTITY searchInNoteTooltip "Добавьте такие строки в поле «Заметка» (разделителем должно быть «:» ,а форматом данных один из указанных ниже): «Birthday:Ты и я, первый поцелуй:02.12.2006»">
+<!ENTITY searchInNoteAccesskey "З">
+<!ENTITY dateFormatLabel "Ожидаемый формат даты">
+<!ENTITY dateFormatAccesskey "О">
+
+<!ENTITY remindersTabLabel "Напоминания">
+<!ENTITY remindViaPopupWindowGroupboxLabel "Открывать всплывающее окно для напоминаний">
+<!ENTITY numberOfDaysForSearchingLabel "Количество дней до дня рождения">
+<!ENTITY numberOfDaysForSearchingAccesskey "К">
+<!ENTITY showPopupOnStartupLabel "Показывать всплывающее окно при запуске">
+<!ENTITY showPopupOnStartupAccesskey "з">
+<!ENTITY showPeriodicPopupLabel "Показывать всплывающее окно ежедневно">
+<!ENTITY showPeriodicPopupAccesskey "е">
+<!ENTITY periodicPopupTimeLabel "В указанное время (чч:мм)">
+<!ENTITY periodicPopupTimeAccesskey "в">
+<!ENTITY showPopupEvenIfNoBirthdayLabel "Показывать всплывающее окно при пустом списке дней рождения">
+<!ENTITY showPopupEvenIfNoBirthdayAccesskey "п">
+<!ENTITY remindViaLightningGroupboxLabel "Вывод напоминаний при помощи расширения Lightning">
+<!ENTITY numberOfDaysForWritingLabel "Количество дней для записи дня рождения">
+<!ENTITY numberOfDaysForWritingAccesskey "д">
+<!ENTITY syncWithLightningOnStartupLabel "Синхронизация с Lightning при запуске">
+<!ENTITY syncWithLightningOnStartupAccesskey "L">
+<!ENTITY calendarEntryTitleLabel "Название события календаря">
+<!ENTITY calendarEntryTitleTooltip "Шаблон названия события в календаре. Он должен содержать две переменные «&#37;S», которые будут заменены, соответственно, именем и возрастом. Если поле пустое, будет использовано стандартное сообщение.">
+<!ENTITY calendarEntryTitleAccesskey "Н">
+<!ENTITY calendarEntryTimeLabel "Время для события календаря  (чч:мм)">
+<!ENTITY calendarEntryTimeAccesskey "В">
+<!ENTITY calendarEntryWholeDayLabel "Событие на весь день">
+<!ENTITY calendarEntryWholeDayAccesskey "д">
+<!ENTITY calendarEntryAlarmLabel "Количество дней до события для начала вывода оповещений">
+<!ENTITY calendarEntryAlarmTooltip "Укажите, за сколько дней до дня рождения Lightning должен показать оповещение. Без даты. Если поле пустое, то оповещения не будет.">
+<!ENTITY calendarEntryAlarmAccesskey "д">
+<!ENTITY calendarEntryCategoriesLabel "Категория (категории) для событий календаря">
+<!ENTITY calendarEntryCategoriesTooltip "Одна или больше категорий, разделённые запятыми. Если поле пустое, то категория не назначается.">
+<!ENTITY calendarEntryCategoriesAccesskey "к">

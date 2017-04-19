@@ -1,0 +1,8 @@
+<!ENTITY listTabLabel "Lista">
+<!ENTITY kindLabel "Fajta">
+<!ENTITY kindAccesskey "F">
+<!ENTITY availableCardsGroupboxLabel "Elérhető kapcsolatok">
+<!ENTITY addedCardsGroupboxLabel "Kapcsolatok lista">
+<!ENTITY appendlistTreeLabel "Listához ad">
+<!ENTITY deletelistTreeLabel "Eltávolítani a listából">
+<!ENTITY editCardFromListLabel "Kapcsolat szerkesztése">

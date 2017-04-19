@@ -1,0 +1,208 @@
+<!ENTITY wdw_cardbookConfigurationWindowLabel "CardBook Preferences">
+
+<!ENTITY generalTabLabel "General">
+<!ENTITY editionTabLabel "Editing">
+<!ENTITY typesTabLabel "Types">
+<!ENTITY IMPPsTabLabel "Internet Communications">
+<!ENTITY customFieldsTabLabel "Custom Fields">
+<!ENTITY listsTabLabel "Lists">
+<!ENTITY syncTabLabel "Sync.">
+<!ENTITY emailTabLabel "Email">
+<!ENTITY birthdaylistTabLabel "Birthdays">
+<!ENTITY synclistTabLabel "Birthday Reminders">
+
+<!ENTITY integrationGroupboxLabel "Integration in Thunderbird">
+<!ENTITY autocompletionLabel "Autocompletion of email addresses">
+<!ENTITY autocompletionAccesskey "o">
+<!ENTITY autocompletionTooltip "Extends the standard autocompletion of contacts in address books of Thunderbird with an autocompletion of contacts in address books of CardBook.">
+<!ENTITY exclusiveLabel "Unique source for contacts">
+<!ENTITY exclusiveAccesskey "U">
+<!ENTITY exclusiveTooltip "If disabled, this option allows to retrieve contacts in Thunderbird standard address books for the yellow stars, for the email display name and the for the email autocompletion.">
+<!ENTITY accountsRestrictionsLabel "Mail Account Restrictions">
+<!ENTITY accountsRestrictionsEnabledLabel "Enabled">
+<!ENTITY accountsRestrictionsMailNameLabel "Mail Account">
+<!ENTITY accountsRestrictionsABNameLabel "Address Book">
+<!ENTITY accountsRestrictionsCatNameLabel "Category">
+<!ENTITY accountsRestrictionsIncludeNameLabel "Type">
+<!ENTITY addRestrictionLabel "Add">
+<!ENTITY addRestrictionAccesskey "A">
+<!ENTITY renameRestrictionLabel "Edit">
+<!ENTITY renameRestrictionAccesskey "E">
+<!ENTITY deleteRestrictionLabel "Delete">
+<!ENTITY deleteRestrictionAccesskey "D">
+<!ENTITY emailsCollectionLabel "Collect outgoing email">
+<!ENTITY emailsCollectionAccesskey "C">
+<!ENTITY emailsCollectionCatLabel "Add this category to the collected contacts">
+<!ENTITY emailsCollectionCatAccesskey "t">
+<!ENTITY emailsCollectionTooltip "Extends the standard outgoing email address collection of Thunderbird. If enabled, email addresses not present in any CardBook address books will be added to the selected address book(s).">
+<!ENTITY logGroupboxLabel "Log">
+<!ENTITY debugModeLabel "Debug mode">
+<!ENTITY debugModeAccesskey "m">
+<!ENTITY debugModeTooltip "Enable debug mode for extended logging.">
+<!ENTITY statusInformationLineNumberLabel "Number of lines kept in the log file">
+<!ENTITY statusInformationLineNumberAccesskey "N">
+
+<!ENTITY tabsEdittingGroupboxLabel "Display Tabs">
+<!ENTITY noteTabLabel "Notes">
+<!ENTITY noteTabAccesskey "N">
+<!ENTITY listTabLabel "List">
+<!ENTITY listTabAccesskey "L">
+<!ENTITY mailPopularityTabLabel "Mail Popularity">
+<!ENTITY mailPopularityTabAccesskey "M">
+<!ENTITY technicalTabLabel "Technical">
+<!ENTITY technicalTabAccesskey "T">
+<!ENTITY vcardTabLabel "vCard">
+<!ENTITY vcardTabAccesskey "V">
+<!ENTITY localizeEdittingGroupboxLabel "Locate with:">
+<!ENTITY localizeEngineOpenStreetMapLabel "OpenStreetMap">
+<!ENTITY localizeEngineOpenStreetMapAccesskey "O">
+<!ENTITY localizeEngineGoogleMapsLabel "Google Maps">
+<!ENTITY localizeEngineGoogleMapsAccesskey "G">
+<!ENTITY localizeEngineBingMapsLabel "Bing Maps">
+<!ENTITY localizeEngineBingMapsAccesskey "B">
+<!ENTITY localizeTargetLabel "Open external links:">
+<!ENTITY localizeTargetInLabel "Inside Thunderbird">
+<!ENTITY localizeTargetInAccesskey "I">
+<!ENTITY localizeTargetOutLabel "Outside Thunderbird">
+<!ENTITY localizeTargetOutAccesskey "U">
+<!ENTITY fnLabelExplanation "It is possible to customize the way CardBook generates its Display Name. This formula consists in blocks enclosed by '()'. In these blocks, there are two parts delimited by '|'. 
+								The first part applies when the term involved, for example {{1}}, is not null, the second part applies when the term involved is null.">
+<!ENTITY fnFormulaLabel "Generate Display Name">
+<!ENTITY fnFormulaAccesskey "y">
+<!ENTITY resetfnFormulaLabel "Restore to Default">
+<!ENTITY resetFnFormulaAccesskey "R">
+<!ENTITY miscEdittingGroupboxLabel "Miscellaneous">
+<!ENTITY cardCreationVersionLabel "Default vCard version:">
+<!ENTITY preferEmailEditionLabel "Double-click on a contact edits it instead of emails it">
+<!ENTITY preferEmailEditionAccesskey "D">
+
+<!ENTITY typesGroupboxLabel "Types">
+<!ENTITY typesCategoryAdrLabel "Address">
+<!ENTITY typesCategoryAdrAccesskey "S">
+<!ENTITY typesCategoryEmailLabel "Email">
+<!ENTITY typesCategoryEmailAccesskey "m">
+<!ENTITY typesCategoryImppLabel "IMPP">
+<!ENTITY typesCategoryImppAccesskey "I">
+<!ENTITY typesCategoryTelLabel "Phone">
+<!ENTITY typesCategoryTelAccesskey "H">
+<!ENTITY typesCategoryUrlLabel "URL">
+<!ENTITY typesCategoryUrlAccesskey "U">
+<!ENTITY typesCodeLabel "Code">
+<!ENTITY typesLabelLabel "Label">
+<!ENTITY addTypeLabel "Add">
+<!ENTITY addTypeAccesskey "A">
+<!ENTITY renameTypeLabel "Edit">
+<!ENTITY renameTypeAccesskey "E">
+<!ENTITY deleteTypeLabel "Delete">
+<!ENTITY deleteTypeAccesskey "D">
+<!ENTITY preferenceGroupboxLabel "Field PREF">
+<!ENTITY preferenceLabel "Label of the PREF field">
+<!ENTITY preferenceAccesskey "P">
+<!ENTITY preferenceValueLabel "Label of the PREF value field (only for vCard 4.0)">
+<!ENTITY preferenceValueAccesskey "V">
+
+<!ENTITY IMPPGroupboxWarn "This setup allows Internet communications using the intended protocol.">
+<!ENTITY IMPPGroupboxLabel "Internet Communications">
+<!ENTITY IMPPCodeLabel "Code">
+<!ENTITY IMPPLabelLabel "Label">
+<!ENTITY IMPPProtocolLabel "Protocol">
+<!ENTITY addIMPPLabel "Add">
+<!ENTITY addIMPPAccesskey "A">
+<!ENTITY renameIMPPLabel "Edit">
+<!ENTITY renameIMPPAccesskey "E">
+<!ENTITY deleteIMPPLabel "Delete">
+<!ENTITY deleteIMPPAccesskey "D">
+
+<!ENTITY customFieldsPanelLabel "Define your own custom fields.">
+<!ENTITY customFieldName "Field Name">
+<!ENTITY customFieldLabel "Field Label">
+
+<!ENTITY orgWarn "The field ORG may contain a structured text value consisting of components separated by the SEMICOLON character (for example : yourcompany;yourservice;yourdepartment). The fields below describe the component labels of this structure.">
+
+<!ENTITY listPanelLabel "If your server does not support categories (like Google, Apple, Zimbra, etc...), lists are a good way to send emails to groups. vCard 3.0 do not natively support lists, but this may be achieved with custom fields, so if you want to use lists in vCard 3.0, you have to define these fields.">
+<!ENTITY listGroupboxLabel "Custom fields for lists">
+<!ENTITY kindCustomLabel "Kind">
+<!ENTITY kindCustomAccesskey "K">
+<!ENTITY memberCustomLabel "Member">
+<!ENTITY memberCustomAccesskey "M">
+
+<!ENTITY syncGroupboxLabel "Sync.">
+<!ENTITY syncWarn "Synchronizing propagates your modifications to a remote server and the server's modifications to you.">
+<!ENTITY initialSyncLabel "Run an initial synchronization at Thunderbird startup">
+<!ENTITY initialSyncAccesskey "R">
+<!ENTITY solveConflictsLabel "If a contact was updated both on server and locally:">
+<!ENTITY solveConflictsLocalLabel "Prefer the local modification">
+<!ENTITY solveConflictsLocalAccesskey "L">
+<!ENTITY solveConflictsRemoteLabel "Prefer the server modification">
+<!ENTITY solveConflictsRemoteAccesskey "S">
+<!ENTITY solveConflictsUserLabel "Ask user">
+<!ENTITY solveConflictsUserAccesskey "A">
+<!ENTITY autoSyncGroupboxLabel "Periodic Syncing">
+<!ENTITY autoSyncLabel "Enable periodic syncing">
+<!ENTITY autoSyncAccesskey "E">
+<!ENTITY autoSyncIntervalLabel "Interval for periodic syncing (minutes)">
+<!ENTITY autoSyncIntervalAccesskey "I">
+<!ENTITY requestsGroupboxLabel "Requests">
+<!ENTITY requestsTimeoutLabel "Timeout (seconds)">
+<!ENTITY requestsTimeoutAccesskey "T">
+<!ENTITY multigetLabel "For GET requests, group contacts by">
+<!ENTITY multigetAccesskey "G">
+<!ENTITY advancedSyncGroupboxLabel "Advanced Properties">
+<!ENTITY decodeReportLabel "Decode URLs for REPORT requests">
+<!ENTITY decodeReportAccesskey "D">
+
+<!ENTITY miscEmailGroupboxLabel "Sending Emails">
+<!ENTITY preferEmailPrefLabel "Prefer email addresses marked PREFerred">
+<!ENTITY preferEmailPrefAccesskey "P">
+<!ENTITY preferEmailPrefWarn "If no address is marked 'PREFerred', the message is sent to all of the contact's addresses.">
+<!ENTITY attachvCardWarn "To automatically add a vCard to your emails, select a vCard for each email account. If activated, CardBook will attach this vCard to every outgoing email from this account.">
+<!ENTITY attachvCardGroupboxLabel "Join a vCard">
+<!ENTITY mailAccountsEnabledLabel "Enabled">
+<!ENTITY mailAccountsNameLabel "Mail Account">
+<!ENTITY mailAccountsFileNameLabel "Attached file">
+<!ENTITY mailAccountsFnLabel "Contact">
+<!ENTITY choosevCardLabel "Choose a vCard">
+<!ENTITY choosevCardAccesskey "C">
+<!ENTITY displayvCardLabel "View the vCard">
+<!ENTITY displayvCardAccesskey "V">
+
+<!ENTITY birthdayListWarn "Birthdays are only searched within CardBook address books.">
+<!ENTITY addressBooksGroupboxLabel "Address Books">
+<!ENTITY calendarsGroupboxLabel "Calendars">
+<!ENTITY searchGroupboxLabel "Search">
+<!ENTITY searchInNoteLabel "Search birthdays in the Note field">
+<!ENTITY searchInNoteTooltip "Add such lines in the Note field  (separator should be : and the date format should be the one given below) : Birthday:You and me, first kiss:02.12.2006">
+<!ENTITY searchInNoteAccesskey "S">
+<!ENTITY dateFormatLabel "Expected date format">
+<!ENTITY dateFormatAccesskey "E">
+
+<!ENTITY remindersTabLabel "Reminders">
+<!ENTITY remindViaPopupWindowGroupboxLabel "Remind via Popup Window">
+<!ENTITY numberOfDaysForSearchingLabel "Number of days to check birthdays for">
+<!ENTITY numberOfDaysForSearchingAccesskey "N">
+<!ENTITY showPopupOnStartupLabel "Show popup window on startup">
+<!ENTITY showPopupOnStartupAccesskey "S">
+<!ENTITY showPeriodicPopupLabel "Show daily popup">
+<!ENTITY showPeriodicPopupAccesskey "d">
+<!ENTITY periodicPopupTimeLabel "Display time (hh:mm)">
+<!ENTITY periodicPopupTimeAccesskey "i">
+<!ENTITY showPopupEvenIfNoBirthdayLabel "Show popup window when birthday list is empty">
+<!ENTITY showPopupEvenIfNoBirthdayAccesskey "h">
+<!ENTITY remindViaLightningGroupboxLabel "Remind via Thunderbird Lightning Calendar Extension">
+<!ENTITY numberOfDaysForWritingLabel "Number of days to write birthdays">
+<!ENTITY numberOfDaysForWritingAccesskey "w">
+<!ENTITY syncWithLightningOnStartupLabel "Sync with Lightning on startup">
+<!ENTITY syncWithLightningOnStartupAccesskey "L">
+<!ENTITY calendarEntryTitleLabel "Title for calendar event">
+<!ENTITY calendarEntryTitleTooltip "Template title for the calendar event. It should contain two placeholders &#37;S, respectively replaced by name and age. If the field is empty, a standard message is used.">
+<!ENTITY calendarEntryTitleAccesskey "T">
+<!ENTITY calendarEntryTimeLabel "Time for calendar event (hh:mm)">
+<!ENTITY calendarEntryTimeAccesskey "m">
+<!ENTITY calendarEntryWholeDayLabel "Calendar event on the whole day">
+<!ENTITY calendarEntryWholeDayAccesskey "y">
+<!ENTITY calendarEntryAlarmLabel "Alarm to n days before calendar event">
+<!ENTITY calendarEntryAlarmTooltip "Enter how many days before the birthday Lightning's alarm should remind you. Without date. If the field is empty, there would be no alarm.">
+<!ENTITY calendarEntryAlarmAccesskey "n">
+<!ENTITY calendarEntryCategoriesLabel "Category(ies) for calendar event">
+<!ENTITY calendarEntryCategoriesTooltip "One or more categories, comma separated. If the field is empty, there would be no category.">
+<!ENTITY calendarEntryCategoriesAccesskey "g">

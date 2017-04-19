@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % configurationDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookConfiguration.dtd"> %configurationDTD;
+	<!ENTITY % passwordDTD SYSTEM "chrome://cardbook/locale/wdw_password.dtd"> %passwordDTD;
+	<!ENTITY % addressbooksAddDTD SYSTEM "chrome://cardbook/locale/wdw_addressbooksAdd.dtd"> %addressbooksAddDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+	onload="wdw_serverEdition.load();" resizable="true"
+	onclose="wdw_serverEdition.cancel();"
+	id="wdw_serverEdition" title="&namePage.wizard.description;"
+	persist="screenX screenY width height"
+	style="min-width:600px;min-height:400px;">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://cardbook/content/cardbookElementTools.js"/>
+	<script src="chrome://cardbook/content/wdw_serverEdition.js"/>
+
+	<keyset id="wdw_serverEdition-keys">
+		<key keycode="VK_ESCAPE" oncommand="wdw_serverEdition.cancel();"/>
+	</keyset>
+
+	<hbox flex="1">
+		<vbox flex="1">
+			<grid align="center" flex="1">
+				<columns>
+					<column/>
+					<column flex="1"/>
+					<column/>
+				</columns>
+	
+				<rows>
+					<row align="center">
+						<label id="serverNameLabel" value="&namePage.name.label;" control="serverNameTextBox"/>
+						<textbox id="serverNameTextBox"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label id="serverTypeLabel" value="&remotePage.type.label;" control="serverTypeTextBox"/>
+						<textbox id="serverTypeTextBox" disabled="true"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label id="serverUrlLabel" value="&remotePage.uri.label;" control="serverUrlTextBox"/>
+						<textbox id="serverUrlTextBox" disabled="true"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label id="serverUserLabel" value="&usernameLabel;" control="serverUserTextBox"/>
+						<textbox id="serverUserTextBox" disabled="true"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label id="serverReadOnlyLabel" value="&namePage.readonly.label;" control="serverReadOnlyCheckBox"/>
+						<checkbox id="serverReadOnlyCheckBox"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label value="&namePage.urnuuid.label;" control="serverUrnuuidCheckBox"/>
+						<checkbox id="serverUrnuuidCheckBox" disabled="true"/>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label value="&namePage.color.label;" control="cardbook-color"/>
+						<hbox align="center">
+							<html:input id="serverColorInput"
+								class="small-margin"
+								type="color"/>
+						</hbox>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label value="&namePage.vCardVersion.label;" control="serverVCardVersionMenu"/>
+						<hbox align="center">
+							<menulist id="serverVCardVersionMenu">
+								<menupopup id="serverVCardVersionMenupopup">
+									<menuitem label="3.0" value="3.0"/>
+									<menuitem label="4.0" value="4.0"/>
+								</menupopup>
+							</menulist>
+						</hbox>
+					</row>
+					<separator class="thin"/>
+					<row align="center">
+						<label value="&dateFormatLabel;" control="dateFormatMenuList"/>
+						<hbox align="center">
+							<menulist id="dateFormatMenuList">  
+								<menupopup id="dateFormatMenuPopup"/>
+							</menulist>    
+						</hbox>
+					</row>
+				</rows>
+			</grid>
+		</vbox>
+	</hbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="saveEditionLabel" label="&saveEditionLabel;" accesskey="&saveEditionAccesskey;" oncommand="wdw_serverEdition.save();"/>
+		<button id="cancelEditionLabel" label="&cancelEditionLabel;" accesskey="&cancelEditionAccesskey;" oncommand="wdw_serverEdition.cancel();"/>
+	</hbox>
+</window>

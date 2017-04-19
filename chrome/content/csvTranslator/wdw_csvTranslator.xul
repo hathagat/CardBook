@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % listsDTD SYSTEM "chrome://cardbook/locale/wdw_lists.dtd"> %listsDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	onload="wdw_csvTranslator.load();" resizable="true"
+	onclose="wdw_csvTranslator.cancel();"
+	id="wdw_csvTranslator"
+	persist="screenX screenY width height"
+	style="min-width:500px;min-height:400px;">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://cardbook/content/preferences/cardbookPreferences.js"/>
+	<script src="chrome://cardbook/content/cardbookUtils.js"/>
+	<script src="chrome://cardbook/content/wdw_log.js"/>
+	<script src="chrome://cardbook/content/csvTranslator/wdw_csvTranslator.js"/>
+
+	<keyset id="wdw_csvTranslator-keys">
+		<key keycode="VK_ESCAPE" oncommand="wdw_csvTranslator.cancel();" />
+	</keyset>
+
+	<tabbox flex="1">
+		<vbox flex="1">
+			<hbox>
+				<vbox flex="1" align="center">
+					<grid align="center" flex="1">
+						<columns>
+							<column/>
+							<column/>
+						</columns>
+			
+						<rows>
+							<row align="center">
+								<label id="columnSeparatorLabel" control="columnSeparatorTextBox" class="header"/>
+								<textbox id="columnSeparatorTextBox" size="5" oninput="wdw_csvTranslator.loadFoundColumns();"/>
+							</row>
+							<row align="center">
+								<label id="lineHeaderLabel" control="lineHeaderCheckBox" class="header"/>
+								<checkbox id="lineHeaderCheckBox" checked="true"/>
+							</row>
+						</rows>
+					</grid>
+				</vbox>
+			</hbox>
+			<hbox flex="1">
+				<vbox flex="1">
+					<groupbox id="availableColumnsGroupbox" flex="1">
+						<caption id="availableColumnsGroupboxLabel" class="header"/>
+						<tree id="availableColumnsTree" class="cardbookTreeClass" flex="1" hidecolumnpicker="true">
+							<treecols id="availableColumnsTreeCols">
+								<treecol id="availableColumnsId" flex="1" persist="width ordinal hidden" hidden="true" style="text-align:left"/>
+								<treecol id="availableColumnsName" flex="1" persist="width ordinal hidden" style="text-align:left" hideheader="true"/>
+							</treecols>
+							<treechildren id="availableColumnsTreeChildren" ondblclick="wdw_csvTranslator.modifyLists(this);"/>
+						</tree>
+					</groupbox>
+				</vbox>
+				<vbox flex="1" align="center">
+					<hbox flex="1" align="center">
+						<vbox flex="1" align="center">
+							<button class="cardbookButtonClass" id="appendlistavailableColumnsTreeButton" label="&buttonAppendToListLabel;"
+									accesskey="&buttonAppendToListAccesskey;" oncommand="wdw_csvTranslator.modifyLists(this);"/>
+							<button class="cardbookButtonClass" id="deletelistaddedColumnsTreeButton" label="&buttonRemoveFromListLabel;"
+									accesskey="&buttonRemoveFromListAccesskey;" oncommand="wdw_csvTranslator.modifyLists(this);"/>
+							<button class="cardbookButtonClass" id="upAddedColumnsTreeButton" label="↑" oncommand="wdw_csvTranslator.upColumns();"/>
+							<button class="cardbookButtonClass" id="downAddedColumnsTreeButton" label="↓" oncommand="wdw_csvTranslator.downColumns(this);"/>
+						</vbox>
+					</hbox>
+				</vbox>
+				<vbox flex="1">
+					<groupbox id="addedColumnsGroupbox" flex="1">
+						<caption id="addedColumnsGroupboxLabel" class="header"/>
+						<tree id="addedColumnsTree" class="cardbookTreeClass" flex="1" hidecolumnpicker="true">
+							<treecols id="addedColumnsTreeCols">
+								<treecol id="addedColumnsId" flex="1" persist="width ordinal hidden" hidden="true"/>
+								<treecol id="addedColumnsName" flex="1" persist="width ordinal hidden" style="text-align:left" hideheader="true"/>
+							</treecols>
+							<treechildren id="addedColumnsTreeChildren" ondblclick="wdw_csvTranslator.modifyLists(this);"/>
+						</tree>
+					</groupbox>
+				</vbox>
+				<vbox id="foundColumnsVBox" flex="1">
+					<groupbox id="foundColumnsGroupbox" flex="1">
+						<caption id="foundColumnsGroupboxLabel" class="header"/>
+						<tree id="foundColumnsTree" class="cardbookTreeClass" flex="1" hidecolumnpicker="true">
+							<treecols id="foundColumnsTreeCols">
+								<treecol id="foundColumnsId" flex="1" persist="width ordinal hidden" hidden="true"/>
+								<treecol id="foundColumnsName" flex="1" persist="width ordinal hidden" style="text-align:left" hideheader="true"/>
+							</treecols>
+							<treechildren id="foundColumnsTreeChildren"/>
+						</tree>
+					</groupbox>
+				</vbox>
+			</hbox>
+		</vbox>
+	</tabbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="saveEditionLabel" label="&saveEditionLabel;" accesskey="&saveEditionAccesskey;" oncommand="wdw_csvTranslator.save();"/>
+		<button id="cancelEditionLabel" label="&cancelEditionLabel;" accesskey="&cancelEditionAccesskey;" oncommand="wdw_csvTranslator.cancel();"/>
+	</hbox>
+</window>

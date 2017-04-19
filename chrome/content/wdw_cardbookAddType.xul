@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % addTypeDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookAddType.dtd"> %addTypeDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="wdw_cardbookAddType.load();" resizable="true"
+	onclose="wdw_cardbookAddType.cancel();"
+	id="wdw_cardbookAddType" title="&wdw_cardbookAddTypeTitle;"
+	persist="screenX screenY width height"
+	style="min-width:200px;min-height:50px;">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://cardbook/content/cardEdition/wdw_cardEdition.js"/>
+	<script src="wdw_cardbookAddType.js"/>
+
+	<keyset id="wdw_cardbookAddType-keys">
+		<key keycode="VK_ESCAPE" oncommand="wdw_cardbookAddType.cancel();"/>
+	</keyset>
+
+	<hbox flex="1">
+		<vbox flex="1">
+			<grid align="center" flex="1">
+				<columns>
+					<column/>
+					<column flex="1"/>
+				</columns>
+	
+				<rows>
+					<row align="center">
+						<label id="typeCodeLabel" value="&typeCodeLabel;" control="typeCodeTextBox"/>
+						<textbox id="typeCodeTextBox"/>
+					</row>
+					<row align="center">
+						<label id="typeLabelLabel" value="&typeLabelLabel;" control="typeLabelTextBox"/>
+						<textbox id="typeLabelTextBox"/>
+					</row>
+				</rows>
+			</grid>
+		</vbox>
+	</hbox>
+
+	<hbox>
+		<spacer flex="1"/>
+		<button id="saveEditionLabel" label="&saveEditionLabel;" accesskey="&saveEditionAccesskey;" oncommand="wdw_cardbookAddType.save();"/>
+		<button id="cancelEditionLabel" label="&cancelEditionLabel;" accesskey="&cancelEditionAccesskey;" oncommand="wdw_cardbookAddType.cancel();"/>
+	</hbox>
+</window>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookButtons.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookCheckboxes.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookTreeChildrens.css" type="text/css"?>
+
+<!DOCTYPE window [
+    <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd"> %brandDTD;
+	<!ENTITY % buttonsDTD SYSTEM "chrome://cardbook/locale/wdw_editionButtons.dtd"> %buttonsDTD;
+	<!ENTITY % categoriesDTD SYSTEM "chrome://cardbook/locale/wdw_categoriesEdition.dtd"> %categoriesDTD;
+	<!ENTITY % cardbookDTD SYSTEM "chrome://cardbook/locale/wdw_cardbook.dtd"> %cardbookDTD;
+	<!ENTITY % namesDTD SYSTEM "chrome://cardbook/locale/wdw_nameEdition.dtd"> %namesDTD;
+	<!ENTITY % bdayDTD SYSTEM "chrome://cardbook/locale/wdw_bdayEdition.dtd"> %bdayDTD;
+	<!ENTITY % orgDTD SYSTEM "chrome://cardbook/locale/wdw_orgEdition.dtd"> %orgDTD;
+	<!ENTITY % adrDTD SYSTEM "chrome://cardbook/locale/wdw_adrEdition.dtd"> %adrDTD;
+	<!ENTITY % listsDTD SYSTEM "chrome://cardbook/locale/wdw_lists.dtd"> %listsDTD;
+	<!ENTITY % logDTD SYSTEM "chrome://cardbook/locale/wdw_logEdition.dtd"> %logDTD;
+	<!ENTITY % configurationDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookConfiguration.dtd"> %configurationDTD;
+]>
+
+<overlay id="ovl_cardbookBar"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<popupset id="cardbook-popupset">
+		<menupopup id="cardbook-toolbar-context" onpopupshowing="onViewToolbarsPopupShowing(event, ['navigation-toolbox', 'cardbook-toolbox']);">
+			<menuseparator id="customizeCardBookToolbarMenuSeparator"/>
+			<menuitem id="CustomizeCardBookToolbar"
+				label="&CustomizeCardBookToolbarLabel;"
+				accesskey="&CustomizeCardBookToolbarAccesskey;"
+				oncommand="CustomizeMailToolbar('cardbook-toolbox', 'CustomizeCardBookToolbar')"/>
+		</menupopup>
+	</popupset>
+
+	<toolbox id="cardbook-toolbox"
+		class="mail-toolbox"
+		mode="full"
+		defaultmode="full"
+		labelalign="end"
+		defaultlabelalign="end">
+		<toolbarpalette id="CardBookToolbarPalette">
+			<toolbarbutton id="cardbookToolbarAddServerButton"
+				label="&cardbookToolbarAddServerButtonLabel;"
+				tooltiptext="&cardbookToolbarAddServerButtonTooltip;"
+				oncommand="wdw_cardbook.addAddressbook();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarSyncButton"
+				label="&cardbookToolbarSyncButtonLabel;"
+				tooltiptext="&cardbookToolbarSyncButtonTooltip;"
+				oncommand="wdw_cardbook.syncAccounts();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarConfigurationButton"
+				label="&cardbookToolbarConfigurationButtonLabel;"
+				tooltiptext="&cardbookToolbarConfigurationButtonTooltip;"
+				oncommand="wdw_cardbook.openOptionsEdition();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarAddButton"
+				label="&cardbookToolbarAddButtonLabel;"
+				tooltiptext="&cardbookToolbarAddButtonTooltip;"
+				oncommand="wdw_cardbook.createCard();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarEditButton"
+				label="&cardbookToolbarEditButtonLabel;"
+				tooltiptext="&cardbookToolbarEditButtonTooltip;"
+				oncommand="wdw_cardbook.editCard();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarRemoveButton"
+				label="&cardbookToolbarRemoveButtonLabel;"
+				tooltiptext="&cardbookToolbarRemoveButtonTooltip;"
+				oncommand="wdw_cardbook.deleteCardsAndValidate('cardbook.cardRemovedDirect');"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarPrintButton"
+				label="&cardbookToolbarPrintButtonLabel;"
+				tooltiptext="&cardbookToolbarPrintButtonTooltip;"
+				oncommand="wdw_cardbook.print();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarAppMenuButton"
+				title="&cardbookToolbarAppMenuButtonLabel;"
+				tooltiptext="&cardbookToolbarAppMenuButtonTooltip;"
+				class="toolbarbutton-1 button-appmenu"
+				type="menu-button">
+				<menupopup id="cardbook-menupopup">
+					<menu id="cardbookAccountMenu" label="&cardbookAccountMenuLabel;">
+						<menupopup onpopupshowing="wdw_cardbook.cardbookAccountMenuContextShowing();">
+							<menuitem id="cardbookAccountMenuAddServer" label="&cardbookAccountMenuAddServerLabel;" oncommand="wdw_cardbook.addAddressbook();"/>
+							<menuitem id="cardbookAccountMenuEditServer" label="&cardbookAccountMenuEditServerLabel;" oncommand="wdw_cardbook.editAddressbook();"/>
+							<menuitem id="cardbookAccountMenuCloseServer" label="&cardbookAccountMenuCloseServerLabel;" oncommand="wdw_cardbook.removeAddressbook();"/>
+							<menuseparator/>
+							<menuitem id="cardbookAccountMenuEnableOrDisableAddressbook" oncommand="wdw_cardbook.enableOrDisableAddressbook();"/>
+							<menuseparator/>
+							<menuitem id="cardbookAccountMenuReadOnlyOrReadWriteAddressbook" oncommand="wdw_cardbook.readOnlyOrReadWriteAddressbook();"/>
+							<menuseparator/>
+							<menuitem id="cardbookAccountMenuSync" label="&cardbookAccountMenuSyncLabel;" oncommand="wdw_cardbook.syncAccountFromAccountsOrCats();"/>
+							<menuitem id="cardbookAccountMenuSyncs" label="&cardbookAccountMenuSyncsLabel;" oncommand="wdw_cardbook.syncAccounts();"/>
+							<menuseparator/>
+							<menuitem id="cardbookAccountMenuExportToFile" label="&exportCardToFileLabel;" oncommand="wdw_cardbook.exportCardsFromAccountsOrCats(this);"/>
+							<menuitem id="cardbookAccountMenuExportToDir" label="&exportCardToDirLabel;" oncommand="wdw_cardbook.exportCardsFromAccountsOrCats(this);"/>
+							<menuseparator/>
+							<menuitem id="cardbookAccountMenuImportFromFile" label="&importCardFromFileLabel;" oncommand="wdw_cardbook.importCardsFromFile();"/>
+							<menuitem id="cardbookAccountMenuImportFromDir" label="&importCardFromDirLabel;" oncommand="wdw_cardbook.importCardsFromDir();"/>
+						</menupopup>
+					</menu>
+					<menu id="cardbookContactsMenu" label="&cardbookContactsMenuLabel;">
+						<menupopup onpopupshowing="wdw_cardbook.cardbookContactsMenuContextShowing();">
+							<menuitem id="cardbookContactsMenuAddCard" label="&cardbookToolbarAddButtonLabel;" oncommand="wdw_cardbook.createCard();"/>
+							<menuitem id="cardbookContactsMenuEditCard" label="&cardbookToolbarEditButtonLabel;" oncommand="wdw_cardbook.editCard();"/>
+							<menuitem id="cardbookContactsMenuRemoveCard" label="&cardbookToolbarRemoveButtonLabel;" oncommand="wdw_cardbook.deleteCardsAndValidate('cardbook.cardRemovedDirect');"/>
+							<menuseparator/>
+							<menu id="cardbookContactsMenuCategories" label="&categoryLabel;">
+								<menupopup id="cardbookContactsMenuCategoriesMenuPopup">
+									<menuitem id="cardbookContactsMenuCategoriesNew" label="&categoryMenuLabel;" oncommand="wdw_cardbook.addNewCategory();"/>
+									<menuseparator/>
+								</menupopup>
+							</menu>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuToEmailCards" label="&toEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('to');"/>
+							<menuitem id="cardbookContactsMenuCcEmailCards" label="&ccEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('cc');"/>
+							<menuitem id="cardbookContactsMenuBccEmailCards" label="&bccEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('bcc');"/>
+							<menuseparator/>
+							<menu id="cardbookContactsMenuIMPPCards" label="&IMPPMenuLabel;">
+								<menupopup id="cardbookContactsMenuIMPPCardsMenuPopup"/>
+							</menu>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuFindEmails" label="&findEmailsFromCardsLabel;" oncommand="wdw_cardbook.findEmailsFromCards();"/>
+							<menuitem id="cardbookContactsMenuFindEvents" label="&findEventsFromCardsLabel;" oncommand="wdw_cardbook.findEventsFromCards();"/>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuLocalizeCards" label="&localizeCardFromCardsLabel;" oncommand="wdw_cardbook.localizeCardsFromCards();"/>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuOpenURL" label="&openURLCardFromCardsLabel;" oncommand="wdw_cardbook.openURLFromCards();"/>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuCutCards" label="&cutCardFromCardsLabel;" oncommand="wdw_cardbook.cutCardsFromCards();"/>
+							<menuitem id="cardbookContactsMenuCopyCards" label="&copyCardFromCardsLabel;" oncommand="wdw_cardbook.copyCardsFromCards();"/>
+							<menuitem id="cardbookContactsMenuPasteCards" label="&pasteCardFromCardsLabel;" oncommand="wdw_cardbook.pasteCards();"/>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuDuplicateCards" label="&duplicateCardFromCardsLabel;" oncommand="wdw_cardbook.duplicateCards();"/>
+							<menuitem id="cardbookContactsMenuMergeCards" label="&mergeCardsFromCardsLabel;" oncommand="wdw_cardbook.mergeCards();"/>
+							<menuseparator/>
+							<menuitem id="cardbookContactsMenuExportCardsToFile" label="&exportCardToFileLabel;" oncommand="wdw_cardbook.exportCardsFromCards(this);"/>
+							<menuitem id="cardbookContactsMenuExportCardsToDir" label="&exportCardToDirLabel;" oncommand="wdw_cardbook.exportCardsFromCards(this);"/>
+						</menupopup>
+					</menu>
+					<menu id="cardbookToolsMenu" label="&cardbookToolsMenuLabel;">
+						<menupopup onpopupshowing="wdw_cardbook.cardbookToolsMenuContextShowing();">
+							<menuitem id="cardbookToolsBirthdayList" label="&cardbookToolsMenuBirthdayListLabel;" oncommand="wdw_cardbook.displayBirthdayList();"/>
+							<menuitem id="cardbookToolsSyncLightning" label="&cardbookToolsMenuSyncLightningLabel;" oncommand="wdw_cardbook.displaySyncList();"/>
+							<menuseparator/>
+							<menuitem id="cardbookToolsMenuComplexSearch" label="&cardbookToolbarComplexSearchLabel;" oncommand="wdw_cardbook.editComplexSearch();"/>
+							<menuitem id="cardbookToolsMenuFindSingleDuplicates" label="&cardbookToolsMenuFindSingleDuplicatesLabel;" oncommand="wdw_cardbook.findDuplicatesFromAccountsOrCats();"/>
+							<menuitem id="cardbookToolsMenuFindDuplicates" label="&cardbookToolsMenuFindAllDuplicatesLabel;" oncommand="wdw_cardbook.findDuplicates();"/>
+							<menuseparator/>
+							<menuitem id="cardbookToolsMenuLog" label="&wdw_logEditionTitle;" oncommand="wdw_cardbook.openLogEdition();"/>
+							<menuseparator/>
+							<menuitem id="cardbookToolsMenuOptions" label="&wdw_cardbookConfigurationWindowLabel;" oncommand="wdw_cardbook.openOptionsEdition();"/>
+						</menupopup>
+					</menu>
+				</menupopup>
+			</toolbarbutton>
+			<toolbaritem id="cardbookToolbarSearchBox" flex="1"
+				title="&cardbookToolbarSearchBoxLabel;"
+				tooltiptext="&cardbookToolbarSearchBoxTooltip;"
+				class="toolbaritem-noline chromeclass-toolbar-additional">
+				<textbox id="cardbookSearchInput" flex="1"
+					type="search"
+					oncommand="wdw_cardbook.startSearch();"/>
+			</toolbaritem>
+			<toolbarbutton id="cardbookToolbarComplexSearch"
+				label="&cardbookToolbarComplexSearchLabel;"
+				tooltiptext="&cardbookToolbarComplexSearchTooltip;"
+				oncommand="wdw_cardbook.editComplexSearch();"
+				class="toolbarbutton-1"/>
+			<toolbarbutton id="cardbookToolbarThMenuButton"
+				class="toolbarbutton-1 button-appmenu"
+				label="&cardbookToolbarThMenuButtonLabel;"
+				tooltiptext="&cardbookToolbarThMenuButtonTooltip;"/>
+ 		</toolbarpalette>
+
+		<toolbar id="cardbook-toolbar" class="inline-toolbar chromeclass-toolbar"
+			toolbarname="&cardbookToolbarLabel;"
+			accesskey="&cardbookToolbarAccesskey;"
+			fullscreentoolbar="true" mode="full"
+			customizable="true"
+			context="cardbook-toolbar-context"
+			defaultset="cardbookToolbarAppMenuButton,cardbookToolbarSyncButton,cardbookToolbarConfigurationButton,spring,cardbookToolbarSearchBox,cardbookToolbarAddButton,cardbookToolbarEditButton,cardbookToolbarRemoveButton,cardbookToolbarThMenuButton"/>
+		<toolbarset id="cardbookToolbars" context="cardbook-toolbar-context"/>
+	</toolbox>
+
+	<menupopup id="adrTreeContextMenu">
+		<menuitem id="localizeadrTree" label="&localizeadrTreeLabel;" oncommand="wdw_cardbook.localizeCardFromTree();"/>
+		<menuseparator/>
+		<menuitem id="copyadrTree" label="&copyCardTreeLabel;" oncommand="wdw_cardbook.copyCardFromTree();"/>
+	</menupopup>
+
+	<menupopup id="telTreeContextMenu" onpopupshowing="wdw_cardbook.telTreeContextShowing();">
+		<menuitem id="connecttelTree" label="&IMPPMenuLabel;" oncommand="wdw_cardbook.openTelFromTree();"/>
+		<menuseparator/>
+		<menuitem id="copytelTree" label="&copyCardTreeLabel;" oncommand="wdw_cardbook.copyCardFromTree();"/>
+	</menupopup>
+
+	<menupopup id="emailTreeContextMenu" onpopupshowing="wdw_cardbook.emailTreeContextShowing();">
+		<menuitem id="toemailemailTree" label="&toEmailEmailTreeLabel;" oncommand="wdw_cardbook.emailCardFromTree('to');"/>
+		<menuitem id="ccemailemailTree" label="&ccEmailEmailTreeLabel;" oncommand="wdw_cardbook.emailCardFromTree('cc');"/>
+		<menuitem id="bccemailemailTree" label="&bccemailemailTreeLabel;" oncommand="wdw_cardbook.emailCardFromTree('bcc');"/>
+		<menuseparator/>
+		<menuitem id="findemailemailTree" label="&findemailemailTreeLabel;" oncommand="wdw_cardbook.findEmailsFromTree();"/>
+		<menuitem id="findeventemailTree" label="&findeventemailTreeLabel;" oncommand="wdw_cardbook.findEventsFromTree();"/>
+		<menuseparator/>
+		<menuitem id="copyemailTree" label="&copyCardTreeLabel;" oncommand="wdw_cardbook.copyCardFromTree();"/>
+	</menupopup>
+
+	<menupopup id="imppTreeContextMenu" onpopupshowing="wdw_cardbook.imppTreeContextShowing();">
+		<menuitem id="connectimppTree" label="&IMPPMenuLabel;" oncommand="wdw_cardbook.openIMPPFromTree();"/>
+		<menuseparator/>
+		<menuitem id="copyimppTree" label="&copyCardTreeLabel;" oncommand="wdw_cardbook.copyCardFromTree();"/>
+	</menupopup>
+
+	<menupopup id="urlTreeContextMenu">
+		<menuitem id="openURLTree" label="&openURLTreeLabel;" oncommand="wdw_cardbook.openURLFromTree();"/>
+		<menuseparator/>
+		<menuitem id="copyurlTree" label="&copyCardTreeLabel;" oncommand="wdw_cardbook.copyCardFromTree();"/>
+	</menupopup>
+
+	<menupopup id="accountsOrCatsTreeContextMenu" onpopupshowing="wdw_cardbook.accountsOrCatsTreeContextShowing();">
+		<menuitem id="addAccountFromAccountsOrCats" label="&cardbookToolbarAddServerButtonLabel;" oncommand="wdw_cardbook.addAddressbook();"/>
+		<menuitem id="editAccountFromAccountsOrCats" label="&editAccountFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.editAddressbook();"/>
+		<menuitem id="removeAccountFromAccountsOrCats" label="&removeAccountFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.removeAddressbook();"/>
+		<menuseparator/>
+		<menuitem id="enableOrDisableFromAccountsOrCats" oncommand="wdw_cardbook.enableOrDisableAddressbook();"/>
+		<menuseparator/>
+		<menuitem id="readOnlyOrReadWriteFromAccountsOrCats" oncommand="wdw_cardbook.readOnlyOrReadWriteAddressbook();"/>
+		<menuseparator/>
+		<menuitem id="syncAccountFromAccountsOrCats" label="&syncAccountFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.syncAccountFromAccountsOrCats();"/>
+		<menuseparator/>
+		<menuitem id="toEmailCardsFromAccountsOrCats" label="&toEmailCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.emailCardsFromAccountsOrCats('to');"/>
+		<menuitem id="ccEmailCardsFromAccountsOrCats" label="&ccEmailCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.emailCardsFromAccountsOrCats('cc');"/>
+		<menuitem id="bccEmailCardsFromAccountsOrCats" label="&bccEmailCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.emailCardsFromAccountsOrCats('bcc');"/>
+		<menuseparator/>
+		<menuitem id="cutCardsFromAccountsOrCats" label="&cutCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.cutCardsFromAccountsOrCats();"/>
+		<menuitem id="copyCardsFromAccountsOrCats" label="&copyCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.copyCardsFromAccountsOrCats();"/>
+		<menuitem id="pasteCardsFromAccountsOrCats" label="&pasteCardFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.pasteCards();"/>
+		<menuseparator/>
+		<menuitem id="renameCatFromAccountsOrCats" label="&renameCatFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.selectCategoryToAction('RENAME');"/>
+		<menuitem id="removeCatFromAccountsOrCats" label="&removeCatFromAccountsOrCatsLabel;" oncommand="wdw_cardbook.selectCategoryToAction('REMOVE');"/>
+		<menuseparator/>
+		<menuitem id="findDuplicatesFromAccountsOrCats" label="&cardbookToolsMenuFindSingleDuplicatesLabel;" oncommand="wdw_cardbook.findDuplicatesFromAccountsOrCats();"/>
+		<menuseparator/>
+		<menuitem id="printFromAccountsOrCats" label="&cardbookToolbarPrintButtonLabel;" oncommand="wdw_cardbook.printFromAccountsOrCats();"/>
+		<menuseparator/>
+		<menuitem id="exportCardsToFileFromAccountsOrCats" label="&exportCardToFileLabel;" oncommand="wdw_cardbook.exportCardsFromAccountsOrCats(this);"/>
+		<menuitem id="exportCardsToDirFromAccountsOrCats" label="&exportCardToDirLabel;" oncommand="wdw_cardbook.exportCardsFromAccountsOrCats(this);"/>
+		<menuseparator/>
+		<menuitem id="importCardsFromFileFromAccountsOrCats" label="&importCardFromFileLabel;" oncommand="wdw_cardbook.importCardsFromFile();"/>
+		<menuitem id="importCardsFromDirFromAccountsOrCats" label="&importCardFromDirLabel;" oncommand="wdw_cardbook.importCardsFromDir();"/>
+	</menupopup>
+
+	<menupopup id="cardsTreeContextMenu" onpopupshowing="return wdw_cardbook.cardsTreeContextShowing();">
+		<menuitem id="addCardFromCards" label="&cardbookToolbarAddButtonLabel;" oncommand="wdw_cardbook.createCard();"/>
+		<menuitem id="editCardFromCards" label="&cardbookToolbarEditButtonLabel;" oncommand="wdw_cardbook.editCard();"/>
+		<menuitem id="removeCardFromCards" label="&cardbookToolbarRemoveButtonLabel;" oncommand="wdw_cardbook.deleteCardsAndValidate('cardbook.cardRemovedDirect');"/>
+		<menuseparator/>
+		<menu id="categoriesFromCards" label="&categoryLabel;">
+			<menupopup id="categoriesFromCardsMenuPopup">
+				<menuitem id="categoriesFromCardsNew" label="&categoryMenuLabel;" oncommand="wdw_cardbook.addNewCategory();"/>
+				<menuseparator/>
+			</menupopup>
+		</menu>
+		<menuseparator/>
+		<menuitem id="toEmailCardsFromCards" label="&toEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('to');"/>
+		<menuitem id="ccEmailCardsFromCards" label="&ccEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('cc');"/>
+		<menuitem id="bccEmailCardsFromCards" label="&bccEmailCardFromCardsLabel;" oncommand="wdw_cardbook.emailCardsFromCards('bcc');"/>
+		<menuseparator/>
+		<menu id="IMPPCardFromCards" label="&IMPPMenuLabel;">
+			<menupopup id="IMPPCardFromCardsMenuPopup"/>
+		</menu>
+		<menuseparator/>
+		<menuitem id="findEmailsFromCards" label="&findEmailsFromCardsLabel;" oncommand="wdw_cardbook.findEmailsFromCards();"/>
+		<menuitem id="findEventsFromCards" label="&findEventsFromCardsLabel;" oncommand="wdw_cardbook.findEventsFromCards();"/>
+		<menuseparator/>
+		<menuitem id="localizeCardsFromCards" label="&localizeCardFromCardsLabel;" oncommand="wdw_cardbook.localizeCardsFromCards();"/>
+		<menuseparator/>
+		<menuitem id="openURLFromCards" label="&openURLCardFromCardsLabel;" oncommand="wdw_cardbook.openURLFromCards();"/>
+		<menuseparator/>
+		<menuitem id="cutCardsFromCards" label="&cutCardFromCardsLabel;" oncommand="wdw_cardbook.cutCardsFromCards();"/>
+		<menuitem id="copyCardsFromCards" label="&copyCardFromCardsLabel;" oncommand="wdw_cardbook.copyCardsFromCards();"/>
+		<menuitem id="pasteCardsFromCards" label="&pasteCardFromCardsLabel;" oncommand="wdw_cardbook.pasteCards();"/>
+		<menuseparator/>
+		<menuitem id="duplicateCardsFromCards" label="&duplicateCardFromCardsLabel;" oncommand="wdw_cardbook.duplicateCards();"/>
+		<menuitem id="mergeCardsFromCards" label="&mergeCardsFromCardsLabel;" oncommand="wdw_cardbook.mergeCards();"/>
+		<menuseparator/>
+		<menuitem id="convertListToCategoryFromCards" label="&convertListToCategoryFromCardsLabel;" oncommand="wdw_cardbook.convertListToCategory();"/>
+		<menuseparator/>
+		<menuitem id="printFromCards" label="&cardbookToolbarPrintButtonLabel;" oncommand="wdw_cardbook.printFromCards();"/>
+		<menuseparator/>
+		<menuitem id="exportCardsToFileFromCards" label="&exportCardToFileLabel;" oncommand="wdw_cardbook.exportCardsFromCards(this);"/>
+		<menuitem id="exportCardsToDirFromCards" label="&exportCardToDirLabel;" oncommand="wdw_cardbook.exportCardsFromCards(this);"/>
+	</menupopup>
+
+	<menupopup id="listsContextMenu" onpopupshowing="wdw_cardbook.cardListContextShowing(event);">
+		<menuitem id="editCardFromList" label="&editCardFromListLabel;" oncommand="wdw_cardbook.editCardFromList();"/>
+	</menupopup>
+
+</overlay>

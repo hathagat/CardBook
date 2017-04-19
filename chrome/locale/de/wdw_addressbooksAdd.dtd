@@ -1,0 +1,60 @@
+<!ENTITY wizard.title "Neues Adressbuch hinzufügen">
+<!ENTITY wizard.label "Neues Adressbuch hinzufügen">
+
+<!ENTITY welcomePage.wizard.description "Willkommen">
+<!ENTITY welcomePage.description "Anscheinend verwenden Sie Cardbook zum ersten Mal. Deshalb werden die Kontakte aus den Standard Adressbüchern von Thunderbird in die Adressbücher von Cardbook importiert.">
+
+<!ENTITY initialPage.wizard.description "Ort des neuen Adressbuchs">
+<!ENTITY initialPage.description "Ist das Adressbuch lokal oder im Netzwerk gespeichert?">
+<!ENTITY initialPage.computer.label "Lokal">
+<!ENTITY initialPage.network.label "Im Netzwerk">
+<!ENTITY initialPage.standard.label "Standard Adressbücher von Thunderbird importieren">
+<!ENTITY initialPage.search.label "Suche in einem existierenden Adressbuch">
+
+<!ENTITY localPage.wizard.description "Art und Ort des neuen lokalen Adressbuchs.">
+<!ENTITY localPage.type.description "Welcher Art ist das lokale Adressbuch?">
+<!ENTITY localPage.type.label "Art">
+<!ENTITY localPage.createDB.label "Neues Adressbuch erstellen">
+<!ENTITY localPage.createDirectory.label "Neues Adressbuch erstellen (Verzeichnis)">
+<!ENTITY localPage.createFile.label "Neues Adressbuch erstellen (Datei)">
+<!ENTITY localPage.openDirectory.label "Existierendes Adressbuch öffnen (Verzeichnis)">
+<!ENTITY localPage.openFile.label "Existierendes Adressbuch öffnen (Datei)">
+<!ENTITY localPage.uri.label "Verzeichnis oder Datei">
+<!ENTITY localPage.uri.description "Wählen Sie den Speicherort für das neue lokale Adressbuch. Falls Sie eine neue Datei erstellen, sollten Sie .vcf als Dateiendung verwenden.">
+<!ENTITY locationFirstPage.uri.description "Wählen Sie das Verzeichnis für die neuen lokalen Adressbücher.">
+<!ENTITY localPage.uributton.label "Durchsuchen">
+
+<!ENTITY remotePage.wizard.description "Art und Ort des neuen Netzwerk-Adressbuchs">
+<!ENTITY remotePage.description "Welcher Art ist das Netzwerk-Adressbuch? (Achtung: Google hält sich nicht an vCard-Standards.)">
+<!ENTITY remotePage.type.label "Art">
+<!ENTITY remotePage.carddav.label "CardDAV">
+<!ENTITY remotePage.google.label "Google">
+<!ENTITY remotePage.apple.label "Apple">
+<!ENTITY remotePage.connection.label "Verbindung">
+<!ENTITY remotePage.uri.description "Adresse für das CardDAV-Adressbuch. Sie können versuchen, Teil-URLs anzugeben (z.B. http(s)://carddav.example.org). Für Google-Adressbücher muss keine URL angegeben werden.">
+<!ENTITY remotePage.uri.label "URL">
+<!ENTITY remotePage.credentials.description "Zugangsdaten für das Adressbuch. Für Google-Adressbücher sollte der Benutzername der Email-Adresse entsprechen.">
+<!ENTITY remotePage.validatebutton.label "Überprüfen">
+
+<!ENTITY locationSearchPage.wizard.description "Die erweiterte Suche definieren.">
+<!ENTITY locationSearchPage.label "Erweiterte Suche">
+
+<!ENTITY googleOauthPage.wizard.description "Google-Authentifizierung">
+
+<!ENTITY namePage.wizard.description "Eigenschaften des Adressbuchs">
+<!ENTITY namePage.selected.label "Ausgewählt">
+<!ENTITY namePage.name.label "Name">
+<!ENTITY namePage.color.label "Farbe">
+<!ENTITY namePage.urnuuid.label "Benutze urn:uuid">
+<!ENTITY namePage.readonly.label "Schreibgeschützter Modus">
+<!ENTITY namePage.vCardVersion.label "vCard">
+
+<!ENTITY namesPage.wizard.description "Eigenschaften der Adressbücher">
+<!ENTITY namesPage.name.label "Namen">
+<!ENTITY namesPage.name.description "Es wurden mehrere Adressbücher gefunden. Wählen Sie, welche Adressbücher geöffnet werden sollen und vergeben Sie Namen für diese.">
+
+<!ENTITY finishPage.wizard.description "Adressbuch konfiguriert">
+<!ENTITY finishPage.description "Ihr neues Adressbuch wurde erfolgreich konfiguriert.">
+
+<!ENTITY finishsPage.wizard.description "Addressbücher konfiguriert">
+<!ENTITY finishsPage.description "Die neuen Adressbücher wurden erfolgreich konfiguriert.">

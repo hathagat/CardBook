@@ -1,0 +1,5 @@
+<!ENTITY addImageCardFromFileLabel "Přidat obrázek ze souboru">
+<!ENTITY addImageCardFromClipboardLabel "Přidat obrázek ze schránky">
+<!ENTITY addImageCardFromUrlLabel "Přidat obrázek z URL ve schránce">
+<!ENTITY saveImageCardLabel "Uložit obrázek">
+<!ENTITY deleteImageCardLabel "Smazat obrázek">

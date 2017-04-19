@@ -1,0 +1,9 @@
+<!ENTITY persTitleLabel "Személyes adatok">
+<!ENTITY fnLabel "Megjelenítendő név">
+<!ENTITY lastnameLabel "Családnév">
+<!ENTITY firstnameLabel "Keresztnév">
+<!ENTITY othernameLabel "Másik név">
+<!ENTITY suffixnameLabel "Utótag név">
+<!ENTITY prefixnameLabel "Előtag neve">
+<!ENTITY nicknameLabel "Becenév">
+<!ENTITY genderLabel "Nem">

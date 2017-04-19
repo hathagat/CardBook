@@ -1,0 +1,28 @@
+﻿.vCard {
+   border-bottom: 2px solid black;
+   padding: 0;
+}
+.table {
+   text-align: left;
+   word-wrap: break-word;
+}
+.datavalue {
+   width: 100%;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+   vertical-align: top;
+}
+.typevalue {
+   white-space: nowrap;
+   vertical-align: top;
+}
+.dummyvalue {
+   min-width: 10px;
+   vertical-align: top;
+}
+.titlevalue {
+   white-space: nowrap;
+   font-weight: bold;
+   vertical-align: top;
+}
+

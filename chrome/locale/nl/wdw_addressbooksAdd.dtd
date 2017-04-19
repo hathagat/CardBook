@@ -1,0 +1,60 @@
+<!ENTITY wizard.title "Adresboek toevoegen">
+<!ENTITY wizard.label "Adresboek toevoegen">
+
+<!ENTITY welcomePage.wizard.description "Welkom">
+<!ENTITY welcomePage.description "Bij het eerste gebruik van CardBook wordt geprobeerd om de contactpersonen uit het standaard-adresboek van Thunderbird te importeren.">
+
+<!ENTITY initialPage.wizard.description "Opslag van het nieuwe adresboek">
+<!ENTITY initialPage.description "Staat het nieuwe adresboek lokaal of op internet:">
+<!ENTITY initialPage.computer.label "Lokaal">
+<!ENTITY initialPage.network.label "Op internet">
+<!ENTITY initialPage.standard.label "Importeren standaard-adresboek van Thunderbird">
+<!ENTITY initialPage.search.label "Zoeken in bestaande adresboeken">
+
+<!ENTITY localPage.wizard.description "Plaats en type van het lokale adresboek.">
+<!ENTITY localPage.type.description "Type van het lokale adresboek:">
+<!ENTITY localPage.type.label "Type">
+<!ENTITY localPage.createDB.label "Nieuw adresboek toevoegen">
+<!ENTITY localPage.createDirectory.label "Nieuw adresboek toevoegen (Map)">
+<!ENTITY localPage.createFile.label "Nieuw adresboek toevoegen (Bestand)">
+<!ENTITY localPage.openDirectory.label "Open een bestaand adresboek (Map)">
+<!ENTITY localPage.openFile.label "Open een bestaand adresboek (Bestand)">
+<!ENTITY localPage.uri.label "Map of bestand">
+<!ENTITY localPage.uri.description "Gebruik Verkenner om de lokatie van het nieuwe adresboek te kiezen. In geval van een nieuw bestand, kies '.vcf' als bestandsextensie.">
+<!ENTITY locationFirstPage.uri.description "Kies de lokatie voor het nieuwe adresboek">
+<!ENTITY localPage.uributton.label "Verkenner">
+
+<!ENTITY remotePage.wizard.description "Type en plaats van het nieuwe internet-adresboek.">
+<!ENTITY remotePage.description "Type van het internet-adresboek: (Pas op: Google ondersteunt geen vCard-standaarden.)">
+<!ENTITY remotePage.type.label "Type">
+<!ENTITY remotePage.carddav.label "CardDAV">
+<!ENTITY remotePage.google.label "Google">
+<!ENTITY remotePage.apple.label "Apple">
+<!ENTITY remotePage.connection.label "Verbinding">
+<!ENTITY remotePage.uri.description "Bij een CardDAV-type: vul de URL van het internet-adresboek in.">
+<!ENTITY remotePage.uri.label "URL">
+<!ENTITY remotePage.credentials.description "Toegangscodes voor het internet-adresboek. (Let op: voor Google-adresboek de Google-email invullen.)">
+<!ENTITY remotePage.validatebutton.label "Controleren">
+
+<!ENTITY locationSearchPage.wizard.description "Definitie van geavanceerd zoeken">
+<!ENTITY locationSearchPage.label "Geavanceerd zoeken">
+
+<!ENTITY googleOauthPage.wizard.description "Google-authenticatie">
+
+<!ENTITY namePage.wizard.description "Eigenschappen van adresboek">
+<!ENTITY namePage.selected.label "Geselecteerd">
+<!ENTITY namePage.name.label "Naam">
+<!ENTITY namePage.color.label "Kleur">
+<!ENTITY namePage.urnuuid.label "Gebruik maken van urn:uuid">
+<!ENTITY namePage.readonly.label "Alleen lezen-modus">
+<!ENTITY namePage.vCardVersion.label "vCard">
+
+<!ENTITY namesPage.wizard.description "Eigenschappen van adresboeken">
+<!ENTITY namesPage.name.label "Namen">
+<!ENTITY namesPage.name.description "Er zijn meerdere adresboeken gevonden. Kies welke geopend moeten worden en kies de namen:">
+
+<!ENTITY finishPage.wizard.description "Adresboek is geconfigureerd">
+<!ENTITY finishPage.description "Het nieuwe adresboek is succesvol geconfigureerd.">
+
+<!ENTITY finishsPage.wizard.description "Adresboeken geconfigureerd">
+<!ENTITY finishsPage.description "De nieuwe adresboeken zijn succesvol geconfigureerd.">

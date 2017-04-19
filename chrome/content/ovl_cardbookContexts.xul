@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE overlay SYSTEM "chrome://cardbook/locale/ovl_cardbook.dtd">
+
+<overlay id="ovl_cardbook"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="wdw_log.js"/>
+	<script src="cardbookObserver.js"/>
+	<script src="cardbookCardParser.js"/>
+	<script src="cardbookUtils.js"/>
+	<script src="cardbookSynchronization.js"/>
+	<script src="cardbookIndexedDB.js"/>
+	<script src="cardbookMailPopularity.js"/>
+	<script src="ovl_mailPopularity.js"/>
+	<script src="chrome://cardbook/content/preferences/cardbookPreferences.js"/>
+	<script src="cardbookElementTools.js"/>
+	<script src="wdw_cardbook.js"/>
+	<script src="chrome://cardbook/content/mailContact/ovl_cardbookMailContacts.js"/>
+	<script src="chrome://cardbook/content/layout/ovl_cardbookLayout.js"/>
+	
+	<menupopup id="emailAddressPopup">
+		<menuseparator id="editCardBookSeparator" insertafter="viewContactItem"/>
+		<menu id="addToCardBookMenu" label="&addToCardBookMenuLabel;" accesskey="&addToCardBookMenuAccesskey;" insertafter="editCardBookSeparator">
+			<menupopup id="addToCardBookMenuPopup" onpopupshowing="cardbookUtils.addToCardBookMenuSubMenu(this.id, ovl_cardbookMailContacts.addToCardBook)"/>
+		</menu>
+		<menuitem id="editInCardBookMenu" label="&editInCardBookMenuLabel;" accesskey="&editInCardBookMenuAccesskey;" insertafter="addToCardBookMenu" onclick="ovl_cardbookMailContacts.editOrViewContact();"/>
+		<menuitem id="deleteInCardBookMenu" label="&deleteInCardBookMenuLabel;" accesskey="&deleteInCardBookMenuAccesskey;" insertafter="editInCardBookMenu" onclick="ovl_cardbookMailContacts.deleteContact();"/>
+		<menuseparator id="IMPPCardBookSeparator" insertafter="deleteInCardBookMenu"/>
+		<menu id="IMPPCards" label="&IMPPMenuLabel;" accesskey="&IMPPMenuAccesskey;" insertafter="IMPPCardBookSeparator">
+			<menupopup id="IMPPCardsMenuPopup"/>
+		</menu>
+		<menuseparator id="findCardBookSeparator1" insertafter="IMPPCards"/>
+		<menuitem id="findEmailsFromEmailMessenger" label="&findEmailsFromEmailMessengerLabel;" accesskey="&findEmailsFromEmailMessengerAccesskey;"
+			oncommand="ovl_cardbookMailContacts.findEmailsFromEmail();" insertafter="findCardBookSeparator1"/>
+		<menuitem id="findAllEmailsFromContactMessenger" label="&findAllEmailsFromContactMessengerLabel;" accesskey="&findAllEmailsFromContactMessengerAccesskey;"
+			oncommand="ovl_cardbookMailContacts.findAllEmailsFromContact();" insertafter="findEmailsFromEmailMessenger"/>
+		<menuitem id="findEventsFromEmailMessenger" label="&findEventsFromEmailMessengerLabel;" accesskey="&findEventsFromEmailMessengerAccesskey;"
+			oncommand="ovl_cardbookMailContacts.findEventsFromEmail();" insertafter="findAllEmailsFromContactMessenger"/>
+		<menuitem id="findAllEventsFromContactMessenger" label="&findAllEventsFromContactMessengerLabel;" accesskey="&findAllEventsFromContactMessengerAccesskey;"
+			oncommand="ovl_cardbookMailContacts.findAllEventsFromContact();" insertafter="findEventsFromEmailMessenger"/>
+		<menuseparator id="findCardBookSeparator2" insertafter="findAllEventsFromContactMessenger"/>
+	</menupopup>
+
+	<menupopup id="mailContext">
+		<menu id="mailContext-addToCardBookMenu" label="&mailContext-addToCardBookMenuLabel;" accesskey="&mailContext-addToCardBookMenuAccesskey;" insertafter="mailContext-addemail">
+			<menupopup id="mailContext-addToCardBookMenuPopup" onpopupshowing="cardbookUtils.addToCardBookMenuSubMenu(this.id, ovl_cardbookMailContacts.mailContextAddToCardBook)"/>
+		</menu>
+	</menupopup>
+</overlay>

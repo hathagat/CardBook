@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://cardbook/skin/cardbookCheckboxes.css" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE window [
+	<!ENTITY % configurationDTD SYSTEM "chrome://cardbook/locale/wdw_cardbookConfiguration.dtd"> %configurationDTD;
+	<!ENTITY % namesDTD SYSTEM "chrome://cardbook/locale/wdw_nameEdition.dtd"> %namesDTD;
+	<!ENTITY % orgDTD SYSTEM "chrome://cardbook/locale/wdw_orgEdition.dtd"> %orgDTD;
+]>
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&wdw_cardbookConfigurationWindowLabel;"
+	onload="wdw_cardbookConfiguration.load();" resizable="true"
+	ondialogcancel="wdw_cardbookConfiguration.cancel();"
+	ondialogaccept="wdw_cardbookConfiguration.accept();"
+	ondialogdisclosure="wdw_cardbookConfiguration.cancel();"
+	id="wdw_cardbookConfigurationWindow">
+
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="wdw_cardbookConfiguration.js"/>
+	<script src="cardbookUtils.js"/>
+	<script src="cardbookRepository.js"/>
+	<script src="wdw_log.js"/>
+	<script src="chrome://cardbook/content/preferences/cardbookPreferences.js"/>
+	<script src="cardbookSynchronization.js"/>
+	<script src="chrome://cardbook/content/layout/ovl_cardbookLayout.js"/>
+	<script src="chrome://cardbook/content/birthdays/cardbookBirthdaysUtils.js"/>
+	<script src="chrome://cardbook/content/cardbookElementTools.js"/>
+
+	<prefpane id="sw2-stock-pane" label="Stock Settings">
+
+		<preferences id="cardbookPreferences">
+			<preference id="extensions.cardbook.autocompletion"
+				name="extensions.cardbook.autocompletion" type="bool"/>
+			<preference id="extensions.cardbook.exclusive"
+				name="extensions.cardbook.exclusive" type="bool"/>
+			<preference id="extensions.cardbook.emailsCollection"
+				name="extensions.cardbook.emailsCollection" type="string"/>
+			<preference id="extensions.cardbook.emailsCollectionCat"
+				name="extensions.cardbook.emailsCollectionCat" type="string"/>
+			<preference id="extensions.cardbook.requestsTimeout"
+				name="extensions.cardbook.requestsTimeout" type="string"/>
+			<preference id="extensions.cardbook.debugMode"
+				name="extensions.cardbook.debugMode" type="bool"/>
+			<preference id="extensions.cardbook.statusInformationLineNumber"
+				name="extensions.cardbook.statusInformationLineNumber" type="string"/>
+			<preference id="extensions.cardbook.listTabView"
+				name="extensions.cardbook.listTabView" type="bool"/>
+			<preference id="extensions.cardbook.mailPopularityTabView"
+				name="extensions.cardbook.mailPopularityTabView" type="bool"/>
+			<preference id="extensions.cardbook.technicalTabView"
+				name="extensions.cardbook.technicalTabView" type="bool"/>
+			<preference id="extensions.cardbook.vcardTabView"
+				name="extensions.cardbook.vcardTabView" type="bool"/>
+			<preference id="extensions.cardbook.preferEmailEdition"
+				name="extensions.cardbook.preferEmailEdition" type="bool"/>
+			<preference id="extensions.cardbook.cardCreationVersion"
+				name="extensions.cardbook.cardCreationVersion" type="string"/>
+			<preference id="extensions.cardbook.localizeEngine"
+				name="extensions.cardbook.localizeEngine" type="string"/>
+			<preference id="extensions.cardbook.fnFormula"
+				name="extensions.cardbook.fnFormula" type="string"/>
+			<preference id="extensions.cardbook.localizeTarget"
+				name="extensions.cardbook.localizeTarget" type="string"/>
+			<preference id="extensions.cardbook.preferenceLabel"
+				name="extensions.cardbook.preferenceLabel" type="string"/>
+			<preference id="extensions.cardbook.preferenceValueLabel"
+				name="extensions.cardbook.preferenceValueLabel" type="string"/>
+			<preference id="extensions.cardbook.kindCustom"
+				name="extensions.cardbook.kindCustom" type="string"/>
+			<preference id="extensions.cardbook.memberCustom"
+				name="extensions.cardbook.memberCustom" type="string"/>
+			<preference id="extensions.cardbook.panesView"
+				name="extensions.cardbook.panesView" type="string"/>
+			<preference id="extensions.cardbook.initialSync"
+				name="extensions.cardbook.initialSync" type="bool"/>
+			<preference id="extensions.cardbook.solveConflicts"
+				name="extensions.cardbook.solveConflicts" type="string"/>
+			<preference id="extensions.cardbook.autoSync"
+				name="extensions.cardbook.autoSync" type="bool"/>
+			<preference id="extensions.cardbook.autoSyncInterval"
+				name="extensions.cardbook.autoSyncInterval" type="string"/>
+			<preference id="extensions.cardbook.multiget"
+				name="extensions.cardbook.multiget" type="string"/>
+			<preference id="extensions.cardbook.decodeReport"
+				name="extensions.cardbook.decodeReport" type="bool"/>
+			<preference id="extensions.cardbook.preferEmailPref"
+				name="extensions.cardbook.preferEmailPref" type="bool"/>
+			<preference id="extensions.cardbook.addressBooksNameList"
+				name="extensions.cardbook.addressBooksNameList" type="string"/>
+			<preference id="extensions.cardbook.calendarsNameList"
+				name="extensions.cardbook.calendarsNameList" type="string"/>
+			<preference id="extensions.cardbook.searchInNote"
+				name="extensions.cardbook.searchInNote" type="bool"/>
+			<preference id="extensions.cardbook.dateFormatMenu"
+				name="extensions.cardbook.dateFormatMenu" type="string"/>
+			<preference id="extensions.cardbook.numberOfDaysForSearching"
+				name="extensions.cardbook.numberOfDaysForSearching" type="string"/>
+			<preference id="extensions.cardbook.showPopupOnStartup"
+				name="extensions.cardbook.showPopupOnStartup" type="bool"/>
+			<preference id="extensions.cardbook.showPeriodicPopup"
+				name="extensions.cardbook.showPeriodicPopup" type="bool"/>
+			<preference id="extensions.cardbook.periodicPopupIime"
+				name="extensions.cardbook.periodicPopupIime" type="string"/>
+			<preference id="extensions.cardbook.showPopupEvenIfNoBirthday"
+				name="extensions.cardbook.showPopupEvenIfNoBirthday" type="bool"/>
+			<preference id="extensions.cardbook.numberOfDaysForWriting"
+				name="extensions.cardbook.numberOfDaysForWriting" type="string"/>
+			<preference id="extensions.cardbook.syncWithLightningOnStartup"
+				name="extensions.cardbook.syncWithLightningOnStartup" type="bool"/>
+			<preference id="extensions.cardbook.eventEntryTitle"
+				name="extensions.cardbook.eventEntryTitle" type="string"/>
+			<preference id="extensions.cardbook.eventEntryTime"
+				name="extensions.cardbook.eventEntryTime" type="string"/>
+			<preference id="extensions.cardbook.eventEntryWholeDay"
+				name="extensions.cardbook.eventEntryWholeDay" type="bool"/>
+			<preference id="extensions.cardbook.calendarEntryAlarm"
+				name="extensions.cardbook.calendarEntryAlarm" type="string"/>
+			<preference id="extensions.cardbook.calendarEntryCategories"
+				name="extensions.cardbook.calendarEntryCategories" type="string"/>
+		</preferences>
+
+		<tabbox id="advancedPrefs" width="400" height="300">
+			
+			<tabs>
+				<tab id="generalTab" label="&generalTabLabel;"/>
+				<tab id="editionTab" label="&editionTabLabel;"/>
+				<tab id="typesTab" label="&typesTabLabel;"/>
+				<tab id="IMPPTab" label="&IMPPsTabLabel;"/>
+				<tab id="orgTab" label="&orgTitleLabel;"/>
+				<tab id="customFieldsTab" label="&customFieldsTabLabel;"/>
+				<tab id="listsTab" label="&listsTabLabel;"/>
+				<tab id="syncTab" label="&syncTabLabel;"/>
+				<tab id="emailTab" label="&emailTabLabel;"/>
+				<tab id="birthdaylistTab" label="&birthdaylistTabLabel;"/>          
+				<tab id="synclistTab" label="&synclistTabLabel;"/>  
+			</tabs>
+			
+			<tabpanels>
+				<tabpanel orient="vertical">
+					<groupbox>
+						<caption label="&integrationGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="autocompletionCheckBox" label="&autocompletionLabel;"
+								accesskey="&autocompletionAccesskey;"
+								tooltiptext = "&autocompletionTooltip;"
+								preference="extensions.cardbook.autocompletion"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="exclusiveCheckBox" label="&exclusiveLabel;"
+								accesskey="&exclusiveAccesskey;"
+								tooltiptext = "&exclusiveTooltip;"
+								preference="extensions.cardbook.exclusive"/>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&accountsRestrictionsLabel;"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<hbox flex="1">
+									<tree id="accountsRestrictionsTree" class="cardbookTreeChildrenConfigClass" hidecolumnpicker="true" flex="1" seltype="single" enableColumnDrag="false" editable="true" onselect="wdw_cardbookConfiguration.selectRestriction();" sortDirection="ascending" sortResource="accountsRestrictionsMailName">
+										<treecols id="accountsRestrictionsTreeCols">
+											<treecol id="accountsRestrictionsEnabled" label="&accountsRestrictionsEnabledLabel;" type="checkbox" persist="width ordinal hidden" style="text-align:center" editable="true"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsIncludeName" label="&accountsRestrictionsIncludeNameLabel;" flex="1" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'accountsRestrictionsTree');" hidden="false" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsIncludeCode" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsMailName" label="&accountsRestrictionsMailNameLabel;" flex="1" persist="width ordinal hidden" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'accountsRestrictionsTree');" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsMailId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsABName" label="&accountsRestrictionsABNameLabel;" flex="1" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'accountsRestrictionsTree');" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsDirPrefId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsCatName" label="&accountsRestrictionsCatNameLabel;" flex="1" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'accountsRestrictionsTree');" hidden="false" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="accountsRestrictionsCatId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+										</treecols>
+										<treechildren id="accountsRestrictionsTreeChildren" ondblclick="wdw_cardbookConfiguration.doubleClickTree(event, 'accountsRestrictionsTree');"/>
+									</tree>
+								</hbox>
+							</vbox>
+							<hbox align="top">
+								<vbox flex="1">
+									<button id="addRestrictionLabel" label="&addRestrictionLabel;" accesskey="&addRestrictionAccesskey;" oncommand="wdw_cardbookConfiguration.addRestriction();"/>
+									<button id="renameRestrictionLabel" label="&renameRestrictionLabel;" accesskey="&renameRestrictionAccesskey;" oncommand="wdw_cardbookConfiguration.renameRestriction();" disabled="true"/>
+									<button id="deleteRestrictionLabel" label="&deleteRestrictionLabel;" accesskey="&deleteRestrictionAccesskey;" oncommand="wdw_cardbookConfiguration.deleteRestriction();" disabled="true"/>
+								</vbox>
+							</hbox>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption>
+							<checkbox id="emailsCollectionCheckbox" oncommand="wdw_cardbookConfiguration.changeAddressBooksPref(this.id);" label="&emailsCollectionLabel;" accesskey="&emailsCollectionAccesskey;" tooltiptext="&emailsCollectionTooltip;"/>
+						</caption>
+						<listbox rows="4" id="emailsCollectionListbox"/>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&emailsCollectionCatLabel;"
+								accesskey="&emailsCollectionCatAccesskey;"
+								control="emailsCollectionCatTextBox"
+								id="emailsCollectionCat"/>
+							<textbox id="emailsCollectionCatTextBox"
+								preference="extensions.cardbook.emailsCollectionCat"/>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&logGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="debugModeCheckBox" label="&debugModeLabel;"
+								accesskey="&debugModeAccesskey;"
+								tooltiptext = "&debugModeTooltip;"
+								preference="extensions.cardbook.debugMode"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&statusInformationLineNumberLabel;"
+								accesskey="&statusInformationLineNumberAccesskey;"
+								control="statusInformationLineNumberTextBox"
+								id="statusInformationLineNumber"/>
+							<textbox id="statusInformationLineNumberTextBox"
+								preference="extensions.cardbook.statusInformationLineNumber"/>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<groupbox>
+						<caption label="&tabsEdittingGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="listTabCheckBox" label="&listTabLabel;"
+								accesskey="&listTabAccesskey;"
+								preference="extensions.cardbook.listTabView"/>
+							<checkbox id="mailPopularityTabCheckBox" label="&mailPopularityTabLabel;"
+								accesskey="&mailPopularityTabAccesskey;"
+								preference="extensions.cardbook.mailPopularityTabView"/>
+							<checkbox id="technicalTabCheckBox" label="&technicalTabLabel;"
+								accesskey="&technicalTabAccesskey;"
+								preference="extensions.cardbook.technicalTabView"/>
+							<checkbox id="vcardTabCheckBox" label="&vcardTabLabel;"
+								accesskey="&vcardTabAccesskey;"
+								preference="extensions.cardbook.vcardTabView"/>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&localizeEdittingGroupboxLabel;"/>
+						<hbox flex="1" align="center">
+							<radiogroup id="localizeEngineRadiogroup" orient="horizontal" preference="extensions.cardbook.localizeEngine">
+								<radio value="OpenStreetMap" label="&localizeEngineOpenStreetMapLabel;" accesskey="&localizeEngineOpenStreetMapAccesskey;"/>
+								<radio value="GoogleMaps" label="&localizeEngineGoogleMapsLabel;" accesskey="&localizeEngineGoogleMapsAccesskey;"/>
+								<radio value="BingMaps" label="&localizeEngineBingMapsLabel;" accesskey="&localizeEngineBingMapsAccesskey;"/>
+							</radiogroup>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&fnLabel;"/>
+						<description>&fnLabelExplanation;</description>
+						<grid align="center" flex="1">
+							<columns>
+								<column/>
+								<column flex="1"/>
+								<column/>
+							</columns>
+				
+							<rows>
+								<row align="center">
+									<label value="&fnFormulaLabel;"
+										accesskey="&fnFormulaAccesskey;"
+										control="fnFormulaTextBox"
+										id="fnFormula"/>
+									<textbox id="fnFormulaTextBox"
+										preference="extensions.cardbook.fnFormula"/>
+									<button id="resetFnFormulaButton" label="&resetfnFormulaLabel;" accesskey="&resetFnFormulaAccesskey;" 
+										oncommand="wdw_cardbookConfiguration.resetFnFormula();"/>
+								</row>
+								<row align="center">
+									<label value=""/>
+									<label id="fnFormulaDescriptionLabel1"/>
+									<label value=""/>
+								</row>
+								<row align="center">
+									<label value=""/>
+									<label id="fnFormulaDescriptionLabel2"/>
+									<label value=""/>
+								</row>
+							</rows>
+						</grid>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&localizeTargetLabel;"/>
+						<hbox flex="1" align="center">
+							<radiogroup id="localizeTargetRadiogroup" orient="horizontal" preference="extensions.cardbook.localizeTarget">
+								<radio value="in" label="&localizeTargetInLabel;" accesskey="&localizeTargetInAccesskey;"/>
+								<radio value="out" label="&localizeTargetOutLabel;" accesskey="&localizeTargetOutAccesskey;"/>
+							</radiogroup>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&miscEdittingGroupboxLabel;"/>
+						<hbox flex="1" align="center">
+							<label value="&cardCreationVersionLabel;"
+								control="cardCreationVersionRadiogroup"
+								id="cardCreationVersion"/>
+						</hbox>
+						<hbox flex="1" align="center">
+							<radiogroup id="cardCreationVersionRadiogroup" orient="horizontal" preference="extensions.cardbook.cardCreationVersion"  class="indent">
+								<radio value="3.0" label="3.0" accesskey="3"/>
+								<radio value="4.0" label="4.0" accesskey="4"/>
+							</radiogroup>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="preferEmailEditionCheckBox" label="&preferEmailEditionLabel;"
+								accesskey="&preferEmailEditionAccesskey;"
+								preference="extensions.cardbook.preferEmailEdition"/>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<groupbox flex="1">
+						<caption label="&typesGroupboxLabel;"/>
+						<hbox align="center">
+							<radiogroup id="typesCategoryRadiogroup" orient="horizontal" onselect="wdw_cardbookConfiguration.sortTrees(null, 'typesTree');">
+								<radio value="adr" label="&typesCategoryAdrLabel;" accesskey="&typesCategoryAdrAccesskey;" selected="true"/>
+								<radio value="email" label="&typesCategoryEmailLabel;" accesskey="&typesCategoryEmailAccesskey;"/>
+								<radio value="impp" label="&typesCategoryImppLabel;" accesskey="&typesCategoryImppAccesskey;"/>
+								<radio value="tel" label="&typesCategoryTelLabel;" accesskey="&typesCategoryTelAccesskey;"/>
+								<radio value="url" label="&typesCategoryUrlLabel;" accesskey="&typesCategoryUrlAccesskey;"/>
+							</radiogroup>
+						</hbox>
+						
+						<hbox flex="1">
+							<vbox flex="1">
+								<hbox flex="1">
+									<tree id="typesTree" class="cardbookTreeChildrenConfigClass" hidecolumnpicker="true" flex="1" seltype="single" enableColumnDrag="false" onselect="wdw_cardbookConfiguration.selectTypes();" sortDirection="ascending" sortResource="typesCode">
+										<treecols id="typesTreeCols">
+											<treecol id="typesCode" label="&typesCodeLabel;" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'typesTree');" persist="width ordinal hidden" style="text-align:left"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="typesLabel" label="&typesLabelLabel;" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'typesTree');" flex="1" persist="width ordinal hidden" style="text-align:left"/>
+										</treecols>
+										<treechildren id="typesTreeChildren" ondblclick="wdw_cardbookConfiguration.doubleClickTree(event, 'typesTree');"/>
+									</tree>
+								</hbox>
+							</vbox>
+							<hbox align="top">
+								<vbox flex="1">
+									<button id="addTypeLabel" label="&addTypeLabel;" accesskey="&addTypeAccesskey;" oncommand="wdw_cardbookConfiguration.addType();"/>
+									<button id="renameTypeLabel" label="&renameTypeLabel;" accesskey="&renameTypeAccesskey;" oncommand="wdw_cardbookConfiguration.renameType();" disabled="true"/>
+									<button id="deleteTypeLabel" label="&deleteTypeLabel;" accesskey="&deleteTypeAccesskey;" oncommand="wdw_cardbookConfiguration.deleteType();" disabled="true"/>
+								</vbox>
+							</hbox>
+						</hbox>
+					</groupbox>
+					<groupbox>
+						<caption label="&preferenceGroupboxLabel;"/>
+						<hbox flex="1" align="center">
+							<label value="&preferenceLabel;"
+								accesskey="&preferenceAccesskey;"
+								control="preferenceTextbox"
+								id="preferenceLabel"/>
+							<textbox id="preferenceTextbox"
+								preference="extensions.cardbook.preferenceLabel"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox flex="1" align="center">
+							<label value="&preferenceValueLabel;"
+								accesskey="&preferenceValueAccesskey;"
+								control="preferenceValueTextbox"
+								id="preferenceValueLabel"/>
+							<textbox id="preferenceValueTextbox"
+								preference="extensions.cardbook.preferenceValueLabel"/>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<description>&IMPPGroupboxWarn;</description>
+					<separator class="thin"/>
+					<groupbox flex="1">
+						<caption label="&IMPPGroupboxLabel;"/>
+						<hbox align="center">
+							<radiogroup id="imppsCategoryRadiogroup" orient="horizontal" onselect="wdw_cardbookConfiguration.selectIMPPsCategory();">
+								<radio value="impp" label="&typesCategoryImppLabel;" accesskey="&typesCategoryImppAccesskey;" selected="true"/>
+								<radio value="tel" label="&typesCategoryTelLabel;" accesskey="&typesCategoryTelAccesskey;"/>
+							</radiogroup>
+						</hbox>
+						
+						<hbox flex="1">
+							<vbox flex="1">
+								<hbox flex="1">
+									<tree id="IMPPsTree" class="cardbookTreeChildrenConfigClass" hidecolumnpicker="true" flex="1" seltype="single" enableColumnDrag="false" onselect="wdw_cardbookConfiguration.selectIMPPs();" sortDirection="ascending" sortResource="IMPPLabel">
+										<treecols id="IMPPsTreeCols">
+											<treecol id="IMPPCode" label="&IMPPCodeLabel;" flex="1" persist="width ordinal hidden" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'IMPPsTree');" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="IMPPLabel" label="&IMPPLabelLabel;" flex="1" persist="width ordinal hidden" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'IMPPsTree');" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="IMPPProtocol" label="&IMPPProtocolLabel;" flex="1" persist="width ordinal hidden" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'IMPPsTree');" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+										</treecols>
+										<treechildren id="IMPPsTreeChildren" ondblclick="wdw_cardbookConfiguration.doubleClickTree(event, 'IMPPsTree');"/>
+									</tree>
+								</hbox>
+							</vbox>
+							<hbox align="top">
+								<vbox flex="1">
+									<button id="addIMPPLabel" label="&addIMPPLabel;" accesskey="&addIMPPAccesskey;" oncommand="wdw_cardbookConfiguration.addIMPP();"/>
+									<button id="renameIMPPLabel" label="&renameIMPPLabel;" accesskey="&renameIMPPAccesskey;" oncommand="wdw_cardbookConfiguration.renameIMPP();" disabled="true"/>
+									<button id="deleteIMPPLabel" label="&deleteIMPPLabel;" accesskey="&deleteIMPPAccesskey;" oncommand="wdw_cardbookConfiguration.deleteIMPP();" disabled="true"/>
+								</vbox>
+							</hbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<description>&orgWarn;</description>
+					<separator class="thin"/>
+					<groupbox>
+						<caption label="&orgTitleLabel;"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<listbox rows="8" id="orgListbox" onselect="wdw_cardbookConfiguration.selectOrg();" ondblclick="wdw_cardbookConfiguration.renameOrg();"/>
+							</vbox>
+							<hbox align="top">
+								<vbox flex="1">
+									<button id="addOrgLabel" label="&addTypeLabel;" accesskey="&addTypeAccesskey;" oncommand="wdw_cardbookConfiguration.addOrg();"/>
+									<button id="renameOrgLabel" label="&renameTypeLabel;" accesskey="&renameTypeAccesskey;" oncommand="wdw_cardbookConfiguration.renameOrg();" disabled="true"/>
+									<button id="deleteOrgLabel" label="&deleteTypeLabel;" accesskey="&deleteTypeAccesskey;" oncommand="wdw_cardbookConfiguration.deleteOrg();" disabled="true"/>
+								</vbox>
+							</hbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<caption label="&customFieldsPanelLabel;"/>
+					<groupbox>
+						<caption label="&persTitleLabel;"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<grid align="center" flex="1">
+									<columns>
+										<column flex="1"/>
+										<column flex="1"/>
+									</columns>
+						
+									<rows>
+										<row align="center">
+											<label value="&customFieldName;"/>
+											<label value="&customFieldLabel;"/>
+										</row>
+										<row align="center">
+											<textbox id="customField1NameName" label="&customFieldName;"/>
+											<textbox id="customField1NameLabel" label="&customFieldLabel;"/>
+										</row>
+										<row align="center">
+											<textbox id="customField2NameName" label="&customFieldName;"/>
+											<textbox id="customField2NameLabel" label="&customFieldLabel;"/>
+										</row>
+									</rows>
+								</grid>
+							</vbox>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&orgTitleLabel;"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<grid align="center" flex="1">
+									<columns>
+										<column flex="1"/>
+										<column flex="1"/>
+									</columns>
+						
+									<rows>
+										<row align="center">
+											<label value="&customFieldName;"/>
+											<label value="&customFieldLabel;"/>
+										</row>
+										<row align="center">
+											<textbox id="customField1OrgName" label="&customFieldName;"/>
+											<textbox id="customField1OrgLabel" label="&customFieldLabel;"/>
+										</row>
+										<row align="center">
+											<textbox id="customField2OrgName" label="&customFieldName;"/>
+											<textbox id="customField2OrgLabel" label="&customFieldLabel;"/>
+										</row>
+									</rows>
+								</grid>
+							</vbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<description>&listPanelLabel;</description>
+					<groupbox>
+						<caption label="&listGroupboxLabel;"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<grid align="center" flex="1">
+									<columns>
+										<column flex="1"/>
+										<column flex="1"/>
+									</columns>
+						
+									<rows>
+										<row align="center">
+											<label value="&kindCustomLabel;"
+												accesskey="&kindCustomAccesskey;"
+												control="kindCustomTextBox"
+												id="kindCustom"/>
+											<textbox id="kindCustomTextBox"
+												preference="extensions.cardbook.kindCustom"/>
+										</row>
+										<row align="center">
+											<label value="&memberCustomLabel;"
+												accesskey="&memberCustomAccesskey;"
+												control="memberCustomTextBox"
+												id="memberCustom"/>
+											<textbox id="memberCustomTextBox"
+												preference="extensions.cardbook.memberCustom"/>
+										</row>
+									</rows>
+								</grid>
+							</vbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				
+				<tabpanel orient="vertical">
+					<description>&syncWarn;</description>
+					<separator class="thin"/>
+					<groupbox>
+						<caption label="&syncGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="initialSyncCheckBox" label="&initialSyncLabel;"
+								accesskey="&initialSyncAccesskey;"
+								preference="extensions.cardbook.initialSync"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&solveConflictsLabel;"
+								control="solveConflictsRadiogroup"
+								id="solveConflicts"/>
+						</hbox>
+						<hbox flex="1" align="center">
+							<radiogroup id="solveConflictsRadiogroup" orient="horizontal" preference="extensions.cardbook.solveConflicts" class="indent">
+								<radio value="Local" label="&solveConflictsLocalLabel;" accesskey="&solveConflictsLocalAccesskey;"/>
+								<radio value="Remote" label="&solveConflictsRemoteLabel;" accesskey="&solveConflictsRemoteAccesskey;"/>
+								<radio value="User" label="&solveConflictsUserLabel;" accesskey="&solveConflictsUserAccesskey;"/>
+							</radiogroup>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&autoSyncGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="autoSyncCheckBox" label="&autoSyncLabel;"
+								accesskey="&autoSyncAccesskey;"
+								preference="extensions.cardbook.autoSync" oncommand="wdw_cardbookConfiguration.showautoSyncInterval();"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&autoSyncIntervalLabel;"
+								accesskey="&autoSyncIntervalAccesskey;"
+								control="autoSyncIntervalTextBox"
+								id="autoSyncInterval"/>
+							<textbox id="autoSyncIntervalTextBox"
+								preference="extensions.cardbook.autoSyncInterval"/>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&requestsGroupboxLabel;"/>
+						<hbox align="center">
+							<label value="&requestsTimeoutLabel;"
+								accesskey="&requestsTimeoutAccesskey;"
+								control="requestsTimeoutTextBox"
+								id="requestsTimeout"/>
+							<textbox id="requestsTimeoutTextBox"
+								preference="extensions.cardbook.requestsTimeout"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&multigetLabel;"
+								accesskey="&multigetAccesskey;"
+								control="multigetTextBox"
+								id="multiget"/>
+							<textbox id="multigetTextBox"
+								preference="extensions.cardbook.multiget"/>
+						</hbox>
+					</groupbox>
+
+					<groupbox>
+						<caption label="&advancedSyncGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="decodeReportCheckBox" label="&decodeReportLabel;"
+								accesskey="&decodeReportAccesskey;"
+								preference="extensions.cardbook.decodeReport"/>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<groupbox>
+						<caption label="&miscEmailGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="preferEmailPrefCheckBox" label="&preferEmailPrefLabel;"
+								accesskey="&preferEmailPrefAccesskey;"
+								preference="extensions.cardbook.preferEmailPref"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<caption label="&preferEmailPrefWarn;"/>
+						</hbox>
+					</groupbox>
+					<separator class="thin"/>
+					<groupbox flex="1">
+						<caption label="&attachvCardGroupboxLabel;"/>
+						<separator class="thin"/>
+						<description>&attachvCardWarn;</description>
+						<separator class="thin"/>
+						<hbox flex="1">
+							<vbox flex="1">
+								<hbox flex="1">
+									<tree id="mailAccountsTree" class="cardbookTreeChildrenConfigClass" hidecolumnpicker="true" flex="1" seltype="single" enableColumnDrag="false" editable="true" sortDirection="ascending" sortResource="mailAccountsName">
+										<treecols id="mailAccountsTreeCols">
+											<treecol id="mailAccountsEnabled" label="&mailAccountsEnabledLabel;" type="checkbox" persist="width ordinal hidden" style="text-align:center" editable="true"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsName" label="&mailAccountsNameLabel;" flex="1" persist="width ordinal hidden" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'mailAccountsTree');" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsFileName" label="&mailAccountsFileNameLabel;" flex="1" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'mailAccountsTree');" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsDirPrefId" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsUid" flex="1" hidden="true" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+											<splitter class="tree-splitter"/>
+											<treecol id="mailAccountsFn" label="&mailAccountsFnLabel;" flex="1" onclick="wdw_cardbookConfiguration.sortTreesFromCol(event, this, 'mailAccountsTree');" hidden="false" persist="width ordinal hidden" style="text-align:left" editable="false"/>
+										</treecols>
+										<treechildren id="mailAccountsTreeChildren" ondblclick="wdw_cardbookConfiguration.doubleClickTree(event, 'mailAccountsTree');"/>
+									</tree>
+								</hbox>
+							</vbox>
+							<hbox align="top">
+								<vbox flex="1">
+									<button id="choosevCard" label="&choosevCardLabel;" accesskey="&choosevCardAccesskey;" oncommand="wdw_cardbookConfiguration.choosevCard();"/>
+									<button id="displayvCard" label="&displayvCardLabel;" accesskey="&displayvCardAccesskey;" oncommand="wdw_cardbookConfiguration.displayvCard();"/>
+								</vbox>
+							</hbox>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+
+				<tabpanel orient="vertical">
+					<description>&birthdayListWarn;</description>
+					<groupbox id="addressBooksNameListGoupbox">
+						<caption>
+							<checkbox id="addressBooksNameListCheckbox" oncommand="wdw_cardbookConfiguration.changeAddressBooksPref(this.id);" label="&addressBooksGroupboxLabel;"/>
+						</caption>
+						<listbox rows="4" id="addressBooksNameListListbox"/>
+					</groupbox>
+					<separator class="thin"/>
+					<groupbox id="calendarsGoupbox">
+						<caption>
+							<checkbox id="calendarsCheckbox" oncommand="wdw_cardbookConfiguration.changeCalendarsPref();" label="&calendarsGroupboxLabel;"/>
+						</caption>
+						<listbox rows="4" id="calendarsListbox"/>
+					</groupbox>
+					<separator class="thin"/>
+					<groupbox>
+						<caption label="&searchGroupboxLabel;"/>
+						<hbox align="center">
+							<checkbox id="searchInNoteCheckBox" label="&searchInNoteLabel;" 
+								accesskey="&searchInNoteAccesskey;" 
+								tooltiptext = "&searchInNoteTooltip;"
+								preference="extensions.cardbook.searchInNote"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center" >
+							<label value="&dateFormatLabel;"
+								accesskey="&dateFormatAccesskey;"
+								control="dateFormatMenuList"
+								id="dateFormatLabel"/>
+							<menulist id="dateFormatMenuList" preference="extensions.cardbook.dateFormatMenu">  
+								<menupopup id="dateFormatMenuPopup"/>
+							</menulist>    
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			
+				<tabpanel orient="vertical">
+					<groupbox>
+						<caption label="&remindViaPopupWindowGroupboxLabel;"/>
+						<hbox align="center">
+							<label value="&numberOfDaysForSearchingLabel;" 
+								accesskey="&numberOfDaysForSearchingAccesskey;" 
+								control="numberOfDaysForSearchingTextBox"
+								id="numberOfDaysForSearchingLabel"/>
+							<textbox id="numberOfDaysForSearchingTextBox" 
+								preference="extensions.cardbook.numberOfDaysForSearching"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="showPopupOnStartupCheckBox" label="&showPopupOnStartupLabel;" 
+								accesskey="&showPopupOnStartupAccesskey;" 
+								preference="extensions.cardbook.showPopupOnStartup"
+								oncommand="wdw_cardbookConfiguration.remindViaPopup();"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="showPeriodicPopupCheckBox" label="&showPeriodicPopupLabel;" 
+								accesskey="&showPeriodicPopupAccesskey;"
+								preference="extensions.cardbook.showPeriodicPopup"
+								oncommand="wdw_cardbookConfiguration.remindViaPopup();"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&periodicPopupTimeLabel;" 
+								accesskey="&periodicPopupTimeAccesskey;" 
+								control="periodicPopupTimeTextBox"
+								id="periodicPopupTimeLabel" />
+							<textbox id="periodicPopupTimeTextBox" 
+								preference="extensions.cardbook.periodicPopupIime"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="showPopupEvenIfNoBirthdayCheckBox" label="&showPopupEvenIfNoBirthdayLabel;" 
+								accesskey="&showPopupEvenIfNoBirthdayAccesskey;" 
+								preference="extensions.cardbook.showPopupEvenIfNoBirthday"/>
+						</hbox>
+					</groupbox>
+	
+					<separator class="thin"/>
+	
+					<groupbox>
+						<caption label="&remindViaLightningGroupboxLabel;"/>
+						<hbox align="center">
+							<label value="&numberOfDaysForWritingLabel;" 
+								accesskey="&numberOfDaysForWritingAccesskey;" 
+								control="numberOfDaysForWritingTextBox"
+								id="numberOfDaysForWritingLabel"/>
+							<textbox id="numberOfDaysForWritingTextBox" 
+								preference="extensions.cardbook.numberOfDaysForWriting"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="syncWithLightningOnStartupCheckBox" label="&syncWithLightningOnStartupLabel;" 
+								accesskey="&syncWithLightningOnStartupAccesskey;"
+								preference="extensions.cardbook.syncWithLightningOnStartup"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&calendarEntryTitleLabel;"
+								accesskey="&calendarEntryTitleAccesskey;" 
+								control="calendarEntryTitleTextBox"
+								tooltiptext="&calendarEntryTitleTooltip;"
+								id="calendarEntryTitleLabel"/>
+							<textbox id="calendarEntryTitleTextBox" flex="1"
+								preference="extensions.cardbook.eventEntryTitle"/>
+							<splitter flex="1"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<checkbox id="calendarEntryWholeDayCheckBox" label="&calendarEntryWholeDayLabel;" 
+								accesskey="&calendarEntryWholeDayAccesskey;"
+								preference="extensions.cardbook.eventEntryWholeDay"
+								oncommand="wdw_cardbookConfiguration.wholeDay();"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&calendarEntryTimeLabel;"
+								accesskey="&calendarEntryTimeAccesskey;" 
+								control="calendarEntryTimeTextBox"
+								id="calendarEntryTimeLabel"/>
+							<textbox id="calendarEntryTimeTextBox" 
+								preference="extensions.cardbook.eventEntryTime"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&calendarEntryAlarmLabel;"
+								accesskey="&calendarEntryAlarmAccesskey;" 
+								control="calendarEntryAlarmTextBox"
+								tooltiptext="&calendarEntryAlarmTooltip;"
+								id="calendarEntryAlarmLabel"/>
+							<textbox id="calendarEntryAlarmTextBox" 
+								preference="extensions.cardbook.calendarEntryAlarm"/>
+						</hbox>
+						<separator class="thin"/>
+						<hbox align="center">
+							<label value="&calendarEntryCategoriesLabel;"
+								accesskey="&calendarEntryCategoriesAccesskey;" 
+								control="calendarEntryCategoriesTextBox"
+								tooltiptext="&calendarEntryCategoriesTooltip;"
+								id="calendarEntryCategoriesLabel"/>
+							<textbox id="calendarEntryCategoriesTextBox" 
+								preference="extensions.cardbook.calendarEntryCategories"/>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>
+</prefwindow>

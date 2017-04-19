@@ -1,0 +1,60 @@
+<!ENTITY wizard.title "Add a new address book">
+<!ENTITY wizard.label "Add a new address book">
+
+<!ENTITY welcomePage.wizard.description "Welcome">
+<!ENTITY welcomePage.description "It seems that it is the first time you use CardBook, so we will try to import contacts from Thunderbird's standard address books into CardBook.">
+
+<!ENTITY initialPage.wizard.description "Location for the new address book.">
+<!ENTITY initialPage.description "Is your address book local or remote ? :">
+<!ENTITY initialPage.computer.label "Local">
+<!ENTITY initialPage.network.label "Remote">
+<!ENTITY initialPage.standard.label "Import Thunderbird's standard address books">
+<!ENTITY initialPage.search.label "Search into existing address books">
+
+<!ENTITY localPage.wizard.description "Type and location of the new local address book.">
+<!ENTITY localPage.type.description "What is the type of your local address book ? :">
+<!ENTITY localPage.type.label "Type">
+<!ENTITY localPage.createDB.label "Create a new address book">
+<!ENTITY localPage.createDirectory.label "Create a new address book (Directory)">
+<!ENTITY localPage.createFile.label "Create a new address book (File)">
+<!ENTITY localPage.openDirectory.label "Open an existing address book (Directory)">
+<!ENTITY localPage.openFile.label "Open an existing address book (File)">
+<!ENTITY localPage.uri.label "Directory or file">
+<!ENTITY localPage.uri.description "Using the browser, choose the location for your new local address book. If you are creating a new file, specify .vcf as the file extension.">
+<!ENTITY locationFirstPage.uri.description "Choose the location for your new local address books.">
+<!ENTITY localPage.uributton.label "Browse">
+
+<!ENTITY remotePage.wizard.description "Type and location of the new remote address book.">
+<!ENTITY remotePage.description "What is the type of your remote address book ? : (Caution: Google does NOT conform to vCard standards)">
+<!ENTITY remotePage.type.label "Type">
+<!ENTITY remotePage.carddav.label "CardDAV">
+<!ENTITY remotePage.google.label "Google">
+<!ENTITY remotePage.apple.label "Apple">
+<!ENTITY remotePage.connection.label "Connection">
+<!ENTITY remotePage.uri.description "For a CardDAV type, enter the URL of your remote address book. You may try to use a partial URL (example : http(s)://carddav.example.org). For a Google address book, don't specify this field.">
+<!ENTITY remotePage.uri.label "URL">
+<!ENTITY remotePage.credentials.description "Enter the credentials for accessing your address book. For a Google address book, the username should be your Google email.">
+<!ENTITY remotePage.validatebutton.label "Validate">
+
+<!ENTITY locationSearchPage.wizard.description "Definition of the advanced search.">
+<!ENTITY locationSearchPage.label "Advanced Search">
+
+<!ENTITY googleOauthPage.wizard.description "Google Authentication">
+
+<!ENTITY namePage.wizard.description "Address book properties">
+<!ENTITY namePage.selected.label "Selected">
+<!ENTITY namePage.name.label "Name">
+<!ENTITY namePage.color.label "Color">
+<!ENTITY namePage.urnuuid.label "Use urn:uuid">
+<!ENTITY namePage.readonly.label "Read-only mode">
+<!ENTITY namePage.vCardVersion.label "vCard">
+
+<!ENTITY namesPage.wizard.description "Address books properties">
+<!ENTITY namesPage.name.label "Names">
+<!ENTITY namesPage.name.description "Multiple address books have been discovered. Choose which address books you want to open and their names :">
+
+<!ENTITY finishPage.wizard.description "Address book configured">
+<!ENTITY finishPage.description "Your new address book has been successfully configured.">
+
+<!ENTITY finishsPage.wizard.description "Address books configured">
+<!ENTITY finishsPage.description "Your new address books have been successfully configured.">

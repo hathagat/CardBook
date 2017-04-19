@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+<!DOCTYPE overlay SYSTEM "chrome://cardbook/locale/ovl_cardbook.dtd">
+
+<overlay id="ovl_attachments"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://cardbook/content/cardbookUtils.js"/>
+	<script src="chrome://cardbook/content/wdw_log.js"/>
+	<script src="chrome://cardbook/content/attachments/ovl_attachments.js"/>
+
+	<menupopup id="attachmentSaveAllMultipleMenu" >
+		<menu id="attachments1CardBookImport" label="&addAllAttachementsToCardBookMenuLabel;" insertafter="button-saveAllAttachments">
+			<menupopup id="attachments1CardBookImportPopup"/>
+		</menu>
+	</menupopup>
+
+	<menupopup id="attachmentSaveAllSingleMenu" >
+		<menu id="attachment1CardBookImport" label="&addAttachementToCardBookMenuLabel;" insertafter="button-saveAttachment">
+			<menupopup id="attachment1CardBookImportPopup"/>
+		</menu>
+	</menupopup>
+
+	<menupopup id="attachmentListContext" >
+		<menu id="attachments2CardBookImport" label="&addAllAttachementsToCardBookMenuLabel;" insertafter="context-saveAllAttachments">
+			<menupopup id="attachments2CardBookImportPopup"/>
+		</menu>
+	</menupopup>
+
+	<menupopup id="attachmentItemContext" >
+		<menu id="attachment2CardBookImport" label="&addAttachementToCardBookMenuLabel;" insertafter="context-saveAttachment">
+			<menupopup id="attachment2CardBookImportPopup"/>
+		</menu>
+	</menupopup>
+
+</overlay>

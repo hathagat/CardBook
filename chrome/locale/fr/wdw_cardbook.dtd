@@ -1,0 +1,166 @@
+<!ENTITY wdw_cardbookWindowLabel "CardBook">
+
+<!ENTITY accountsOrCatsTreeLabel "Carnets d'adresses">
+<!ENTITY enableAccountsTooltip "Activer ou désactiver les carnets d'adresses lors des recherches et des synchronisations.">
+<!ENTITY colorAccountsTooltip "Choisir une couleur pour les carnets d'adresses lors des recherches sur plusieurs carnets d'adresses.">
+<!ENTITY readonlyAccountsTooltip "Mettre ou non les carnets d'adresses en lecture seule.">
+
+<!ENTITY cardbookAccountMenuLabel "Carnet d'adresses">
+
+<!ENTITY cardbookAccountMenuAddServerLabel "Ajouter un carnet d'adresses">
+<!ENTITY cardbookAccountMenuEditServerLabel "Modifier le carnet d'adresses">
+<!ENTITY cardbookAccountMenuCloseServerLabel "Supprimer le carnet d'adresses">
+<!ENTITY cardbookAccountMenuSyncLabel "Synchroniser le carnet d'adresses">
+<!ENTITY cardbookAccountMenuSyncsLabel "Synchroniser tous les carnets d'adresses">
+
+<!ENTITY cardbookContactsMenuLabel "Contacts">
+
+<!ENTITY cardbookToolsMenuLabel "Outils">
+<!ENTITY cardbookToolsMenuBirthdayListLabel "Liste des anniversaires">
+<!ENTITY cardbookToolsMenuSyncLightningLabel "Ajout des anniversaires dans l'agenda">
+<!ENTITY cardbookToolsMenuFindAllDuplicatesLabel "Recherche des contacts dupliqués dans tous les carnets d'adresses">
+<!ENTITY cardbookToolsMenuFindSingleDuplicatesLabel "Recherche des contacts dupliqués dans le carnet d'adresses courant">
+
+<!ENTITY cardbookToolbarLabel "Barre d'outils CardBook">
+<!ENTITY cardbookToolbarAccesskey "C">
+<!ENTITY CustomizeCardBookToolbarLabel "Personnaliser...">
+<!ENTITY CustomizeCardBookToolbarAccesskey "P">
+<!ENTITY cardbookToolbarAddServerButtonLabel "Ajouter un carnet d'adresses">
+<!ENTITY cardbookToolbarAddServerButtonTooltip "Ajouter un carnet d'adresses local ou distant">
+<!ENTITY cardbookToolbarSyncButtonLabel "Synchroniser">
+<!ENTITY cardbookToolbarSyncButtonTooltip "Synchroniser tous les carnets d'adresses distants">
+<!ENTITY cardbookToolbarConfigurationButtonLabel "Préférences">
+<!ENTITY cardbookToolbarConfigurationButtonTooltip "Préférences de CardBook">
+<!ENTITY cardbookToolbarAddButtonLabel "Ajouter un contact">
+<!ENTITY cardbookToolbarAddButtonTooltip "Permet la création d'un contact">
+<!ENTITY cardbookToolbarEditButtonLabel "Modifier le contact">
+<!ENTITY cardbookToolbarEditButtonTooltip "Permet la modification d'un contact">
+<!ENTITY cardbookToolbarRemoveButtonLabel "Supprimer le contact">
+<!ENTITY cardbookToolbarRemoveButtonTooltip "Permet la suppression d'un contact">
+<!ENTITY cardbookToolbarPrintButtonLabel "Aperçu avant impression">
+<!ENTITY cardbookToolbarPrintButtonTooltip "Permet d'imprimer la sélection">
+<!ENTITY cardbookToolbarAppMenuButtonLabel "Menu CardBook">
+<!ENTITY cardbookToolbarAppMenuButtonTooltip "Menu CardBook">
+<!ENTITY cardbookToolbarSearchBoxLabel "Recherche des contacts">
+<!ENTITY cardbookToolbarSearchBoxTooltip "Recherche des contacts">
+<!ENTITY cardbookToolbarComplexSearchLabel "Recherche avancée">
+<!ENTITY cardbookToolbarComplexSearchTooltip "Recherche suivant des conditions multiples">
+<!ENTITY cardbookToolbarThMenuButtonLabel "Menu de l'application">
+<!ENTITY cardbookToolbarThMenuButtonTooltip "Afficher le menu de &brandShortName;">
+
+<!ENTITY generalTabLabel "Général">
+<!ENTITY mailPopularityTabLabel "Popularité des emails">
+<!ENTITY technicalTabLabel "Technique">
+<!ENTITY vcardTabLabel "vCard">
+
+<!ENTITY lastnameColumnLabel "Nom">
+<!ENTITY firstnameColumnLabel "Prénom">
+<!ENTITY othernameColumnLabel "Autre nom">
+<!ENTITY prefixnameColumnLabel "Préfixe">
+<!ENTITY suffixnameColumnLabel "Suffixe">
+<!ENTITY fnColumnLabel "Nom affiché">
+<!ENTITY nicknameColumnLabel "Surnom">
+<!ENTITY genderColumnLabel "Genre">
+<!ENTITY bdayColumnLabel "Anniversaire">
+<!ENTITY dispadrColumnLabel "Adresses">
+<!ENTITY disphomeadrColumnLabel "Adresses maison">
+<!ENTITY dispworkadrColumnLabel "Adresses travail">
+<!ENTITY disptelColumnLabel "Téléphones">
+<!ENTITY disphometelColumnLabel "Téléphones maison">
+<!ENTITY dispworktelColumnLabel "Téléphones travail">
+<!ENTITY dispcelltelColumnLabel "Téléphones portables">
+<!ENTITY dispemailColumnLabel "Emails">
+<!ENTITY disphomeemailColumnLabel "Emails maison">
+<!ENTITY dispworkemailColumnLabel "Emails travail">
+<!ENTITY mailerColumnLabel "Mailer">
+<!ENTITY tzColumnLabel "Tz">
+<!ENTITY geoColumnLabel "Geo">
+<!ENTITY titleColumnLabel "Titre">
+<!ENTITY roleColumnLabel "Rôle">
+<!ENTITY orgColumnLabel "Société">
+<!ENTITY categoriesColumnLabel "Catégories">
+<!ENTITY noteColumnLabel "Note">
+<!ENTITY prodidColumnLabel "Prodid">
+<!ENTITY sortstringColumnLabel "Sort string">
+<!ENTITY uidColumnLabel "Uid">
+<!ENTITY dispurlColumnLabel "URL">
+<!ENTITY versionColumnLabel "Version">
+<!ENTITY class1ColumnLabel "Class">
+<!ENTITY dispimppColumnLabel "Instant messaging">
+<!ENTITY cardurlColumnLabel "Card URL">
+<!ENTITY dirPrefIdColumnLabel "DirPrefId">
+<!ENTITY kindColumnLabel "Type">
+<!ENTITY revColumnLabel "Rev">
+<!ENTITY etagColumnLabel "Etag">
+
+<!ENTITY categoriesGroupboxLabel "Catégories">
+<!ENTITY noteTabLabel "Notes">
+
+<!ENTITY miscGroupboxLabel "Divers">
+<!ENTITY othersGroupboxLabel "Autres">
+<!ENTITY techGroupboxLabel "Technique">
+<!ENTITY labelGroupboxLabel "Labels">
+<!ENTITY class1Label "Class">
+<!ENTITY geoLabel "Geo">
+<!ENTITY mailerLabel "Mailer">
+<!ENTITY agentLabel "Agent">
+<!ENTITY keyLabel "Key">
+<!ENTITY photolocalURILabel "Local photo">
+<!ENTITY logolocalURILabel "Local logo">
+<!ENTITY soundlocalURILabel "Local son">
+<!ENTITY photoURILabel "Photo">
+<!ENTITY logoURILabel "Logo">
+<!ENTITY soundURILabel "Son">
+<!ENTITY prodidLabel "Prodid">
+<!ENTITY sortstringLabel "Sort-String">
+<!ENTITY uidLabel "Uid">
+<!ENTITY versionLabel "Version">
+<!ENTITY tzLabel "Timezone">
+
+<!ENTITY dirPrefIdLabel "dirPrefId">
+<!ENTITY cardurlLabel "URL du contact">
+<!ENTITY cacheuriLabel "URI du cache">
+<!ENTITY revLabel "Rev">
+<!ENTITY etagLabel "Etag">
+
+<!ENTITY localizeadrTreeLabel "Localiser">
+<!ENTITY toEmailEmailTreeLabel "Envoyer un email">
+<!ENTITY ccEmailEmailTreeLabel "Envoyer un email (copie / cc)">
+<!ENTITY bccemailemailTreeLabel "Envoyer un email (copie cachée / bcc)">
+<!ENTITY findemailemailTreeLabel "Trouver les emails de cette adresse email">
+<!ENTITY findeventemailTreeLabel "Trouver les rendez-vous de cette adresse email">
+<!ENTITY openURLTreeLabel "Ouvrir l'URL">
+
+<!ENTITY copyCardTreeLabel "Copier cette ligne">
+
+<!ENTITY toEmailCardFromAccountsOrCatsLabel "Envoyer des emails">
+<!ENTITY toEmailCardFromCardsLabel "Envoyer des emails">
+<!ENTITY ccEmailCardFromAccountsOrCatsLabel "Envoyer des emails (copie / cc)">
+<!ENTITY ccEmailCardFromCardsLabel "Envoyer des emails (copie / cc)">
+<!ENTITY bccEmailCardFromAccountsOrCatsLabel "Envoyer des emails (copie cachée / bcc)">
+<!ENTITY bccEmailCardFromCardsLabel "Envoyer des emails (copie cachée / bcc)">
+<!ENTITY categoryLabel "Catégorie">
+<!ENTITY findEmailsFromCardsLabel "Trouver les emails du contact">
+<!ENTITY findEventsFromCardsLabel "Trouver les rendez-vous du contact">
+<!ENTITY localizeCardFromCardsLabel "Localiser le contact">
+<!ENTITY openURLCardFromCardsLabel "Ouvrir les URLs du contact">
+<!ENTITY cutCardFromAccountsOrCatsLabel "Couper le contact">
+<!ENTITY cutCardFromCardsLabel "Couper le contact">
+<!ENTITY copyCardFromAccountsOrCatsLabel "Copier le contact">
+<!ENTITY copyCardFromCardsLabel "Copier le contact">
+<!ENTITY pasteCardFromAccountsOrCatsLabel "Coller le contact">
+<!ENTITY pasteCardFromCardsLabel "Coller le contact">
+<!ENTITY exportCardToFileLabel "Exporter le contact vers un fichier">
+<!ENTITY exportCardToDirLabel "Exporter le contact vers un répertoire">
+<!ENTITY importCardFromFileLabel "Importer des contacts depuis un fichier">
+<!ENTITY importCardFromDirLabel "Importer des contacts depuis un répertoire">
+<!ENTITY renameCatFromAccountsOrCatsLabel "Renommer la catégorie">
+<!ENTITY removeCatFromAccountsOrCatsLabel "Supprimer la catégorie">
+<!ENTITY mergeCardsFromCardsLabel "Fusionner les contacts">
+<!ENTITY duplicateCardFromCardsLabel "Dupliquer le contact">
+<!ENTITY convertListToCategoryFromCardsLabel "Convertir la liste en catégorie">
+<!ENTITY editAccountFromAccountsOrCatsLabel "Éditer le carnet d'adresses">
+<!ENTITY syncAccountFromAccountsOrCatsLabel "Synchroniser le carnet d'adresses">
+<!ENTITY removeAccountFromAccountsOrCatsLabel "Supprimer le carnet d'adresses">
+
+<!ENTITY IMPPMenuLabel "Connecter à">

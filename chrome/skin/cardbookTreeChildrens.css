@@ -1,0 +1,19 @@
+﻿.cardbookTreeClass {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    min-width: 150px !important;
+    min-height: 150px !important;
+}
+
+.cardbookAccountTreeClass treechildren,
+.cardbookAccountTreeClass treechildren::-moz-tree-row(odd),
+.cardbookAccountTreeClass treechildren::-moz-tree-row(even) {
+	background-color: transparent;
+}
+.cardbookAccountTreeClass treechildren::-moz-tree-row(odd selected),
+.cardbookAccountTreeClass treechildren::-moz-tree-row(even selected) {
+	background-color: Highlight !important;
+	color: Highlighttext !important;
+}

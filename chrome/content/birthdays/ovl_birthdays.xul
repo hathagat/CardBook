@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xul-overlay href="chrome://cardbook/content/ovl_cardbookStringBundle.xul"?>
+
+<overlay id="ovl_birthdays"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<stringbundleset id="stringbundleset"/>
+
+	<script src="chrome://messenger/content/dateFormat.js"/>
+	<script src="chrome://cardbook/content/cardbookUtils.js"/>
+	<script src="chrome://cardbook/content/birthdays/cardbookBirthdaysUtils.js"/>
+	<script src="chrome://cardbook/content/birthdays/ovl_birthdays.js"/>
+
+</overlay>
